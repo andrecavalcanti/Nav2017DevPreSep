@@ -1,0 +1,4939 @@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´  OS  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Operating System                                                        ³
+// ³                                                                          ³
+// ³  All texts should be based on the operating system documentation in      ³
+// ³  your language to ensure correct translation.                            ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@1@0@
+@2@2@0@
+The operating system cannot find the file %1 %2.
+
+Verify that the drive, directory, and file names are correct.
+@2@3@0@
+The operating system cannot find the drive and directory that are specified for the file %1 %2.
+
+Verify that the drive, directory, and file names are correct.
+@2@4@0@
+The file %1 %2 cannot be opened because additional files cannot be opened.
+
+With MS-DOS and OS/2, you can solve this problem by increasing the value of 'FILES' in the CONFIG.SYS file.
+@2@5@0@
+The operating system cannot access to the file %1 %2.
+
+Verify that the file type and attributes are correct.
+@2@8@0@
+There is not enough memory to execute this function.
+
+If you work in a single-user installation, you can try reducing the value of the 'cache' program property. You can find information about how to optimize the operating system in the documentation for your operating system.
+@2@14@0@
+There is not enough memory available on the computer running Microsoft Dynamics NAV Server to perform the current activity.
+@2@15@0@
+The operating system cannot find the drive specified for the file %1 %2.
+
+Check the drive and the spelling of the drive name.
+@2@17@0@
+It is not possible to rename or move a file to another drive.
+
+This message refers to the files %1 %2.
+
+Both files must be placed on the same drive.
+@2@19@0@
+The disk is write-protected.
+
+This message refers to the file %1 %2.
+
+Verify that you are using the correct disk and then remove the write-protection. See the documentation for your operating system for more information.
+@2@20@0@
+The operating system cannot find the %1 %2 device.
+
+Verify that you are in the correct directory and that the name is spelled correctly.
+@2@21@0@
+The disk drive is not ready.
+
+This message refers to the file %1 %2.
+
+Verify that the disk is in the drive, that the drive is closed, and that it is not being used by another program.
+@2@23@0@
+Caution: The operating system has found a corrupted area on the disk. To avoid losing important data, this error must be corrected before you can use the program again. Do not use any type of disk utilities on the database.
+
+This message refers to the file %1 %2.
+
+If the error occurred on a disk, verify that the disk has been formatted. Otherwise, check the hard disk and correct any errors there. It may be necessary to format the disk and restore a backup. 
+See the documentation for your operating system for more information. The next time that you start the program, you should test the database with the dbtest=min program property. Contact your system administrator.
+@2@25@0@
+Caution: The operating system could not find a specific track or area on the disk. The disk may be damaged, not formatted, or not compatible with the operating system. To avoid losing important data, this error must be corrected before you can use the program again. Do not use any type of disk utilities on the database.
+
+This message refers to the file %1 %2.
+
+If the error occurred on a disk, verify that the disk is formatted. Otherwise, check the hard disk and correct any errors there. It may be necessary to format the disk and restore a backup. 
+See the documentation for your operating system for more information. The next time that you start the program, you should test the database with the dbtest=min program property. Contact your system administrator.
+@2@26@0@
+The operating system cannot read this disk.
+
+This message refers to the file %1 %2.
+
+The disk is either damaged or not formatted for the operating system, or the necessary file system driver has not been installed. Your system administrator can provide more information about this.
+@2@27@0@
+Caution: The operating system cannot find the requested sector on the disk. The disk may be damaged, not formatted, or not compatible with the operating system. To avoid losing important data, this error must be corrected before you can use the program again. Do not use any type of disk utilities on the database.
+
+This message refers to the file %1 %2.
+
+If the error occurred on a disk, verify that the disk is formatted. Otherwise, check the hard disk and correct any errors there. It may be necessary to format the disk and restore a backup. 
+See the documentation for your operating system for more information. The next time that you start the program, you should test the database with the dbtest=min program property. Contact your system administrator.
+@2@28@0@
+The operating system cannot complete your print job.
+
+Verify that the printer is turned on, that it has been connected and installed correctly, and that it contains paper. If you are printing to a network printer, verify that there is sufficient space on the server disk.
+@2@29@0@
+The operating system cannot print to %1 %2.
+
+Verify that it is installed and connected, turned on, available, ready to receive data, and (if it is a disk) formatted.
+@2@30@0@
+The operating system cannot read data from %1 %2.
+
+Verify that it is installed and connected, turned on, available, in send mode, and (if it is a disk) formatted.
+@2@31@0@
+The device %1 %2, which is connected to the system, is not functioning.
+
+Verify that it is installed and connected, turned on, available, in send mode, and (if it is a disk) formatted. 
+If it is a disk drive, verify that the disk is the right type, that it is formatted, and that it has been inserted correctly in the disk drive.
+@2@32@0@
+You cannot use the file %1 %2 because it is already in use.
+@2@33@0@
+You cannot use the file %1 %2 because it is being used by another process.
+@2@34@0@
+You have switched to the wrong disk.
+
+This message refers to the file %1 %2.
+
+Insert the correct disk.
+@2@53@0@
+The network path cannot be found.
+
+This message refers to the file %1 %2.
+
+The network server may be down, or the path may be invalid.
+@2@80@0@
+The file %1 %2 already exists.
+@2@82@0@
+The operating system cannot create a file or directory called %1 %2 because of one or more of the following errors:
+
+* The directory or file already exists.
+* It cannot find the path to the directory.
+* The root directory is full or there is no more space on the disk.
+* The directory name contains invalid characters or is reserved for use by the operating system.
+* The disk has not been formatted correctly.
+@2@100@0@
+The operating system cannot create additional semaphores.
+
+Configure your operating system to allow additional semaphore identifiers. If you are running UNIX, increase the SEMMNI value and create a new UNIX kernel. See the documentation for your operating system for additional information.
+Contact your system administrator. 
+@2@108@0@
+Another program is using the disk.
+
+This message refers to the file %1 %2.
+
+Wait until the other program is finished.
+@2@112@0@
+There is no available space on the disk.
+
+This message refers to the file %1 %2.
+
+Use another disk or delete some files.
+@2@123@0@
+The file name %1 %2 contains a character that cannot be used.
+
+Check the file name. You can find additional information about file names in the documentation for your operating system.
+@2@126@0@
+The operating system cannot load the DLL module %1.
+
+Check that the DLL module exists, and check that any other DLL modules that it will use also exist.
+@2@127@0@
+The operating system cannot find the DLL module %1.
+@2@166@0@
+The function that you selected cannot be run because the network is not installed.
+
+This message refers to the file %1 %2.
+
+Ensure that the network is correctly installed and functioning.
+@2@190@0@
+The operating system cannot execute the program %1 %2.
+
+This error occurs if you try to execute a DLL module as a program or if you try to execute a program as a DLL module. It can also occur if the program is structured differently than expected. Check the structure of the program and how it is started.
+@2@191@0@
+Your operating system cannot execute the program %1 %2.
+
+Verify that the program is correctly installed and can be run by your operating system.
+@2@192@0@
+The operating system cannot execute the program %1 %2.
+
+Verify that the program was correctly installed and linked.
+@2@193@0@
+Your operating system cannot execute the program %1 %2.
+
+Verify that the program is correctly installed and can be run by your operating system.
+@2@203@0@
+The operating system cannot find the environment variable %1.
+@2@206@0@
+The directory or file name %1 %2 is too long.
+
+See the documentation for your operating system for more information.
+@2@700@0@
+OLE could not be initialized.
+@2@800@0@
+The file %1 cannot be opened on a Network File System (NFS) because the "statd" daemon has not been started on the NFS client.
+
+See the documentation for your operating system for more information."
+@2@801@0@
+The file %1 cannot be opened on a Network File System (NFS) because the "lockd" daemon has not been started on the NFS client.
+
+See the documentation for your operating system for more information.
+
+@2@802@0@
+The file %1 cannot be opened on a Network File System (NFS) because the "lockd" daemon has not been started on the NFS client.
+
+See the documentation for your operating system for more information.
+
+@2@899@0@
+The program is unable to connect to the server's process.
+
+This is because the server is running as a service using a system account. Run the client using the network instead.
+@2@951@0@
+The operating system cannot create any more semaphores.
+
+You must reconfigure your operating system to use more semaphores. For more information, see the readme.txt file and the documentation for your operating system.
+@2@952@0@
+The operating system cannot create any more shared memory.
+
+You must reconfigure your operating system to use more shared memory. For more information, see the readme.txt file and the documentation for your operating system.
+@2@953@0@
+The operating system cannot create shared memory for the specified size.
+
+You must reconfigure your operating system to use shared memory of a greater or smaller size. For more information, see the readme.txt file and the documentation for your operating system.
+@2@958@0@
+The operating system does not support files larger than 2 GB.
+@2@995@0@
+The operating system returned the error (%18):
+
+%99
+@2@998@0@
+The menu item or function cannot be used with this operating system.
+@2@999@0@
+The command to start the external program %1 is too long.
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´ Lang ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Multilanguage							      ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@7@0@
+@2@3@0@
+An unknown language was selected ('%1').
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´  UT  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Usertypes                                                               ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@9@0@
+@2@002@0@
+The type '%1' was not defined for the function.
+@2@6@0@
+The values are incompatible:
+
+The value '%4', which is of type '%1',
+
+is not compatible with
+
+the value '%104', which is of type '%101'.
+@2@7@0@
+The minimum permitted value is %4.
+@2@8@0@
+The maximum permitted value is %4.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  STACK  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÙ                                                              ³
+// ³                                                                          ³
+// ³  Stack Manager                                                           ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@15@0@
+@2@1@0@
+There is insufficient memory to execute this function.
+
+This can be caused by recursive function calls that are used in the program. Contact your system administrator.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  FILE  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÙ                                                               ³
+// ³                                                                          ³
+// ³  File                                                                    ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@17@0@
+@2@1006@0@
+The file name, drive, and path cannot exceed 255 characters.
+
+This message refers to the file %1.
+@2@1009@0@
+The file %1 contains a record that cannot be read completely.
+@2@1010@0@
+The file %1 contains a line that is too long for an internal variable.
+@2@1014@0@
+You cannot seek on character devices.
+
+This message refers to the file %1.
+@2@1015@0@
+The file %1 contains a file position that no longer exists.
+@2@1016@0@
+You cannot copy a file to its own name.
+
+This message refers to the file %1.
+@2@1017@0@
+You cannot copy a file to its own name.
+
+This message refers to the file %1.
+@2@1018@0@
+The format of the compressed file %1 is invalid.
+@2@2100@0@
+The file %1 is too large.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  EVAL  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÙ                                                               ³
+// ³                                                                          ³
+// ³  Evaluation                                                              ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@41@0@
+@2@100@0@
+%5 must not be blank.
+
+%5 is missing or invalid in the expression.
+@2@101@0@
+The text '%10' is too long. %5 can have a maximum length of %3 characters.
+@2@104@0@
+The text '%10' is too long. The list of options can have a maximum length of %3 characters.
+@2@111@0@
+%5 must not be %10.
+
+%5 must be in the range of %1 - %2.
+@2@112@0@
+You cannot enter '%10' in %5.
+@2@113@0@
+You cannot enter '%10' in %5.
+@2@120@0@
+'%10' is too large for the internal variable '%5'.
+@2@141@0@
+'%10' is not an option.
+
+The existing options are:
+
+%4
+@2@142@0@
+'%10' is not an option.
+
+The existing options are:
+
+%4
+@2@151@0@
+The text '%10' is too long. The text in code fields can have a maximum length of %3 characters.
+@2@161@0@
+'%10' is not a valid date.
+@2@162@0@
+'%10' is not a valid date.
+@2@171@0@
+'%10' is not a valid time.
+@2@172@0@
+'%10' is not a valid time.
+@2@175@0@
+'%10' is not a valid DateTime.
+@2@180@0@
+'%5' cannot contain '%7' more than once.
+
+%10
+@2@181@0@
+'%5' cannot contain '%7' more than once.
+
+%10
+@2@182@0@
+The type '%5' is not complete.
+
+%10
+@2@183@0@
+An invalid field or attribute has been specified for the 'Format' property.
+
+%10
+
+@2@184@0@
+'%10' contains invalid characters.
+
+@2@185@0@  //'(field name/DataItem)' is not an ancestral DataItem. Enter an ancestral DataItem. 
+'%1' is not an ancestral DataItem. Enter an ancestral DataItem.
+@2@186@0@
+You cannot enter "%1" because it is not a valid column in this query.
+@2@187@0@
+DataItemLink does not have a 'Field' specified.
+@2@188@0@
+DataItemLink does not have a 'Referenced DataItem' specified.
+@2@189@0@
+DataItemLink does not have a 'Referenced Field' specified.
+@2@190@0@
+FlowField cannot be used in DataItem Link.
+@2@191@0@
+FlowFilter can be linked only to normal field.
+@2@300@0@
+A '%5' was expected here.
+
+%10
+@2@301@0@
+The error occurred in the following file:
+
+File name: %50
+Line number: %51
+Line: %10
+Column: %11
+@2@500@0@
+Internal error:
+
+The Type %5 is unknown.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄ¿
+// ÚÄ´  FMT  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÙ                                                                ³
+// ³                                                                          ³
+// ³  Format                                                                  ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@42@0@
+@2@2@0@
+Standard format number %1 does not exist for the type '%2'.
+@2@4@0@
+The length of the source exceeds the size of the destination buffer.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  RecConv  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÙ                                                            ³
+// ³                                                                          ³
+// ³  Conversion Utility                                                      ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@43@0@
+@2@1@0@
+The value entered in the Name field of the Data Item cannot exceed 30 characters.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄ¿
+// ÚÄ´  STR  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÙ                                                                ³
+// ³                                                                          ³
+// ³  String                                                                  ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@45@0@
+@2@6@0@
+String %3 is too small for insertion of %# fields.
+
+This error message appeared because:
+No.: %1
+Value: %2
+@2@7@0@
+The following text cannot exceed a total of %1 characters.
+
+'%2' +
+'%3'
+@2@5@0@
+The alpha variable must not exceed a total of %1 characters.
+
+'%2'
+@2@11@0@
+The length of the text string exceeds the size of the string buffer.
+@2@300@0@
+The index is out of range when accessing a string.
+
+String: %3
+String length: %1
+Index: %5
+@2@301@0@
+%6 cannot be %3.
+@2@302@0@
+You must specify a %6.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  DATE  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÙ                                                               ³
+// ³                                                                          ³
+// ³  Date                                                                    ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@46@0@
+@2@1@0@
+An undefined date cannot be used in date calculations.
+@2@2@0@
+The date is not valid.
+@2@3@0@
+You cannot use a closing date in date calculations.
+@2@4@0@
+An undefined time cannot be used in time calculations.
+@2@5@0@
+The time is not valid.
+@2@8@0@
+The date formula exceeds the allowed size.
+@2@201@0@
+The date formula '%10' must include plus (+) or minus (-).
+@2@202@0@
+The date formula '%10' should include a number.
+@2@203@0@
+The date formula '%10' should include a time unit.
+
+Time units can be: D,WD,W,M,Q, or Y.
+C, meaning current time unit based on date, can be specified as a prefix to the time unit.
+@2@204@0@
+The date formula '%10' should include a number.
+@2@205@0@
+The date formula '%10' contains a number that is too large.
+
+The number must be in the range %1 - %2.
+@2@206@0@
+The calculation of the date formula %10 resulted in an invalid date: %1.
+
+Only dates between Jan. 1, 0000 - Dec. 31, 9999 may be used.
+@2@207@0@
+Evaluation error (invalid unit string, %4, for date expressions in the .stx file).
+
+Internal error: 41-%0 
+
+@2@208@0@
+You cannot base a date calculation on an undefined date.
+
+Date: 0D
+Formula: %10
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  TEXTCONV  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ                                                           ³
+// ³                                                                          ³
+// ³  Text Conversion                                                         ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@47@0@
+@2@1@0@
+There are errors in the text conversion because text no. %1-%2 does not exist in the .stx file.
+
+Internal error: 47-%0
+@2@2@0@
+There are errors in the text conversion because text no. %1-%2 is too long for the internal buffer.
+
+Internal error: 47-%0
+@2@3@0@
+There are errors in the text conversion because of an incorrect internal buffer length in relation to text no. %1-%2.
+
+Internal error: 47-%0
+@2@5@0@
+The following file or files have been successfully sealed:
+
+%1
+@2@7@0@
+Sealing cannot be performed.
+
+Your license does not permit you to modify the fin.stx file. 
+
+Contact your system administrator if you need assistance.
+@2@101@0@
+There are errors in the text conversion. The error occurred in file %11 on line %12 in text '%13'.
+
+The syntax is invalid for the .stx file. The correct syntax is:
+<ModuleNo.>-<TextNo.>-<MaximumLength>-<Translate>: <Text>
+
+Number of digits in the syntax:
+
+ModuleNo.: 5 digits
+TextNo.: 5 digits
+MaximumLength: 3 digits
+Translate: 1 digit
+
+For example:
+
+00040-01003-256-1: Monday,Tuesday,Wednesday,...
+Internal error: 47-%0
+@2@102@0@
+There are errors in the text conversion because the line is too long.
+
+The error occurred in the file %11 on line %12 in the text '%13'.
+
+Internal error: 47-%0 
+@2@103@0@
+There are errors in the text conversion because the same text is defined more than once.
+
+The error occurred in the file %11 on line %12 in the text '%13'.
+
+Internal error: 47-%0 
+@2@104@0@
+There are errors in the text conversion because the text is too long.
+
+The error occurred in the file %11 on line %12 in the text '%13'.
+
+Internal error: 47-%0
+@2@105@0@
+There are errors in the text conversion because of invalid .stx syntax.
+
+The error occurred in the file %11 on line %12 in the text '%13'.
+
+Internal error: 47-%0 
+@2@106@0@
+There is a checksum error in the fin.stx file. The file has been changed or corrupted since it was installed.
+
+Contact your system administrator if you need assistance.
+@2@109@0@
+There are errors in the text conversion because the correct level of file must be the first line of fin.stx.
+
+The error occurred in the file %11 on line %12 in the text '%13'.
+
+Internal error: 47-%0 
+@2@110@0@
+There is a checksum error in the fin.stx file. The file has been changed or corrupted since it was installed.
+
+The error occurred in the %11 file.
+
+Contact your system administrator.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄ¿
+// ÚÄ´  BCD  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÙ                                                                ³
+// ³                                                                          ³
+// ³  Binary Coded Decimal (Decimal No.)                                      ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@50@0@
+@2@1@0@
+Division by zero.
+
+%2 / %3
+@2@2@0@
+The following operation has resulted in a decimal number that is too large.
+
+%1
+@2@4@0@
+The following operation has resulted in a decimal number that is too large.
+
+%1
+@2@5@0@
+An integer is too large.
+
+%2
+@2@6@0@
+One of the following errors has occurred:
+
+* A negative number was raised to a non-integer power.
+* Zero was raised to a negative power.
+
+POWER(%2,%4)
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  EXEC  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÙ                                                               ³
+// ³                                                                          ³
+// ³  Execute External Program                                                ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@80@0@
+@2@1@0@
+The external program %1 sent error code %0.
+
+See the documentation about the external program for more information.
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´ ATT  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Attributes                                                              ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@11@0@
+@2@1@0@
+The property exceeds the buffer size.
+@2@100@0@
+Internal Error:
+The property %1 is not defined in the property list.
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´  MT  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  MiniTree                                                                ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@24@0@
+@2@3@0@
+There is something wrong with the file %2. To continue, you must delete or rename the file.
+@2@8@0@
+The text in the report exceeds the allowed limit by %11 characters.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄ¿
+// ÚÄ´  HELP ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÙ                                                                ³
+// ³  Help Lookup Subsystem                                                   ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@25@0@
+@2@001@0@
+The Help system has been corrupted.
+Ensure that the .hh files are correctly installed.
+@2@002@0@
+A line (%4) in the Help file %1 is too long. Lines can have a maximum of 1023 characters.
+@2@003@0@
+There is a syntax error in the Help file %1 on line %2, position %3.
+
+%4
+@2@004@0@
+There is a syntax error in the Help file %1 on line %2, position %3. A #define was expected.
+
+%4
+@2@005@0@
+There is a syntax error in the Help file %1 on line %2, position %3. An identifier was expected.
+
+%4
+@2@006@0@
+There is a syntax error in the Help file %1 on line %2, position %3. A number was expected.
+
+%4
+@2@007@0@
+Invalid content was found in the Help file %1.
+
+%4
+@2@008@0@
+An unexpected tag was found in the Help file %1.
+
+%4
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄ¿
+// ÚÄ´RUNTIME ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÙ                                                               ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@40@0@
+@2@001@0@
+%1 is not implemented.
+@2@015@0@
+The ApplicationArea property value '%1' is not valid.
+The value must be a text string that contains one or more application area tags. 
+A tag must start with # and can be followed by any combination of letters (Aa-Zz) and numbers (0-9). 
+Use a comma to separate multiple tags. Example: #Basic,#Suite,#RelationshipMgmt
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´Assert        ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ                                                         ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@255@0@
+@2@027@0@
+Internal Error: %1
+
+%2 line %3
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  L4    ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÙ  License File                                                 ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@160@0@
+@2@200@0@
+The file format is invalid. The file is not a valid license file.
+@2@201@0@
+Bitwise operations can be performed only on data that is equal in size.
+@2@204@0@
+The return data buffer is not large enough.
+@2@205@0@
+The data already exists.
+@2@206@0@
+An invalid parameter was used.
+@2@208@0@
+A .dll file in the Windows API has been corrupted.
+
+Internal error: 160-%0
+
+Contact your system administrator.
+@2@210@0@
+Data cannot be interpreted as %18.
+@2@211@0@
+The data type %18 cannot be used here.
+@2@220@0@
+There is no more available space.
+@2@242@0@
+The license file cannot be used with this version of the program.
+@2@248@0@
+The country code in the license does not correspond to the country code (%1) of your product.
+@2@END@0@
+ 
+//   ÚÄÄÄÄÄÄÄ¿
+// ÚÄ´ BCMIA ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÙ                                                                ³
+// ³  Large Fixed Decimal Numbers                                             ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@18@0@
+@2@1@0@
+Overflow in decimal.
+@2@END@0@
+//   ÚÄÄÄÄ¿
+// ÚÄ´ DB ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÙ                                                                   ³
+// ³  Database System                                                         ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@19@0@
+@2@1@0@
+Caution: There is an error in the database structure. This occurs if the database file is changed by another program or if a device driver does not function properly.
+
+You must correct this error before you can continue. The error (%18 in module %23) may have been caused by the computer or a program.
+
+Table: %1.1
+Company: %1.9
+Key Fields: %6
+
+Check the database. On the File menu, click Database, click Test, and then click Maximum. If you get the same error, you should:
+
+1. Back up the database by copying the database file or files to another location.
+
+2. Use the built-in functionality to make a backup.
+
+3. If this works, create a new database without deleting the database that contains the error or errors.
+Restore the backup that you made with the built-in backup functionality into the new database. To test it, on the File menu, click Database, click Test, and then click Maximum.
+
+If this procedure does not work, then any database changes that were made after the most recent backup will be lost. Restore the most recent backup that was made with the built-in backup functionality and test it.
+For security reasons, you should save the old database until you have used the new one for a period of time.
+
+Contact your system administrator for assistance.
+@2@3@0@
+There is not sufficient space available in the database to perform this task. You can obtain more space by:
+
+* Expanding the database.
+* Deleting unnecessary data.
+* Date compressing older, non-current entries.
+* Optimizing the database.
+@2@4@0@
+Other concurrent activities have reused the available space in the database that contained your snapshot of data. This can occur with time-consuming tasks such as printing or making backups.
+Wait until there are fewer concurrent updates of the database and try again.
+
+If this occurs often, you should create more available space in the database. You can create more space in the database by:
+
+* Expanding the database.
+* Deleting unnecessary data.
+* Date compressing older, non-current entries.
+* Optimizing the database.
+@2@5@0@
+The %1.1 table does not exist.
+@2@7@0@
+You cannot make any changes in the database until a transaction has been started.
+@2@9@0@
+The field type is not defined for field number %2.2 in the %1.1 table.
+@2@13@0@
+You cannot delete a field that is a SumIndexField for an active key. The field is:
+
+Field No.: %2.2
+Table: %1.1
+SumIndexFields: %6
+@2@14@0@
+You cannot delete a field that is included in an active key. The field is:
+
+Field No.: %2.2
+Table: %1.1
+Key Fields: %6
+@2@15@0@
+The type of SumIndexField must be numeric (Decimal, BigInteger, Integer or Duration). The field is:
+
+Field: %2.1
+Table: %1.1
+SumIndexFields: %6
+@2@17@0@
+The %1.1 table cannot be locked or changed because it is already locked by the user with User ID %13.
+
+Wait until the user is finished and then try again.
+@2@20@0@
+The Form and Dataport object types are not supported. Remove these object types from the database with the previous version of the Microsoft Dynamics NAV Development Environment.
+@2@1000@0@
+%1.3 %1.2 already exists.
+@2@1001@0@
+%1.3 %1.2 does not exist.
+@2@1002@0@
+%1.1 %6.1.1 '%6.1.5' does not exist. %12
+@2@1003@0@
+The active fields in a record cannot take up more than %8 bytes. The active fields in the %1.1 table take up %7 bytes.
+
+You must reduce the number or the length of the active fields.
+@2@1004@0@
+There is more than one definition for field no. %2.2 in the %1.1 table.
+@2@1005@0@
+Field number %2.2 is not defined in the %1.1 table.
+@2@1007@0@
+The %1.1 table does not have an active key that starts with the following field or fields: %6.
+@2@1008@0@
+The %1.1 does not exist. %12
+
+Identification fields and values:
+
+%6
+
+%1.10
+@2@1009@0@
+The %1.1 already exists.
+
+Identification fields and values:
+
+%6
+@2@1010@0@
+The %2.1 field in the %1.1 table must be a FlowFilter.
+@2@1011@0@
+The sum of the values in the %2.1 field cannot be calculated.
+
+You must define, activate, and select a key that contains the following key fields, in any order. The %2.1 field should be associated with it as a SumIndexField.
+
+Table: %1.1
+Key Fields: %1.6
+@2@1013@0@
+The field name '%2.1' in the %1.1 table is too long (%7). The maximum length is %8.
+@2@1014@0@
+%1.1 %6.1.1 '%6.1.5' already exists.
+@2@1015@0@
+The key already exists.
+
+The fields from the primary key are automatically appended to all secondary keys.
+
+Table: %1.1
+Key fields: %6
+@2@1018@0@
+A key can have a maximum of %8 fields.
+
+The fields from the primary key are automatically appended to all secondary keys.
+
+Fields: %7
+Table: %1.1
+Key fields: %6
+@2@1019@0@
+A key can have a maximum of %8 SumIndexFields.
+
+Fields: %7
+Table: %1.1
+SumIndexFields: %6
+@2@1020@0@
+A table can have a maximum of %8 keys.
+
+Keys: %7
+Table: %1.1
+@2@1021@0@
+Another user has changed the definition of the %1.1 table after the activity was started.
+
+Start your activity again.
+@2@1022@0@
+Another user has modified the record for this %1.1 after you retrieved it from the database.
+
+Enter your changes again in the updated window, or start the interrupted activity again.
+
+Identification fields and values:
+
+%6
+@2@1023@0@
+The %2.1 field in the %1.1 table cannot be a FlowFilter.
+@2@1024@0@
+There is an invalid character in the Find expression '%12'.
+
+In Find expressions, you can use =, >, and < in combinations, where each sign can only appear once, or you can use - or +.
+@2@1027@0@
+The sum of the values in the %2.1 field cannot be calculated because the current key does not contain all filtered fields.
+
+You must select a key that contains all fields in any order in the filter.
+
+Filters: %1.10
+Table: %1.1
+Key fields: %1.6
+@2@1029@0@
+The sum of the values in the %2.1 field cannot be calculated because the filter contains question marks (%19), asterisks (%20), or 'at' symbols (%21).
+
+Filters: %1.10
+Table: %1.1
+@2@1030@0@
+The %2.1 field in the %1.1 table must be a FlowField.
+@2@1031@0@
+The specification of the filter on the %1.1 table is too long (%7 bytes). It can take up a maximum of %8 bytes.
+@2@1032@0@
+The filter '%2.10' on the %2.1 field in the %1.1 table must specify a minimum value.
+
+You can use three permitted formats for filters with a minimum value of A:
+
+* A     Selects values equal to A.
+* A..   Selects values greater than or equal to A.
+* A..Z  Selects values between A and Z, inclusive.
+@2@1033@0@
+The filter '%2.10' on the %2.1 field in the %1.1 table must specify a maximum value.
+
+You can use three permitted formats for filters with a maximum value of Z:
+
+* Z     Selects values equal to Z.
+* ..Z   Selects values less than or equal to Z.
+* A..Z  Selects values between A and Z, inclusive.
+@2@1034@0@
+The filter '%2.10' on the %2.1 field in the %1.1 table must specify an interval.
+
+You can use two permitted formats for filters that specify an interval:
+
+* A     Selects values equal to A.
+* A..Z  Selects values between A and Z, inclusive.
+@2@1035@0@
+Please specify a filter for the %2.1 field in the %1.1 table.
+
+For information about entering filters, see the online Help.
+@2@1036@0@
+Field number %2.2 in the %1.1 table must have a name.
+@2@1037@0@
+The length of the filter string %7 exceeds the maximum length %8.
+
+Table: %1.1
+@2@1038@0@
+The %1.1 table is empty.
+@2@1039@0@
+The FlowField value cannot be calculated.
+
+You must define and activate a key that contains the following key fields in any order and then associate the specified SumIndexField with it.
+
+Key Fields: %6
+SumIndexField: %2.1
+Table: %1.1
+@2@1040@0@
+The %2.1 field in the %1.1 table must be active.
+@2@1041@0@
+The %2.1 field in the %1.1 table cannot be a FlowField.
+@2@1042@0@
+Another user has modified the record for %1.1 %6.1.1 '%6.1.5' after you retrieved it from the database.
+
+Re-enter the changes in the updated window or start the activity again.
+@2@1043@0@
+The two fields below must have the same type:
+
+Field: %2.1 <-- %92.1
+Table: %1.1 <-- %91.1
+Type: %2.3 <-- %92.3
+@2@1044@0@
+Caution: The database has become corrupted. This occurs if the database file is changed by another program or if a device driver does not function properly.
+
+You must correct this error before you can continue. Do not use any disk utilities on the database.
+
+Check the database. On the File menu, click Database, click Test, and then click Maximum. If you get the same error, you should:
+
+1. Back up the database by copying the database file or files to another location.
+
+2. Use the built-in functionality to make a backup.
+
+3. If this works, create a new database without deleting the database that contains the error or errors.
+Restore the backup that you made with the built-in backup functionality into the new database. To test it, on the File menu, click Database, click Test, and then click Maximum.
+
+If this procedure does not work, then any database changes that were made after the most recent backup will be lost. Restore the most recent backup that was made with the built-in backup functionality and test it.
+For security reasons, you should save the old database until you have used the new one for a period of time.
+
+Contact your system administrator for assistance.
+@2@1046@0@
+You have not selected a database.
+@2@1047@0@
+The file is not a database.
+@2@1048@0@
+The database cannot be opened by this version of the Microsoft Dynamics NAV Development Environment. The database has already been converted by a newer version.
+
+You must upgrade to the latest version of the Microsoft Dynamics NAV Development Environment to open the database.
+@2@1049@0@
+The database files do not belong to the same database.
+@2@1050@0@
+The database files are not compatible.
+
+The time stamps are not the same. One or more of the files has been used later than the others files. This can occur when backup has been only partially restored. Locate database files that are all stamped with the same date and time.
+@2@1051@0@
+The order of the database files is incorrect. This can happen for the following reasons:
+
+* The selected database file is not the first one in the database.
+* The order in 'database=file1+file2+file3' is incorrect.
+@2@1052@0@
+A database can have a maximum of 16 files.
+@2@1055@0@
+You cannot run this function while the database is being used by other users.
+@2@1075@0@
+It is not possible to delete a table definition (the %1.1 table) if there are records in the table.
+
+Delete all records in the table for all companies before deleting the definition.
+@2@1077@0@
+Text, Code, and Binary type codes cannot be more than %8 characters long.
+
+The %2.1 field in the %1.1 table is %7 characters long.
+@2@1078@0@
+The fields in an active key cannot exceed %8 bytes. The size of the %6 key fields in the %1.1 table is %7 bytes.
+
+You must reduce the number or length of the active fields.
+@2@1079@0@
+The %2.1 field in the %1.1 table is included twice in the same key (the key fields are %6).
+@2@1080@0@
+The %2.1 field is included twice as a SumIndexField for the same key.
+
+Table: %1.1
+SumIndexFields: %6
+@2@1081@0@
+The initialization value in the %2.1 field in the %1.1 table is too long for the field type (%2.3).
+@2@1082@0@
+The active keys in the %1.1 table are too complex, too many, or both. You can correct this by reducing the number of one of the following:
+
+* Active keys
+* Fields in the keys
+* SumIndexFields associated with the keys
+@2@1083@0@
+You must choose a company before you can use the %1.1 table.
+@2@1087@0@
+You cannot delete or change the type of the %2.1 field (in the %1.1 table) before the value in the field is reduced to 0 (zero) or '' (blank) in all records. This message occurred because a nonzero value was found for the record %6 in company %1.9.
+@2@1088@0@
+The change in the primary key definition has resulted in two records with the same primary key value.
+
+The primary key is the first key in the list of keys.
+
+Table: %1.1
+Company: %1.9
+Record: %6
+@2@1090@0@
+You cannot apply the filter to the %2.1 field because the filter and the field are of different types.
+
+Table: %1.1
+@2@1092@0@
+A value in the filter '%2.10' in the %2.1 field in the %1.1 table is too long for the field type.
+
+Type: %2.3
+@2@1093@0@
+The type of the constant must be compatible with that of the %2.1 field, and the length of the constant must not exceed the length of the field.
+
+Type: %2.3 <-- %3
+Field: %2.1 <-- %5
+Table: %1.1
+@2@1094@0@
+You must define a CalcFormula for the %2.1 FlowField in the %1.1 table.
+@2@1095@0@
+There is no %1.1 within the filter.
+
+Filters: %1.10
+@2@1097@0@
+The filter '%10' is invalid.
+
+You entered an invalid expression in the filter on the %2.1 field in the %1.1 table.
+@2@1098@0@
+The filter '%10' is invalid.
+
+A ')' is missing from the filter in the %2.1 field in the %1.1 table.
+@2@1100@0@
+The filter '%10' is invalid.
+
+A value is missing in the filter in the %2.1 field in the %1.1 table.
+@2@1101@0@
+The filter '%10' is invalid.
+
+A value or an interval is missing in the filter in the %2.1 field in the %1.1 table.
+@2@1102@0@
+The filter '%10' is invalid.
+
+The filter in the %2.1 field in the %1.1 table is too large.
+@2@1103@0@
+The filter '%10' is invalid.
+
+An apostrophe (') is missing in the filter in the %2.1 field in the %1.1 table.
+@2@1104@0@
+You must specify the property OptionString for the %2.1 field.
+
+Type: %2.3
+Table: %1.1
+@2@1107@0@
+The primary key (the first one in the key list) must be active.
+
+Table: %1.1
+@2@1108@0@
+The transaction cannot be completed because it will cause inconsistencies in the %1.1 table.
+
+Check where and how the CONSISTENT function is used in the transaction to find the reason for the error.
+
+Contact your system administrator.
+
+Tables can be marked as inconsistent during comprehensive tasks, such as posting. This prevents data from being updated incorrectly.
+@2@1109@0@
+Field numbers must be greater than zero.
+
+Table: %1.1
+
+Type a field number for each line or delete the empty lines.
+@2@1111@0@
+The server and client do not have the same program version number.
+@2@1112@0@
+Your program license does not permit more users to work simultaneously.
+
+Wait until another user has stopped using the program.
+
+Contact your system administrator if you want to allow more simultaneous users on your system.
+@2@1115@0@
+The connection to the server was interrupted because of a communication error.
+
+Start the client again.
+@2@1117@0@
+No fields have been defined in the %1.1 table.
+@2@1118@0@
+A key must contain at least one field.
+@2@1119@0@
+The field name can appear only once in a table:
+
+Field Name: %2.1
+Table: %1.1
+@2@1123@0@
+You do not have permission to read the %1.1 table.
+
+Contact your system administrator to have your permissions changed.
+@2@1126@0@
+You cannot use large databases with this program license.
+
+Contact your system administrator to expand the database.
+@2@1133@0@
+The program license is not valid for this operating system.
+
+Contact your system administrator to work with this operating system.
+@2@1134@0@
+The following C/AL functions can be used only to a limited degree during write transactions because one or more tables will be locked.
+
+Form.RunModal is not allowed in write transactions.
+
+CodeUnit.Run is allowed in write transactions only if the return value is not used. For example, 'OK := CodeUnit.Run()' is not allowed.
+
+Report.RunModal is allowed in write transactions only if 'RequestForm = FALSE'. For example, 'Report.RunModal(...,FALSE)' is allowed.
+
+DataPort.RunModal is allowed in write transactions only if 'RequestForm = FALSE'. For example, 'DataPort.RunModal(...,FALSE)' is allowed.
+
+Use the COMMIT function to save the changes before this call, or structure the code differently.
+@2@1141@0@
+You cannot modify table data in the object table. Modify the table definition instead.
+
+Table: %1.1
+@2@1143@0@
+Copying all filters at once can only be done between records that belong to the same table.
+
+Table: %91.1 <-- %1.1
+
+Copy the necessary filters individually.
+@2@1145@0@
+%1.3 '%1.1' is empty.
+@2@1146@0@
+It is not possible to change the property 'DataPerCompany' when there are records in the %1.1 table. Follow these guidelines:
+
+* Export all records in the table to a file.
+* Delete all records from the table.
+* Modify the table definition.
+* Import all records from the file.
+@2@1163@0@
+The contents of the %92.1 field cannot be copied to the %2.1 field because the size of the %2.1 field is too small.
+
+Type: %2.3 <-- %92.3
+Field: %2.1 <-- %92.1
+Table: %1.1 <-- %91.1
+@2@1168@0@
+The file is not a database file.
+@2@1172@0@
+It is not possible to make changes because the program was started with the program property 'dbreadonly' (read access only).
+
+Contact your system administrator.
+@2@1174@0@
+The sum of the values in the %2.1 field cannot be calculated because the table is filtered as 'Marked Only'.
+
+Table: %1.1
+@2@1175@0@
+The field definition for the %2.1 field in the %1.1 table, which is included as a SumIndexField, must be 'Active'.
+
+Key fields: %6
+@2@1176@0@
+The following field must be set to 'Active' in the field definition. The field is part of an active key.
+
+Field: %2.1
+Table: %1.1
+Key fields: %6
+@2@1177@0@
+A FlowField cannot be a SumIndexField.
+
+Field: %2.1
+Table: %1.1
+Key fields: %6
+@2@1178@0@
+A FlowField cannot be part of a key.
+
+Field: %2.1
+Table: %1.1
+Key fields: %6
+@2@1179@0@
+A FlowFilter cannot be a SumIndexField.
+
+Field: %2.1
+Table: %1.1
+Key fields: %6
+@2@1180@0@
+A FlowFilter cannot be part of a key.
+
+Field: %2.1
+Table: %1.1
+Key fields: %6
+@2@1214@0@
+The following message came from the server.
+@2@1215@0@
+The length of database file that is recorded in the file is different from the length that is recorded by the operating system. The database file has been changed by another program, or a device driver is not functioning properly.
+
+Create a new database file and import the newest backup. To test this file, on the File menu, click Database, click Test, and then click Maximum.
+
+Contact your system administrator.
+@2@1224@0@
+Another version of the program is already running on this computer.
+
+You cannot run multiple versions of the program simultaneously.
+@2@1226@0@
+The text '%2.5' is too long to be copied to the field:
+
+Field: %2.1
+Type: %2.3
+Table: %1.1
+@2@1232@0@
+The network is not functioning correctly. A packet was sent to the wrong address.
+
+This error indicates that the network is not completely reliable. Note how often this type of error occurs. Contact your system administrator.
+@2@1233@0@
+The network is not functioning correctly. A packet has been corrupted and returns a checksum error.
+
+This error indicates that the network is not completely reliable. Note how often this type of error occurs. Contact your system administrator.
+@2@1237@0@
+The user ID and password are invalid. Try again.
+@2@1243@0@
+Unable to copy field. The source field is not specified:
+
+Table: %91.1 <-- %1
+Field: %92.1 <-- %2
+@2@1244@0@
+The following field must be a code or text field.
+
+Field: %2.1
+Type: %2.3
+Table: %1.1
+@2@1263@0@
+The %1.1 table is read-only.
+@2@1266@0@
+In the %1.1 table, the %2.1 field must be at least 1 character long.
+@2@1267@0@
+A '=' is missing in %3.
+
+%5
+@2@1269@0@
+A ')' is missing in %3.
+
+%5
+@2@1270@0@
+There is a syntax error in %3.
+
+%5
+@2@1272@0@
+A '(' is missing in %3.
+
+%5
+@2@1273@0@
+A '.' is missing in %3.
+
+%5
+@2@1274@0@
+The sum of the values in the %2.1 field in the %1.1 table cannot be calculated. Only Decimal fields can be summed.
+@2@1275@0@
+The %2.1 FlowField in the %1.1 table is not a Boolean field. If a FlowField CalcFormula starts with 'Exist(...', then the FlowField must be a Boolean type field.
+@2@1276@0@
+The %2.1 FlowField in the %1.1 table is not an Integer field. If a FlowField CalcFormula starts with 'Count(...', then the FlowField must be an Integer type field.
+@2@1277@0@
+The %2.1 field in the %1.1 table has a CalcFormula, but the field is not a FlowField.
+@2@1279@0@
+The sum of the values in the %2.1 field in the %1.1 table cannot be calculated. Only fields with Normal field class can be summed.
+@2@1281@0@
+The following field must be included in the table's primary key.
+
+Field: %2.1
+Table: %1.1
+@2@1286@0@
+The following field is missing a field length.
+
+Field: %2.1
+Table: %1.1
+@2@1290@0@
+The type of InitValue for the following field and the field type are not the same.
+
+Field: %2.1
+Table: %1.1
+@2@1291@0@
+You entered a value that exceeds the maximum size of the %3.
+@2@1292@0@
+The following field cannot be a SumIndexField, because its type is BLOB.
+
+Field: %2.1
+Table: %1.1
+Key fields: %6
+@2@1293@0@
+The field %2.1 in the table %1.1 cannot be included in a key because its type is BLOB.
+
+Key fields: %6
+@2@1294@0@
+You cannot define secondary indexes for temporary tables.
+
+Table: %1.1
+@2@1295@0@
+You do not have permission to insert into the %1.1 table.
+
+Contact your system administrator to have your permissions changed.
+@2@1296@0@
+You do not have permission to delete from the %1.1 table.
+
+Contact your system administrator to have your permissions changed.
+@2@1297@0@
+You do not have permission to modify records in the %1.1 table.
+
+Contact your system administrator to have your permissions changed.
+@2@1298@0@
+You do not have permission to run the %1.1 table.
+
+Contact your system administrator to have your permissions changed.
+@2@1299@0@
+You do not have permission to read the '%1.1' %1.3.
+
+Contact your system administrator to have your permissions changed.
+@2@1300@0@
+You do not have permission to create the '%1.1' %1.3.
+
+Contact your system administrator to have your permissions changed.
+@2@1301@0@
+You do not have permission to delete the '%1.1' %1.3.
+
+Contact your system administrator to have your permissions changed.
+@2@1302@0@
+You do not have permission to modify the '%1.1' %1.3.
+
+Contact your system administrator to have your permissions changed.
+@2@1303@0@
+You do not have permission to run the '%1.1' %1.3.
+
+Contact your system administrator to have your permissions changed.
+@2@1304@0@
+You cannot delete or change the user ID %13, because the user has additional permissions.
+@2@1305@0@
+You cannot delete or change the login because it has additional permissions.
+@2@1306@0@
+You cannot use the function 'MODIFYALL' because the field below is included in the primary key.
+
+Field: %2.1
+Table: %1.1
+@2@1307@0@
+You cannot use the function 'MODIFY' because it changes the primary key.
+
+Record before: %6
+Record after: %96
+Table: %1.1
+@2@1308@0@
+You cannot rename a record because the new value for the following field is '%2.5',
+
+Field: %2.1
+Table: %1.1
+@2@1309@0@
+You cannot rename a record because the old value for the following field is '%2.5',
+
+Field: %2.1
+Table: %1.1
+@2@1311@0@
+'%91.1' does not exist. %91.9
+
+%91.10
+
+The %2.1 field in the %1.1 table has a table relationship to the %92.1 field in the %91.1 table.
+
+'%1.1' has the following identification fields and values:
+
+%6
+@2@1313@0@
+The database cache is too small. The cache must be at least 0.012 percent of the size of the database.
+In this case, the cache must be at least 7 percent.
+@2@1314@0@
+Your user ID has expired.
+@2@1315@0@
+The field number is invalid. A field number must be between 1 and 999999999.
+
+Field: %2.1
+Field No.: %2.2
+Table: %1.1
+@2@1317@0@
+The %1.1 table has been created in a newer version of the program and cannot be used in this program version.
+@2@1318@0@
+The field name '%2.1' in the %1.1 table contains invalid characters.
+@2@1319@0@
+The sum of the values in the %2.1 field cannot be calculated because there is a filter on the following FlowField.
+
+Field: %92.1
+Table: %1.1
+@2@1320@0@
+You cannot change this database property.
+@2@1322@0@
+Caution: The license for module %15 expires in %16 days.
+
+Contact your system administrator to continue to use this module.
+@2@1323@0@
+The license for module %15 has expired.
+
+Contact your system administrator to continue using this module.
+@2@1324@0@
+Your program license does not permit additional users to use Microsoft Windows to work simultaneously.
+
+Wait until another user has stopped using the program. Contact your system administrator to connect more simultaneous users to the system.
+@2@1325@0@
+Your program license does not permit additional users to use Microsoft Windows NT to work simultaneously.
+
+Wait until another user has stopped using the program. Contact your system administrator to connect more simultaneous users to the system.
+@2@1326@0@
+Your program license does not permit additional C/ODBC users to run simultaneously.
+
+Contact your system administrator to connect more simultaneous users to the system.
+@2@1327@0@
+Your program license does not permit additional C/FRONT users to run simultaneously.
+
+Contact your system administrator to connect more simultaneous users to the system.
+@2@1328@0@
+Your program license permits a maximum of %8 nondemonstration companies.
+Contact your system administrator to set up additional companies.
+
+You can create an unlimited number of demonstration companies.
+Their names must start with "CRONUS."
+@2@1329@0@
+Your program license permits you to work only with companies that have names that start with %10.
+@2@1330@0@
+This program license cannot be used.
+@2@1331@0@
+You cannot open another database or create a new database because the database was opened on the server with the program property database=<database name>.
+To choose another database, you must start the server again with the same program property and specify a different database name.
+@2@1332@0@
+The %1.1 table is not compiled.
+@2@1335@0@
+The permissions for the '%14' group cannot be changed.
+@2@1336@0@
+At least one user must be a member of the '%14' group.
+@2@1337@0@
+At least one user must be a member of the '%14' group in all companies.
+@2@1341@0@
+You cannot insert table data in the object table.
+@2@1342@0@
+Caution: The program license for %1.3 %1.2 expires in %16 days.
+
+Contact your system administrator to continue using %1.3 %1.2.
+@2@1343@0@
+The program license for %1.3 %1.2 has expired.
+
+Contact your system administrator to use %1.3 %1.2 again.
+@2@1344@0@
+You cannot give Run permissions to the object type Table Data.
+@2@1345@0@
+You can give Run permissions only to these types of objects:
+
+Table, Form, Report, Codeunit, System, XMLport, and Dataport.
+@2@1346@0@
+Commit Cache cannot be used with the Windows operating system.
+@2@1347@0@
+The CalcFormula for the %2.1 FlowField in the %1.1 table must start with 'Sum(...'.
+@2@1348@0@
+The type of the %2.1 FlowField in the %1.1 table must be Decimal.
+@2@1349@0@
+The FieldClass for the %2.1 field in the %1.1 table must be Normal.
+@2@1350@0@
+The type of the %2.1 field in the %1.1 table must be Decimal.
+@2@1351@0@
+The primary key in the %1.1 table can contain only one field, and its type must be Integer.
+@2@1352@0@
+Your program license does not allow you to create the %2.1 field in the %1.1 table.
+
+Contact your system administrator to update your program license.
+@2@1353@0@
+Your program license does not permit you to delete the %2.1 field in the %1.1 table.
+
+Contact your system administrator to update your program license.
+@2@1354@0@
+Your program license does not permit you to modify the %2.1 field in the %1.1 table.
+
+Contact your system administrator to update your program license.
+@2@1356@0@
+Your program license does not allow any more write transactions.
+
+Contact your system administrator to increase this limit.
+@2@1358@0@
+'%22' expected in %3.
+
+%5
+%25
+@2@1360@0@
+The minimum size by which you can expand a database is 16 KB.
+@2@1361@0@
+The destination buffer is too small.
+
+Destination buffer size: %8
+Source size: %7
+Source value: %5
+@2@1362@0@
+The database must be converted before you can use it with this version of the Microsoft Dynamics NAV Development Environment.
+
+If you convert the database, older versions cannot open it.
+
+We recommend that you:
+
+* Make a database backup before the conversion.
+* Are the only user working with the database during the conversion.
+* Have at least 50 MB of free space in the database.
+
+Choose the OK button to convert the database, or choose the Cancel button to exit.
+@2@1363@0@
+Caution: Your program license expires in %16 days.
+@2@1364@0@
+Your program license has expired.
+@2@1365@0@
+This device already contains a database partition.
+
+If you continue, then that database partition will be lost.
+
+Are you sure you want to continue?
+@2@1366@0@
+Caution: This option only applies if the server operating system supports Windows Authentication.
+If you support unified login for this database, the server relies on Windows Authentication to identify Microsoft Dynamics NAV Development Environment database users.
+If the authenticated user ID exists in the user table in the Microsoft Dynamics NAV Development Environment database, the password in the user table is ignored.
+If the user table does not contain the user ID, the user must follow the typical Microsoft Dynamics NAV Development Environment login procedure.
+@2@1367@0@
+The table is not specified.
+@2@1369@0@
+%1
+@2@1370@0@
+You cannot change the object type.
+
+Object record before: %6
+Object record after: %96
+Table: %1.1
+@2@1371@0@
+The tables are incompatible.
+
+Table 1: %1
+Table 2: %91
+@2@1372@0@
+Write operations in the database (INSERT, DELETE, and MODIFY) are not allowed for the selected transaction type.
+@2@1373@0@
+The field property must be '%5'.
+
+Property: %3
+Field: %2.1
+Table: %1.1
+@2@1374@0@
+Your program license does not permit you to run this version of the Microsoft Dynamics NAV Development Environment.
+
+Contact your system administrator to upgrade your license.
+@2@1375@0@
+Your upgrade program for the Microsoft Dynamics NAV Development Environment has expired.
+
+Contact your Microsoft Business Solutions Partner for assistance.
+@2@1376@0@
+Your license does not permit you to use the language %24.
+@2@1377@0@
+The key property must be '%5' for the primary key.
+
+Property: %3
+Table: %1.1
+@2@1378@0@
+The object name already exists.
+
+Object: %1
+@2@1379@0@
+You cannot change the transaction type after you start the transaction.
+
+A transaction starts when the program executes the first database operation, such as FIND, NEXT, INSERT, DELETE, MODIFY, SUM, and COUNT.
+
+The error occurred because you were trying to change the transaction type from %8 to %7.
+@2@1380@0@
+Your program license does not permit you to run the Microsoft Dynamics NAV Development Environment for Microsoft SQL Server.
+@2@1381@0@
+The current activity has been stopped because Windows is attempting to sleep, hibernate, or stand by.
+@2@1382@0@
+Windows login is not available on this computer.
+@2@1384@0@
+Windows login is not available on the selected server.
+@2@1385@0@
+The %3 property must be '%5'.
+
+Object: %1
+@2@1386@0@
+A ':' is missing in %3.
+
+%5
+@2@1387@0@
+The filters are too large to be copied to the type '%3'.
+
+Filters: %1.10
+@2@1388@0@
+Your program license does not permit additional Application Servers to run simultaneously.
+
+Contact your system administrator to connect additional simultaneous Application Servers to the system.
+@2@1389@0@
+A backup is already in progress. Wait for the backup to finish.
+@2@1392@0@
+A SQL Timestamp field must be of type BigInteger and it cannot be AutoIncrement
+
+Field: %2.1
+Table: %1.1
+
+Field type:%2.3
+@2@1393@0@
+A SQL Timestamp field can appear only once in a table.
+
+Field: %2.1
+Table: %1.1
+@2@1394@0@
+An AutoIncrement field can appear only once in a table.
+
+Field: %2.1
+Table: %1.1
+@2@1395@0@
+An AutoIncrement field must be of type Integer or BigInteger and it cannot be SQL Timestamp.
+
+Field: %2.1
+Table: %1.1
+
+Field type:%2.3
+@2@1396@0@
+You cannot change the value of an AutoIncrement field.
+
+Field: %2.1
+Table: %1.1
+
+Identification fields and values:
+
+%6
+@2@1397@0@
+You cannot add the AutoIncrement field property, because the field contains zero values.
+
+Field: %2.1
+Table: %1.1
+
+Identification fields and values:
+
+%6
+@2@1398@0@
+Overflow in the calculation of %7 %26 %8.
+
+@2@1401@0@
+The transaction was canceled because of a previous error.
+@2@1402@0@
+You cannot delete a session when you are not connected to a server.
+@2@1403@0@
+You cannot delete session %7 because it is not connected to the same server.
+@2@1404@0@
+You cannot delete session %7, because it is your own session.
+@2@1406@0@
+Call is obsolete. Use DBL_ConnectServerAndOpenDatabase instead.
+@2@1407@0@
+You do not have permission to read the %1.1 table.
+@2@1408@0@
+You do not have permission to insert into the %1.1 table.
+@2@1409@0@
+You do not have permission to delete from the %1.1 table.
+@2@1410@0@
+You do not have permission to modify records in the %1.1 table.
+@2@1411@0@
+A clustered key can appear only once in a table.
+
+Table: %1.1
+@2@1412@0@
+The database was successfully converted. You must now run schema synchronization to finalize the conversion. Connect Microsoft Dynamics NAV Server to the database, and then, in the 'Tools' menu, point to 'Sync. Schema For All Tables', and then choose 'With Validation'.
+@2@1413@0@
+Confirm your choice to convert the database.
+
+Click OK to convert the database, or click Cancel to exit.
+@2@1414@0@
+You can only use the FINDSET function with an ascending key order.
+
+Table: %1.1
+@2@1415@0@
+You can only assign the FINDSET function parameter UpdateKey to TRUE if the ForUpdate parameter is also TRUE.
+
+Table: %1.1
+@2@1416@0@
+You do not have permission to access the %1.3 %1.2. It does not have a signature and is not a valid application object.
+@2@1417@0@
+The database must be converted before you can use it with this version of the Microsoft Dynamics NAV Development Environment.
+
+Clear the read-only setting and open the database again.
+@2@1418@0@
+A SQLIndex defined for the primary key must contain the same fields as the key.
+
+Table: %1.1
+SQLIndex fields: %6
+
+@2@1419@0@
+The URL string is too long. The maximum length is %8 characters.
+@2@1421@0@
+The value of a %3 cannot exceed %7 bytes.
+
+Table: %1.1
+@2@1422@0@
+A %1.1 already exists with a default Role Center.
+
+Identification fields and values:
+
+%6
+@2@1423@0@
+You cannot start the Microsoft Dynamics NAV Development Environment because you do not have the VIEW SERVER STATE permission on SQL Server.
+
+Contact your system administrator.
+@2@1424@0@
+Both target and source tables must refer to the same table.
+@2@1425@0@   //The value of the (field name) field must be blank.\r\n\r\nObject: (name & ID number) 
+The value of the %2.1 field must be blank.
+
+Object: %1
+@2@1426@0@   //The object has been locked by '(user name)' and cannot be changed or deleted.\r\n\r\nObject: (name & ID number)
+The object has been locked by '%22' and cannot be changed or deleted.
+
+Object: %1
+@2@1427@0@   //The value of the (field name) field cannot be modified for a locked object.\r\n\r\nObject: (name & ID number) 
+The value of the %2.1 field cannot be modified for a locked object.
+
+Object: %1
+@2@1428@0@
+You must be a system administrator to perform this activity.
+@2@1429@0@   //You cannot rename record (Record ID/Primary key) in the (table name) table, because that would change record (Record ID/Primary Key) in the (table name) table,
+//             and your application is set up to track changes to (table name). 
+//             You can manually break links from any record in the (table name) table to (table name) (Record ID/Primary key), rename the record, and then recreate the links.
+You cannot rename record %6 in the %1.1 table because that would change record %96 in the %91.1 table, and your application is set up to track changes to %91.1. 
+You can manually break links from any record in the %91.1 table to %1.1 %6, rename the record, and then recreate the links. 
+@2@1431@0@
+There are some objects locked in the database. You must unlock these objects before upgrading the database.
+@2@1432@0@
+Note that you have %5 reports that cannot be recompiled during the database conversion.
+@2@1433@0@
+Table %1 contains one or more fields of type Binary that cannot be upgraded to the Microsoft Dynamics NAV Development Environment. 
+
+Change the layout of the table before upgrading.
+@2@1434@0@
+You cannot change the object id of a table.
+
+Object record before: %6
+Object record after: %96
+@2@1435@0@
+Failed to rename the table. 
+@2@END@0@
+@1@93@0@
+@2@50001@0@
+An ODBC error occurred, but no error information could be retrieved.
+
+Contact your system administrator.
+@2@50002@0@
+The ODBC driver environment could not be initialized.
+
+Contact your system administrator.
+@2@50003@0@
+The following ODBC error occurred:
+
+%101.151
+@2@50004@0@
+The following ODBC error occurred:
+
+State ID: %101.152
+@2@50005@0@
+The following ODBC error occurred:
+
+Error: %101.151
+State ID: %101.152
+@2@50006@0@
+The following SQL Server error or errors occurred:
+
+%103
+@2@50007@0@
+The following SQL Server error or errors occurred when accessing the %1.1 table:
+
+%103
+@2@50008@0@
+Detected a NEXT function call on a record without a matching FIND/FINDSET call.
+@2@51002@0@
+A connection to the %102.155 database on the %102.154 server has already been established.
+@2@51003@0@
+A connection to a server and database has not been established.
+@2@51004@0@
+A transaction has already started. Nested transactions are not supported.
+@2@51005@0@
+The current activity cannot be performed within a transaction.
+@2@51008@0@
+An update or delete is being attempted on one or more records outside the required transaction.
+@2@51009@0@
+The current activity can only be performed within an Update or UpdateNoLocks transaction.
+@2@51010@0@
+The current activity can only be performed within a Snapshot transaction.
+@2@51011@0@
+The current activity can only be performed within a Browse transaction.
+@2@51012@0@
+The request to lock the %1.1 table with a Wait parameter of FALSE is not supported.
+@2@51013@0@
+The current activity can only be performed within an Update or Snapshot transaction.
+@2@52001@0@
+The %102.155 database does not exist on the %102.154 server.
+@2@52002@0@
+The %102.155 database already exists on the %102.154 server.
+@2@52003@0@
+The %102.155 database on the %102.154 server cannot be opened by this version of the Microsoft Dynamics NAV Development Environment.
+
+Upgrade the database to Microsoft Dynamics NAV 2013 before opening it with this version of Microsoft Dynamics NAV Development Environment.
+@2@52004@0@
+The database compatibility level %102.161 is too low for this version of the Microsoft Dynamics NAV Development Environment. 
+
+Change the compatibility level to %102.162 before reopening the database. 
+@2@52005@0@
+The %102.154 server does not contain Microsoft Dynamics NAV Development Environment license information. This information is required before any access can be made to this server.
+
+To upload a license file to the server, you must be a member of the db_owner database role in the master database.
+
+Choose the OK button to select a license file to upload, or choose the Cancel button to exit.
+@2@52006@0@
+The %102.155 database on the %102.154 server cannot be opened by this version of the Microsoft Dynamics NAV Development Environment. The database has already been converted by a newer version.
+
+You must upgrade the Microsoft Dynamics NAV Development Environment to the latest version to open the database.
+@2@52007@0@
+The %102.155 database on the %102.154 server does not contain Microsoft Dynamics NAV Development Environment system objects and cannot be opened.
+@2@52008@0@
+The %102.154 server cannot be found. Try again later or contact your system administrator.
+@2@52009@0@
+The %102.154 server is not running a supported version of SQL Server.
+
+Before this server can be used by the Microsoft Dynamics NAV Development Environment, you must upgrade it to at least %1 version %22.
+@2@52010@0@
+The supplied net type value of %102.160 is not valid. The available net types are: %22.
+@2@52011@0@
+The SQL Server ODBC driver on your computer is not supported.
+
+To use the driver with the Microsoft Dynamics NAV Development Environment, you must upgrade the driver to version %22 or later.
+@2@52012@0@
+Your connection to the %102.154 server is no longer responding. This can be caused by one of the following reasons:
+
+* The server has been shut down manually or because of an error.
+* Your session was stopped by an administrator.
+* A network failure has occurred.
+* A hardware failure has occurred on the server or on your computer.
+
+Try again later or contact your system administrator.
+@2@52014@0@
+There is no system code page on the Microsoft Dynamics NAV Server computer that matches the %7 code page of the %22 collation for the %102.155 database.
+
+The Microsoft Dynamics NAV Server system code pages are: %1.
+
+Ensure that the regional options of the Microsoft Dynamics NAV Server computer use the correct system language and locale for the code pages to match.
+
+To avoid this error message, a system administrator can disable the 'Validate Collation' setting in the Alter Database window using the Microsoft Dynamics NAV Development Environment.
+@2@52015@0@
+There is no system code page on your computer that matches the %7 code page of the %22 collation for the %102.155 database.
+
+Your system code pages are: %1.
+
+Ensure that the regional options of the computer use the correct system language and locale for the code pages to match.
+
+To avoid this error message, a system administrator can disable the 'Validate Collation' setting in the Alter Database window using the Microsoft Dynamics NAV Development Environment.
+@2@52016@0@
+The %22 collation is not supported by the Microsoft Dynamics NAV Development Environment.
+@2@52017@0@
+The %102.155 database on the %102.154 server must be converted before you can use it with this version of the Microsoft Dynamics NAV Development Environment.
+
+If you convert the database, you will no longer be able to open it with older versions of Microsoft Dynamics NAV Development Environment.
+
+We strongly recommended that you make a database or transaction log backup in SQL Server before the conversion.
+
+Note that the conversion removes any modifications that you have made to system tables.
+ 
+Choose the OK button to convert the database, or choose the Cancel button to exit.
+@2@52018@0@
+The %102.155 database on the %102.154 server must be converted before you can use it with this version of the Microsoft Dynamics NAV Development Environment.
+
+If you convert the database, it will be converted to Unicode and the collation upgraded to the best matching Windows Collation. You will no longer be able to open it with older versions of Microsoft Dynamics NAV Development Environment.
+
+We strongly recommended that you make a database or transaction log backup in SQL Server before the conversion.
+
+Note that the conversion removes any modifications that you have made to system tables.
+
+Choose the OK button to convert the database, or choose the Cancel button to exit.
+@2@52020@0@
+The database was successfully converted. You must now run schema synchronization to finalize the conversion. Connect Microsoft Dynamics NAV Server to the database, and then, in the 'Tools' menu, point to 'Sync. Schema For All Tables', and then choose 'With Validation'.
+@2@52021@0@
+The conversion of database %102.155 requires the database option "Convert identifiers" to be enabled.
+
+Use the previous version of the Microsoft Dynamics NAV Development Environment to enable this option and perform the conversion again.
+@2@52022@0@
+You cannot remove any of the following characters from identifiers: [%22].
+@2@52023@0@
+You have chosen to convert identifiers as part of the database alteration.
+
+Click OK to continue altering the database, or click Cancel to exit.
+@2@52024@0@
+You cannot change the 'Maintain views', 'Maintain relationships', or 'Maintain defaults' settings when converting identifiers.
+@2@52025@0@
+The identifier [%1] contains one of the following invalid characters: [%22].
+@2@52026@0@
+You cannot alter the database collation when changing integration settings.
+@2@52027@0@
+You have chosen to change the database collation settings as part of the database alteration.
+
+Click OK to continue altering the database, or click Cancel to exit.
+@2@52028@0@
+You must ensure that you are the only user who is accessing the %102.155 database and select the 'Single user' setting to perform the chosen database alterations.
+@2@52029@0@
+The database alteration was successfully completed.
+
+You must now close the database and reopen it for the settings to take effect. Disable the 'Single user' setting to allow other users to use the database.
+@2@52030@0@
+The '%1' object/column name in the %102.155 database contains one of the following characters:
+
+[%22]
+
+These characters cannot be converted correctly when changing to the new collation.
+
+You must either choose a different collation that can represent the character or characters in this object or rename the object.
+@2@52031@0@
+%1
+@2@52032@0@
+%1
+@2@52034@0@
+The %102.154 server has not been initialized with a license by the Microsoft Dynamics NAV Development Environment.
+@2@52035@0@
+The %102.155 database on the %102.154 server must be converted by the Microsoft Dynamics NAV Development Environment before you can use it with the Microsoft Dynamics NAV Server.
+@2@52036@0@
+Before you can convert this database, you must use an older version of Microsoft Dynamics NAV Development Environment to disable the database Integration settings for 'Maintain views', 'Maintain relationships', and 'Maintain defaults'. To access these settings, on the File menu, click Database, and then click Alter.
+@2@52037@0@
+You have chosen to change the database collation settings as part of the database alteration.
+
+You can only change the collation if the 'Validate Collation' setting was already checked before altering the database.
+@2@52040@0@
+The current activity has been stopped because Windows is attempting to sleep, hibernate, or stand by.
+@2@52041@0@
+There is no system code page on your computer that matches the %7 code page of the %22 collation for the %102.155 database.
+
+Your system code pages are: %1.
+
+Ensure that the Regional Options of the computer use the correct system language and locale for the code pages to match.
+
+You can also disable the 'Validate Collation' setting for this database. It is possible that certain text data will not be converted correctly when stored in the database.
+
+Click OK to disable the 'Validate Collation' setting and continue to use the database, or click Cancel to exit.
+@2@52042@0@
+You have chosen not to validate the database collation as part of the database alteration.
+
+The database can then be used by computers with a code page that does not match the collation. It is possible that certain text data will not be converted correctly when stored in the database, if used by such computers.
+
+Click OK to continue altering the database, or click Cancel to exit.
+@2@52043@0@  // The (database name) database on the (server name) server requires a Per Database license to be opened on SQL Azure.
+The %102.155 database on the %102.154 server requires a Per Database license to be opened on %22.
+@2@52044@0@  // The (database name) database on the (server name) server must be converted before you can use it with this version of (NAV Development Environment).
+The %102.155 database on the %102.154 server must be converted before you can use it with this version of the Microsoft Dynamics NAV Development Environment.
+
+You cannot convert the database because there are open connections. Stop all instances of Dynamics NAV Server that are connected to the database and disconnect all instances of the development environment except this one.
+@2@52045@0@  // You cannot create a database on the (server name) SQL Azure server.
+You cannot create a database on the %102.154 %22 server.
+@2@52046@0@
+The "Single user" option cannot be set for the %102.155 database on the %102.154 server.
+
+Make sure that there are no other SQL Server sessions using the database.
+@2@52047@0@
+The %102.155 database on the %102.154 server must be converted before you can use it with this version of the Microsoft Dynamics NAV Development Environment.
+
+The database conversion cannot continue because there are other SQL Server sessions using the database.
+
+Close all other sessions and then try again.
+@2@52048@0@
+You have %1 reports that were compiled before the database conversion but that cannot be compiled now.
+@2@53003@0@
+You do not have the required SQL Server permissions to perform the current security activity.
+@2@53011@0@
+The %102.155 database on the %102.154 server must be converted before you can use it with this version of the Microsoft Dynamics NAV Development Environment.
+
+You must be a member of the db_owner database group in this database to convert it.
+@2@53015@0@
+The login failed when connecting to SQL Server %102.154.
+@2@54001@0@
+The %2.1 field on the %1.1 table does not exist in the SQL Server table or view.
+@2@54002@0@
+The %1.1 table primary key exceeds the maximum of %22 columns in a SQL Server index.
+
+Key fields: %6
+@2@54003@0@
+Table %1.2 has no name.
+@2@54004@0@
+The %1.1 table does not exist as the required object name of %1.157 in this database.
+@2@54005@0@
+The %1.1 table is a SQL Server temporary table. You cannot rename it or any of its fields.
+@2@54006@0@
+The %1.1 table is a SQL Server temporary table. The Microsoft Dynamics NAV Development Environment does not support SQL Server temporary tables.
+@2@54007@0@
+The %1.1 table has no primary key constraint in the SQL Server table description.
+@2@54008@0@
+The %1.1 table has no ROWVERSION column in the SQL Server table description.
+@2@54010@0@
+The %1.1 table has multiple ROWVERSION columns in the SQL Server view description. Views can only have one ROWVERSION column.
+@2@54012@0@
+The %1.1 table name conflicts with an existing SQL Server object %1.157.
+@2@54013@0@
+The %1.1 table name conflicts with an existing SQL Server object %1.157.
+
+You must choose another table name or set the LinkedObject table property to Yes to link to this object.
+@2@54014@0@
+The %1.1 table references the SQL Server object %1.157. You cannot redesign linked objects.
+@2@54016@0@
+The %1.1 table references a SQL Server object. You cannot redesign linked objects.
+@2@54017@0@
+The %1.1 table references the SQL Server object %1.157. You cannot link to the object when SumIndexFields have been defined.
+@2@54018@0@
+The %1.1 table references the SQL Server object %1.157. You cannot link to a SQL Server temporary table object.
+@2@54019@0@
+The SQL Server object %1.157 that is referenced by table %1.1 does not exist.
+@2@54020@0@
+The %1.1 table references the SQL Server object %1.157, which is a system table or a view. You cannot change the LinkedObject table property to No for these object types.
+@2@54021@0@
+The %1.1 table has no ROWVERSION column in the SQL Server view description. A ROWVERSION column is required when BLOB fields have been defined.
+@2@54022@0@
+The %1.1 table contains a BLOB field with invalid compression data:
+
+Record: %6
+Field: %2.1
+@2@54023@0@
+The Microsoft Dynamics NAV Development Environment TableRelation properties and SQL Server foreign keys have not been successfully synchronized.
+
+The %1.1 table references a table in the TableRelation field property of the %2.1 field that does not exist.
+@2@54024@0@
+The %1.1 table SumIndexField key exceeds the maximum of %22 allowable columns.
+
+Key fields: %6
+@2@54025@0@
+Your activity was deadlocked with another user who was modifying the %1.1 table.
+
+Start again.
+@2@54026@0@
+The %1.1 table cannot be changed because it is locked by another user. This can be caused by one of the following tasks:
+
+* Objects are being compiled.
+* Table schema is synchronizing.
+* Objects are being imported.
+
+Wait until the user is finished and then try again.
+@2@56001@0@
+The %1.1 table contains a field that has a SQL Server data type that cannot be edited by the Microsoft Dynamics NAV Development Environment using the current activity:
+
+Field: %2.1
+SQL Type: %104.159
+@2@56003@0@
+The %1.1 table contains a field with a SQL Server value that is outside the allowable Microsoft Dynamics NAV Development Environment range:
+
+Field: %2.1
+Type: %2.3
+@2@56004@0@
+The %1.1 table contains a field with a date value that cannot be used with SQL Server:
+
+Record: %6
+Field: %2
+@2@56005@0@
+The %1.1 table contains a Microsoft Dynamics NAV Development Environment field data type that is not compatible with the SQL Server data type:
+
+Field: %2.1
+Type: %2.3
+SQL type: %104.159
+@2@56006@0@
+The %1.1 table contains a value in an integer Code field that cannot be used with SQL Server:
+
+Record: %6
+Field: %2
+@2@56007@0@
+The %1.1 table contains a value in a Code field that cannot be used with the Microsoft Dynamics NAV Development Environment:
+
+Field: %2.1
+Value: %22
+@2@56008@0@
+The %1.1 table contains a value in an integer Code field that cannot be used with the Microsoft Dynamics NAV Development Environment:
+
+Field: %2.1
+Value: %22
+@2@56009@0@
+The supplied value cannot be used with an integer Code field:
+
+Table: %1.1
+Field: %2.1
+Value: %22
+@2@56010@0@
+The %1.1 table contains a field value that cannot be converted:
+
+Record: %6
+Field: %2.1
+@2@56011@0@  //The (table name) table contains a field with a Code, Text, or WideText value that is too large for the SQL Server data type:\r\n\r\n
+//             Record: (record ID)\r\nField: (field name)\r\nSQL type: (data type) 
+The %1.1 table contains a field with a Code, Text, or WideText value that is too large for the SQL Server data type:
+Record: %6
+Field: %2
+SQL type: %104.159
+@2@56012@0@
+The %1.1 table contains an Integer, Option, or Boolean field that uses a DECIMAL or FLOAT SQL Server data type. An invalid value has been found in this field:
+
+Field: %2.1
+SQL type: %104.159
+Value: %22
+@2@56014@0@
+The %1.1 table contains a Time field that uses invalid data for the date component of the DATETIME value:
+
+Field: %2.1
+Value: %22
+@2@56015@0@
+The %1.1 table contains a Date field that uses invalid data for the time component of the DATETIME value:
+
+Field: %2.1
+Value: %22
+@2@56016@0@
+The %1.1 table contains a Boolean field that does not use a BIT SQL Server data type. A value other than 0 or 1 has been found in this field:
+
+Field: %2.1
+SQL type: %104.159
+Value: %22
+@2@56017@0@
+The %1.1 table has inconsistent SumIndexField values:
+
+Key fields: %6
+SumIndexField table: %22
+
+Contact your system administrator.
+@2@56018@0@
+The %1.1 table contains a field with an AutoIncrement value that does not match the SQL Server IDENTITY status:
+
+Field: %2.1
+@2@56019@0@
+The %1.1 table contains a field with a Variant SQL data type that can only be converted to a Varchar SQL data type:
+
+Field: %2.1
+@2@END@0@
+@1@30@0@
+@2@1@0@
+%1.1-ID (%1.3) is being used by the %1.2 named '%1.4'.
+@2@2@0@
+%1.1-Name ('%1.4') is being used by the %1.2 with ID %1.3.
+@2@4@0@
+Property '%3' does not apply to a(n) %1.2.
+@2@5@0@
+A(n) %1.2 cannot be activated.
+@2@6@0@
+A(n) %1.2 cannot be updated (only data controls can be updated).
+@2@7@0@
+Property '%3' may not be changed on a(n) %1.2 while it is open!
+(%3 was called for the %1.2 named '%1.4'.)
+@2@8@0@
+The property '%3' is not dynamic on a %1.2.
+(%3 was called for the %1.2 named '%1.4'.)
+@2@9@0@
+The ID of a(n) %1.2 must be non-zero.
+@2@10@0@
+The %1.2 named '%1.4' specified a non-existent ID (%5) as a parent.
+@2@11@0@
+The %1.2 named '%1.4' cannot contain the %2.2 named '%2.4'.
+@2@12@0@
+You tried to insert the control named '%2.4' as a heading in the table or matrix box named '%1.4', and no corresponding column was found.
+@2@13@0@
+You tried to insert the control named '%2.4' as a matrix heading in the matrix box named '%1.4', and the matrix part is empty.
+@2@14@0@
+Invalid page number (%5) for the tab control named '%1.4'.
+(%3 was set to %4 on the %2.2 '%2.4').
+@2@15@0@
+You cannot insert the control named '%2.4' in the matrix part of the matrix box named '%1.4' because the control named '%6.4' is already placed there.
+@2@16@0@
+You cannot insert the control named '%2.4' as the matrix heading of the matrix box named '%1.4' because the control named '%6.4' is the heading.
+@2@17@0@
+You cannot insert the control named '%2.4' as a heading of the table box named '%1.4' because the control named '%6.4' is already that heading.
+@2@18@0@
+'%8' is not a Device-Independent Bitmap file.
+@2@19@0@
+This is an invalid Device-Independent Bitmap file.
+@2@20@0@
+'%8' is not an icon file.
+@2@21@0@
+'%8' is an invalid icon file.
+@2@22@0@
+The property '%3' is obligatory for a(n) %1.2.
+You tried to delete '%3' of the %1.2 named '%1.4'.
+@2@23@0@
+You cannot insert the control named '%2.4' as a matrix part of '%1.4' because '%1.4' is not a matrix box.
+@2@24@0@
+You cannot insert the control named '%2.4' as a heading of the list, table or matrix box '%1.4' because it has been specified that '%1.4' should not have a heading.
+@2@25@0@
+The Dynamic Property '%3' cannot be changed in this context.
+
+You tried to change '%3' to %4 on the %1.2 named '%1.4'.
+@2@26@0@
+The property '%3' may not be set to %4 on the %1.2 named '%1.4'.
+@2@28@0@
+Bitmap number %5 is not included in the program.
+
+The program includes bitmaps that are numbered from 1 - 53.
+@2@29@0@
+The last editing action (often 'paste') was ignored because it would have caused the maximum number of characters (%5) for the text box %1.4 to be exceeded.
+@2@30@0@
+'%1.5' cannot be closed, because it is locked by '%2.5'.
+
+Please finish '%2.5' before closing.
+@2@31@0@
+The property '%3' on the %1.2 named '%1.4' is out-of-range (interval maximum %4).
+@2@32@0@
+The %3 cannot be %8.
+
+The permitted values are: 'infinite', 'default', or integers from 0 to %5.
+@2@33@0@
+You resized the glued column %1.5, which then expanded automatically to fill otherwise empty space.
+@2@34@0@
+The %3 cannot be %8.
+
+Enter a valid key combination such as Ctrl+F5.
+@2@35@0@
+You cannot use %4 as the ID because it is already used by a menu item.
+@2@36@0@
+%3 cannot contain %8.
+
+The maximum size of %3 (including file name and path) is 32 K (32756 bytes).
+@2@37@0@
+%3 cannot contain %8.
+
+The maximum size of the entire list of bitmaps in %3 (including file names and paths) is 32 K (32756 bytes).
+@2@38@0@
+'%1.5' cannot close because the system is currently working.
+@2@39@0@
+%3 of the %1.2 named '%1.4' cannot be %4 since it would cause a cyclic parent chain - the %1.2 named '%1.4' as 'parent' of the %2.2 named '%2.4'
+@2@43@0@
+You cannot manually change or delete %3 of the %1.2 named '%1.4'.
+
+If you want to change the container, drag '%1.4' with the mouse instead.
+@2@44@0@
+You cannot change or delete %3 of the %2.2 named '%2.4', because it is within the %1.2 named '%1.4'.
+@2@45@0@
+You cannot have more than one active session of the Microsoft Dynamics NAV Development Environment in 16-bit Windows. 
+@2@47@0@
+C/SIDE hyperlinking failed.
+
+You tried to hyperlink to this target:
+%8
+
+Do you want to place that hyperlink target on the clipboard?
+@2@49@0@
+C/SIDE was unable to load a Windows resource.
+
+Windows resources may be low.
+Please close some windows and retry.
+@2@50@0@
+The %3 cannot be %4.
+
+The permitted values are integers from 220 to %5.
+@2@52@0@
+The path is too long. The length of a path cannot exceed %5 bytes.
+@2@53@0@
+You cannot activate a subform without its active main form.
+@2@54@0@
+You cannot activate a subform without its active main form.
+Main form ID=%1.
+@2@55@0@
+The number of records in the table exceeds the maximum number of %1.
+
+Either set a filter to decrease the number of records in the table or click Tools, 
+Options and then increase the maximum number of records to export.
+
+Exporting many records at one time may decrease system performance.
+@2@56@0@
+Fatal internal error.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  UA    ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÙ The Connection between the Database and Forms                 ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@60@0@
+@2@1@0@
+The form does not recognize the control %6.
+@2@2@0@
+%1 cannot be inserted in this form.
+@2@3@0@
+%1 cannot be modified in this form.
+@2@4@0@
+%1 cannot be deleted in this form.
+@2@5@0@
+Drop-down cannot be used here because there are no choices.
+@2@6@0@
+CurrForm.UPDATE cannot be called from here.
+@2@7@0@
+Timer Triggers are not available.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  UA_Control  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ Controls used in the Connection between                 ³
+// ³                  the Database and Forms                                  ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@61@0@
+@2@1@0@
+'%3' is not a valid value.
+@2@2@0@
+The control %9(%6) has an invalid data type %7. The valid data types are: %8.
+@2@3@0@
+'%3' is not a valid value. The following values can be used: %5.
+@2@4@0@
+The field cannot be empty. Please enter a value.
+@2@5@0@
+The field contains an invalid character (%1). The following characters can be used: %4.
+@2@6@0@
+You should enter a number in this field.
+@2@7@0@
+You cannot specify a closing date here.
+@2@10@0@
+Please specify a decimal or a calculation expression.
+@2@11@0@
+The field can have a maximum of %5 decimal places.
+@2@13@0@
+The control %9(%6) cannot be edited, because the underlying database field cannot be edited.
+@2@14@0@
+'CharAllowed' must be pairs of characters. The first character in the pair must be equal to or less than the second.
+@2@15@0@
+The password contains an invalid character.
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´ ADSI ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Active Directory Services Interface                                     ³
+// ³                                                                          ³
+// ³  ID values:    1- 199   General errors                                   ³
+// ³              200- 249   AD Schema errors                                 ³
+// ³              250- 269   Service Connection Point errors                  ³
+// ³                                                                          ³
+// ³             1xxx        Information (success) message corresponding to   ³
+// ³                                               the xxx error message      ³
+// ³                                                                          ³
+// ³  Symbol   Substitution   Explanation/Examples                            ³
+// ³  ------   ------------   --------------------                            ³
+// ³                                                                          ³
+// ³    %1     Text           Error text retrieved from ADSI                  ³
+// ³                                                                          ³
+// ³    %2     Text           Error context                                   ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@142@0@
+@2@1@0@
+Active Directory Service could not be initialized.
+@2@2@0@
+A call to the Active Directory Service Interface failed.
+
+The following error was returned:
+%1
+Contact your system administrator.
+@2@3@0@
+The system failed to retrieve the object %2 from Active Directory.
+
+The system returned the following error:
+%1
+Contact your system administrator or your vendor for support.
+@2@4@0@
+The system failed to retrieve the global catalog from Active Directory.
+This can be caused by network problems, or it can be caused by a lack of Active Directory functionality on your machine or the network.
+
+The system returned the following error:
+%1
+
+Active Directory functionality is not available.
+Contact your system administrator or your vendor for support.
+@2@5@0@
+The system failed to retrieve the global catalog from Active Directory.
+This can be caused by network problems, or it can be caused by a lack of Active Directory functionality on your machine or the network.
+
+Active Directory functionality is not available.
+Contact your system administrator or your vendor for support.
+@2@250@0@
+The system failed to publish or update the Database Server for Microsoft Dynamics NAV Classic Service Connection Point in Active Directory.
+
+The system returned the following error:
+%1
+Contact your system administrator or your vendor for support.
+@2@251@0@
+The system failed to write the Database Server for Microsoft Dynamics NAV Classic Service Connection Point GUID to the registry.
+The server cannot update the Service Connection Point.
+@2@252@0@
+The system failed to publish the Database Server for Microsoft Dynamics NAV Classic Service Connection Point in Active Directory.
+
+For Database Server for Microsoft Dynamics NAV Classic to publish a Service Connection Point, the Active Directory Schema on the network domain controller must be extended. Contact your network administrator for information.
+
+Use the SchemaXt Tool that is located on the installation media to add this support to Active Directory.
+
+Note: Database Server for Microsoft Dynamics NAV Classic can function without a Service Connection Point. However, clients cannot list servers on the network.
+@2@253@0@
+The system failed to update the Database Server for Microsoft Dynamics NAV Classic Service Connection Point in Active Directory.
+The registry entry does not exist.
+@2@254@0@
+The system failed to publish the Database Server for Microsoft Dynamics NAV Classic Service Connection Point in Active Directory.
+The operating system does not support service publication. The minimum supported operating system is Microsoft Windows 2000.
+This does not affect Database Server for Microsoft Dynamics NAV Classic performance. However, clients cannot browse for this server.
+@2@260@0@
+The system failed to remove the Database Server for Microsoft Dynamics NAV Classic Service Connection Point from Active Directory.
+
+The system returned the following error:
+%1
+Contact your system administrator or your vendor for support.
+@2@261@0@
+The system failed to remove the Database Server for Microsoft Dynamics NAV Classic Service Connection Point from Active Directory.
+The registry entry does not exist.
+@2@1250@0@
+The system published the Database Server for Microsoft Dynamics NAV Classic Service Connection Point in Active Directory.
+@2@1260@0@
+The system removed the Database Server for Microsoft Dynamics NAV Classic Service Connection Point from Active Directory.
+@2@END@0@
+//   ÚÄÄÄÄÄ¿
+// ÚÄ´ OIO ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÙ                                                                  ³
+// ³                                                                          ³
+// ³  Module_OIO                                                              ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@27@0@
+@2@2@0@
+The disk on which you have chosen to place your backup is too small to contain the identification block. Please choose a medium that has more space.
+@2@3@0@
+There is no more space on the disk. Please use a disk with a greater capacity.
+@2@4@0@
+The backup has been corrupted (incorrect checksum).
+@2@6@0@
+The backup has been corrupted (unexpected type of data).
+@2@8@0@
+The backup/restore process has been interrupted.
+@2@16@0@
+The backup is not a Microsoft Dynamics NAV Development Environment backup.
+@2@17@0@
+The backup and the program have different program version numbers.
+@2@18@0@
+The file format of "%1" is not supported by this version of the Microsoft Dynamics NAV Development Environment.
+@2@20@0@
+The backup is not a Microsoft Dynamics NAV Development Environment backup.
+@2@21@0@
+This .fob file is an old version which does not work with the Microsoft Dynamics NAV Development Environment. Use the Microsoft Dynamics NAV 2013 Development Environment to import it into a Microsoft Dynamics NAV 2013 database and then export the upgraded application objects to a new .fob file.
+@2@100@0@
+Restoration of the backup was interrupted because the company '%10' is already in the database.
+@2@101@0@
+The system for making backups cannot find the file %1. Please check that you are using the correct disk.
+@2@102@0@
+The disk on which you have chosen to place your backup is too small to contain the entire title of the backup. Please choose a medium that has more space.
+@2@103@0@
+Restore has been terminated because data common to all companies exists in the database.
+@2@200@0@
+One or more of the objects you are trying to import does not have a signature
+and is therefore not a valid application object. Importing will be cancelled.
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´  IE  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Binary Object Import/Export                                             ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@169@0@
+@2@1@0@
+Create is only allowed for new objects.
+@2@2@0@
+Overwrite is not allowed for new objects.
+@2@3@0@
+Only tables can be merged.
+@2@4@0@
+Delete is only allowed for empty objects.
+@2@5@0@
+Empty objects can only be used to delete other objects.
+
+Select either Skip or Delete.
+@2@101@0@
+All objects have been examined, and no conflicts were found.
+
+Choose Yes to import all objects, No to open the Import Worksheet, or Cancel to stop the import.
+@2@102@0@
+The objects in %1 could not be imported because the worksheet settings in the import file cannot be applied to the objects in your database and/or the objects you are trying to import.
+
+Choose OK to open the Import Worksheet, or Cancel to stop the import.
+@2@103@0@
+The objects in %1 could not be imported because there are objects already in the database with conflicting versions.
+
+Choose OK to open the Import Worksheet, or Cancel to stop the import.
+@2@400@0@
+The '%1' backup was successfully completed.
+@2@401@0@
+The '%1' backup was successfully restored.
+@2@404@0@
+The '%1' backup was successfully restored.
+
+User information was unable to be retrieved (Windows Error Code '%2'). A Windows login should be manually added to activate the security system.
+@2@600@0@
+There is not enough space on the disk to contain the identification block. Please choose a medium that has more space.
+@2@602@0@
+The file has been corrupted (incorrect checksum).
+@2@603@0@
+The file has been corrupted (unexpected type of data).
+@2@604@0@
+The job has been interrupted.
+@2@605@0@
+The file is not a Microsoft Dynamics NAV Development Environment object file.
+@2@606@0@
+The object file and the program have different program version numbers.
+@2@607@0@
+The object file cannot be used with this version of the program.
+@2@608@0@
+The file is not a Microsoft Dynamics NAV Development Environment object file.
+@2@609@0@
+Cannot find the file %1. Please check that you are using the correct disk.
+@2@610@0@
+There is not enough space on the disk to contain the entire title of the object file. Please choose a medium that has more space.
+@2@700@0@
+Cannot import objects to the database. The following conflicts were found:
+
+%1
+@2@END@0@
+
+
+//   ÚÄÄÄÄ¿
+// ÚÄ´ WZ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÙ                                                                   ³
+// ³  Wizards                                                                 ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@111@0@
+@2@1@0@
+You must specify a table in order to use a wizard.
+@2@2@0@
+The Table ID %1 does not exist. 
+@2@END@0@
+
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´  DM  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Data Manager                                                            ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@110@0@
+@2@1@0@
+There are too many FlowFields in the window. A window can display a maximum of %1 FlowFields.
+
+Remove some of the fields from the form.
+@2@4@0@
+The record already exists.
+@2@6@0@
+In a demonstration company, you can only enter dates in the months of November, December, January, and February. This is determined by the filter '%1', which is defined by the license file.
+@2@7@0@
+%1 must be filled in. Please enter a value.
+@2@8@0@
+You cannot insert a record from another table.
+@2@9@0@
+You cannot paste into this table.
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´  AO  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Application Object                                                      ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@70@0@
+@2@001@0@
+The object type '%6' is not supported.
+@2@021@0@
+There is a syntax error in the import on line %3 in position %2 : %1.
+
+A '{' (ListBegin) is expected here.
+@2@022@0@
+There is a syntax error in the import on line %3 in position %2 : %1.
+
+A '}' (ListEnd) is expected here.
+@2@023@0@
+There is a syntax error in the import on line %3 in position %2 : %1.
+
+A '=' (EqualSign) is expected here.
+@2@024@0@
+There is a syntax error in the import on line %3 in position %2 : %1.
+
+A '{' (ElemBegin) is expected here.
+@2@025@0@
+There is a syntax error in the import on line %3 in position %2 : %1.
+
+A '}' (ElemEnd) is expected here.
+@2@026@0@
+There is a syntax error in the import on line %3 in position %2 : %1.
+
+The file should not end here.
+@2@027@0@
+There is a syntax error in the import on line %3 in position %2 : %1.
+
+The AL code is not indented as much as the first line.
+@2@028@0@
+There is a syntax error in the import on line %3, in position %2 : %1. 
+
+A new object should start here.
+@2@029@0@   //There is a syntax error in the import on line (line number) in position (position number) : (error stiring).\r\n\r\n
+//            The ControlAddIn component has to be installed to import its event triggers.
+There is a syntax error in the import on line %3 in position %2 : %1. 
+
+The ControlAddIn component has to be installed to import its event triggers.
+
+@2@030@0@
+There is an error in the import on line %3, in position %2 : %1. 
+
+Word Layout is too large.
+
+@2@031@0@
+You must specify an object ID.
+@2@032@0@
+You must specify an object name.
+@2@033@0@
+BREAK is a C/AL keyword and cannot be used as a variable name. You must specify a different name for the variable.
+@2@041@0@
+There is a syntax error in a 'Translation Import'. There must not be any blank lines.
+@2@042@0@
+There is a syntax error in a 'Translation Import'. There must be a minus in the string.
+
+%5
+@2@043@0@
+There is a syntax error in a 'Translation Import'. There must be a colon in the string.
+
+%5
+@2@045@0@
+There is a syntax error in a 'Translation Import'. The text is too long.
+
+%5
+@2@051@0@
+'%7' is not a valid Language Module file.
+@2@052@0@
+The Language Module file '%7' is an incompatible version.
+@2@053@0@
+There is a checksum error in the Language Module file '%7'.
+@2@400@0@
+The export format is not supported: %1. Supported formats are 0: txt and 1: xml.
+@2@401@0@
+The record that is passed to EXPORTOBJECTS must be an object table record.
+@2@420@0@
+The import format is not supported: %1. Supported formats are 0: txt and 1: xml.
+@2@421@0@
+The import stopped at line %1 with the error message:
+
+%2
+@2@423@0@
+The import stopped at line %1 (unknown error).
+@2@500@0@
+The output file is not open.
+@2@800@0@
+The XML document %7 could not be loaded.
+@2@801@0@
+MSXML could not be loaded
+@2@802@0@
+Unexpected element %1. The expected element is %2.
+@2@803@0@
+The XML document %7 could not be saved.
+@2@900@0@
+You cannot lock %1 because it is currently locked by '%22'.
+@2@902@0@
+You cannot lock %1 because it is already locked by you.
+@2@903@0@
+You cannot unlock %1 because it is not locked.
+@2@904@0@
+You cannot unlock %1 because it is currently locked by '%22'.  
+
+To unlock an object that is locked by another user, contact your system administrator.
+@2@905@0@
+You cannot save the object because it is read-only.
+@2@906@0@
+You cannot save the object of this ID.
+@2@907@0@
+The Form object type is not supported.
+@2@908@0@
+The Dataport object type is not supported.
+@2@909@0@
+Running AL code is not supported in this context.
+@2@910@0@
+The object '%1' must be saved in compiled form before it can be run.
+@2@915@0@
+The FOB file contains table objects.\
+\
+Some changes in the table objects may require data upgrade instructions. In this case, if this FOB file contains the upgrade toolkit objects, such as upgrade codeunits and upgrade tables, then you can choose to synchronize schema now. If the upgrade toolkit objects are included in a separate FOB file, then you can choose to synchronize schema later, after you have imported that FOB file.\
+\
+We recommend that you make a backup of all of your application objects by exporting all your current objects in the FOB format before you proceed.\
+\
+Select the option for synchronizing the schema changes after the table objects are imported into the application.
+@2@END@0@
+//   ÚÄÄÄÄ¿
+// ÚÄ´COMCÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÙ                                                                                          ³
+// ³  COMponent Controller                                                                           ³
+// ³                                                                                                 ³
+// ³  This section provides a short explanation of the %x symbols used below.                        ³
+// ³                                                                                                 ³
+// ³  Symbol   Substitution   Explanation/Examples                                                   ³
+// ³  ------   ------------   --------------------                                                   ³
+// ³                                                                                                 ³
+// ³  %1.1     Name.                                                                                 ³
+// ³  %1.2     GUID.          This is a Global Unique ID.                                            ³
+// ³                          Example:{FCCE8CE5-CC0E-11CE-9EA2-08005A4478D8}                         ³
+// ³   2       Filename                                                                              ³
+// ³   3       Symbolname     The name of a method or a property.                                    ³
+// ³                          Examples: CTERM, PV or Caption                                         ³
+// ³   4       Number         A numeric value (integer).                                             ³
+// ³   5       MaxArgs        A numeric value. The maximum number of allowed                         ³
+// ³                          arguments when calling methods or properties in                        ³
+// ³                          an OLE control or Automation server.                                   ³
+// ³   6       CLSID          This is a Class ID path.                                               ³
+// ³                          Example: HKEY_CLASSES_ROOT\CLSID\{FCCE8CE5-CC0E-11CE-9EA2-08005A4478D8}³
+// ³   7       Text           A text string.                                                         ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+@1@35@0@
+@2@1@0@
+OLE could not be initialized.
+
+Check that the OLE system dlls are correctly installed.
+@2@2@0@
+A subtype (a GUID) for the OCX or Automation variable has not been specified.
+
+Specify a GUID by filling out the Subtype field in the C/AL Locals or C/AL Globals window.
+@2@4@0@
+Could not load the type library for the OLE control or Automation server referred to as %1.1.
+%1.2
+
+The type library may have been deleted or moved to another location.
+Try to reregister the OLE control or Automation Server.
+@2@7@0@
+Invalid format of GUID string. The correct format of the GUID string is
+
+{CDEF7890-ABCD-0123-1234-567890ABCDEF}
+
+where 0-9, A-F symbolizes hexadecimal digits.
+@2@8@0@
+The program cannot get type information from the type library.
+
+The type library may be corrupted or have an invalid format.
+Try to reregister the OLE control or Automation Server.
+@2@10@0@
+The program could not read information about properties from the type library.
+
+Try to reregister the OLE control or Automation server.
+@2@12@0@
+The program could not get a description of properties from the type library.
+
+Try to reregister the OLE control or Automation server.
+@2@13@0@
+The program could not get a description of methods from the type library.
+
+Try to reregister the OLE control or Automation server.
+@2@14@0@
+The program could not get a syntax description from the type library.
+
+Try to reregister the OLE control or Automation server.
+@2@16@0@
+During compilation it was not possible to get information from the type library
+about the symbol %3.
+
+The type library may have been corrupted. Try to reregister the OLE control
+or Automation server.
+@2@17@0@
+The type library does not define a method or property called %3.
+
+Use the Symbol Menu to browse the methods and properties defined by the
+OLE control or Automation server.
+@2@18@0@
+This message is for C/AL programmers:
+
+The maximum number of parameters has been exceeded. %3 requires %4
+parameters. C/SIDE supports a maximum of %5 parameters.
+@2@19@0@
+No method or property called %3 is defined by the OLE control or Automation server.
+
+Use the Symbol Menu to browse the methods and properties defined
+by the OLE control or Automation server.
+@2@20@0@
+This message is for C/AL programmers:
+
+This data type is not supported by C/SIDE. You can access data from
+any of the following data types:
+VT_VOID, VT_I2, VT_I4, VT_R4, VT_R8, VT_CY, VT_DATE, VT_BSTR and VT_BOOL
+@2@21@0@
+This message is for C/AL programmers:
+
+The OLE control or Automation server provided an unknown data type.
+@2@26@0@
+This message is for C/AL programmers:
+
+Could not get IDs of names from the OLE control or Automation server.
+@2@27@0@
+This message is for C/AL programmers:
+
+Could not get the value of the %3 property.
+@2@28@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+The number of elements provided is different from the number of arguments
+accepted by the method or property.
+@2@30@0@
+This message is for C/AL programmers:
+
+Could not create an instance of the OLE control or Automation server identified by
+GUID=%3.
+Check that the OLE control or Automation server is correctly installed and registered.
+@2@34@0@
+Could not open the key HKEY_CLASSES_ROOT\%6
+in the registry.
+@2@35@0@
+This message is for C/AL programmers:
+
+The return value from the OLE control or Automation server (data type float)
+has an invalid format.
+The OLE control or Automation server cannot handle the given input parameters. Most
+likely, a division by zero or an overflow occurred and caused an invalid return value.
+@2@36@0@
+This message is for C/AL programmers:
+
+The return value from the OLE control or Automation server (data type double)
+has an invalid format.
+The OLE control or Automation server cannot handle the given input parameters. Most
+likely, a division by zero or an overflow occurred and caused an invalid return value.
+@2@37@0@
+Could not invoke the AboutBox method for this OLE control.
+
+GUID: %6
+@2@38@0@
+Could not register the OLE control.
+
+Path: %2
+@2@39@0@
+Information about the OLE control was successfully added
+to the system registry.
+
+Path: %2
+@2@40@0@
+Could not unregister the OLE control.
+
+Path: %2
+@2@41@0@
+Information about the OLE control was successfully removed
+from the system registry.
+
+Path: %2
+@2@42@0@
+Could not load the OLE control.
+
+Path: %2
+@2@44@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+One of the arguments is not a valid VARIANT type.
+@2@45@0@
+This message is for C/AL programmers:
+
+The call to member %3 failed. %2 returned the following message:
+%7
+@2@46@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+The requested member does not exist, or the call tried to set the value
+of a read-only property.
+@2@47@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+This implementation of IDispatch does not support named arguments.
+@2@48@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+One of the arguments could not be coerced to the specified type
+or overflow occurred.
+@2@49@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+One of the parameter dispatch IDs does not correspond to a parameter
+of the method.
+@2@50@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+One or more of the arguments could not be coerced.
+@2@51@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+The interface ID passed in riid is not IID_NULL.
+@2@52@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+The member being invoked interprets string arguments according to the
+locale ID (LCID), and the LCID is not recognized.
+@2@53@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned the following
+message:
+A required parameter was omitted.
+@2@54@0@
+This message is for C/AL programmers:
+
+Could not invoke the member %3. The OLE control or Automation server returned an unknown
+error code.
+@2@56@0@
+Could not find the specified interface in the type library.
+@2@57@0@
+Could not load the selected type library.
+@2@58@0@
+There are several interfaces in the type library, which have the name you have specified.
+Click the assist-edit button to select the correct interface.
+@2@59@0@
+The type library %7 seems to be corrupted.
+
+Reinstalling the relevant application may solve the problem.
+@2@60@0@
+This message is for C/AL programmers:
+
+It is not possible to assign an empty object.
+@2@61@0@
+This message is for C/AL programmers:
+
+Invalid assignment. It is not possible to assign a %9 to a %8.
+@2@62@0@
+The OLE control (GUID: %6) could not be compiled because it was not registered properly.
+
+Try to register the OLE control by clicking Tools, Custom Controls, Browse.
+@2@63@0@
+This message is for C/AL programmers:
+
+Variable already created.
+@2@64@0@
+This message is for C/AL programmers:
+
+This Automation variable has not been instantiated.
+You can instantiate it by either creating or assigning it.
+@2@65@0@
+This message is for C/AL programmers:
+
+The string:
+"%7"
+is too long for use in C/AL.
+@2@66@0@
+This message is for C/AL programmers:
+
+The OLE control or Automation server identified by
+%3
+requires a design time license. This license cannot be obtained.
+Make sure that the OLE control or Automation server is installed correctly with the appropriate license.
+@2@67@0@
+This message is for C/AL programmers:
+
+The external component did not provide an IID_IStream or IID_ISequentialStream interface on the IUnknown interface.
+@2@68@0@
+This message is for C/AL programmers:
+
+The variant is empty, so you cannot pass a value.
+@2@69@0@
+This message is for C/AL programmers:
+
+An exception was raised in method %3. The OLE control or Automation server has returned error (HRESULT) %7.
+The component did not provide the exception description.
+@2@70@0@
+This message is for C/AL programmers:
+
+Could not convert from %11.20 to %10.20.
+The return value of parameter %7 in event trigger
+'%6' may be outside the permitted range for 
+the OLE control or Automation server.
+@2@71@0@
+This message is for C/AL programmers:
+
+Type conversion of %1 is not possible. %2 was probably the target type.
+@2@END@0@
+
+
+// OCX_Type ---------------------------------------------------
+
+@1@36@0@
+@2@1@0@
+It is possible to map the name %3 to %4 GUIDs.
+C/SIDE has selected %6.
+@2@2@0@
+%3 is neither recognized as a GUID nor as the name of an OLE control or Automation server.
+Check to see if the entry is misspelled.
+@2@7@0@
+%3 is neither recognized as a GUID nor as the name of an Automation server.
+Check to see if the entry is misspelled.
+@2@END@0@
+@1@165@0@
+@2@1@0@
+The field number is invalid. A field number must be between %1 and %2.
+@2@2@0@
+The object %3 has an invalid version.
+@2@3@0@
+Invalid data type returned from %4. The data type should be Integer.
+@2@4@0@
+FIELDREF variable not initialized.
+@2@5@0@
+RECORDREF variable not initialized.
+@2@6@0@
+KEYREF variable not initialized.
+@2@7@0@
+RECORDID variable not initialized.
+@2@8@0@
+RECORDREF variable uses table %1 - it cannot be assigned to a variable of RECORD for table %2.
+@2@9@0@
+Field index '%1' out of range (must be within %2 through %3).
+@2@10@0@
+Key index '%1' out of range (must be within %2 through %3).
+@2@11@0@
+Invalid table handle. The record parameter has not been properly initialized.
+@2@12@0@
+RECORDREF variable has not been closed. You must close the RECORDREF with CLOSE before opening a new table.
+@2@13@0@
+This data type is not valid because the ExtendedDatatype property is set to %1. 
+
+Valid data types are Integer, BigInteger and Decimal.
+@2@14@0@  //The RECORDREF variable uses table (table ID). The GET function cannot be used with a RecordID for table (table ID). 
+The RECORDREF variable uses table %1. The GET function cannot be used with a RecordID for table %2.
+@2@15@0@
+Data type "%20" is not valid when the Width property is set.
+
+Valid data types are Text, Code, Integer, BigInteger and Decimal.
+@2@16@0@
+This data type is not valid because the ExtendedDatatype property is set to %1. 
+
+Valid data types are Media and MediaSet.
+@2@50@0@
+The Name of Field Group %1 contain spaces.
+@2@51@0@
+There is more than one definition of ID no. %1 in the field groups.
+@2@52@0@
+There is more than one definition of Name %1 in the field groups.
+@2@53@0@
+The Field Group name cannot be blank.
+@2@54@0@
+Unable to process table changes because the Microsoft Dynamics NAV Development Environment cannot connect to the specified Microsoft Dynamics NAV Server instance:
+
+Server Name: %1
+Server Instance: %2
+Management Port: %3
+
+Microsoft Dynamics NAV Development Environment will detect a running server automatically.
+
+Check that:
+1. The Microsoft Dynamics NAV Server is running
+2. The management service is configured
+3. The firewall is open for the management port if remote
+4. The server is running with only one tenant
+5. Microsoft Dynamics NAV Development Environment is running as Administrator, or
+6. UAC is turned off.
+@2@55@0@
+The objects from the .fob file were imported, but they contain schema changes that cannot be synchronized to the database with the Microsoft Dynamics NAV Server instance.
+Contact your system administrator with the following information:
+
+Server Name: %1
+Server Instance: %2
+Management Port: %3
+
+Microsoft Dynamics NAV Development Environment will detect a running server automatically.
+
+Check that:
+1. The Microsoft Dynamics NAV Server is running
+2. The management service is configured
+3. The firewall is open for the management port if remote
+4. Microsoft Dynamics NAV Development Environment is running as Administrator, or
+5. UAC is turned off.
+@2@56@0@
+The table changes were saved, but they contain schema changes that cannot be synchronized to the database with the Microsoft Dynamics NAV Server instance.
+Contact your system administrator with the following information:
+
+Server Name: %1
+Server Instance: %2
+Management Port: %3
+
+Microsoft Dynamics NAV Development Environment will detect a running server automatically.
+
+Check that:
+1. The Microsoft Dynamics NAV Server is running
+2. The management service is configured
+3. The firewall is open for the management port if remote
+4. Microsoft Dynamics NAV Development Environment is running as Administrator, or
+5. UAC is turned off.
+@2@57@0@
+Unable to process table changes because the request cannot be processed by the specified Microsoft Dynamics NAV Server instance:
+
+Server Name: %1
+Server Instance: %2
+Management Port: %3
+
+Check that:
+1. The Microsoft Dynamics NAV Server is running
+2. There is only one tenant mounted on the server instance.
+@2@58@0@
+The OptionString length for field %1 (%2) in table %3 (%4) exeeds the limitation set by the %5 virtual table (current length is %6 and limit is %7).
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´  FO  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Form Object                                                             ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@81@0@
+@2@005@0@
+The object '%1' must be compiled before it can be run.
+@2@101@0@
+This is an invalid data type for 'Expression' in 'MenuItem'. It should be 'Boolean'.
+@2@102@0@
+This is an invalid data type for 'DataCaption'. It should be 'Text'.
+@2@103@0@
+Data controls must have an expression.
+@2@104@0@
+The property '%10' must be present.
+@2@105@0@
+This is an invalid data type for '%10'. It should be 'Text'.
+@2@120@0@
+This is an invalid type of primary key for the autosplitkey facility. It should be Integer/BigInteger/Decimal/GUID.
+@2@121@0@
+The autosplitkey facility cannot find a key between the current and the previous record.
+@2@130@0@
+The specified table (%3) is different from the table the form uses (%4).
+@2@131@0@
+You cannot open a subform within a subform.
+@2@132@0@
+The form has been run. Use the function CLEAR(Form).
+@2@133@0@
+The form is not open.
+@2@134@0@
+The form cannot be activated.
+@2@135@0@
+You have not specified which object should be run (if you use the 'RunObject' action, you must also specify an object).
+@2@136@0@
+You cannot run a subform.
+@2@137@0@
+The property RunFormOnRec is only valid if SourceTable and DestTable are identical.
+In this case, SourceTable: %7 and DestTable: %8.
+@2@138@0@
+You cannot run a form from the Application Server.
+
+Form: %2
+@2@200@0@
+The form object %1 has an invalid version.
+@2@400@0@
+%5 is an invalid MenuLevel (It must be between 0 and 9).
+@2@401@0@
+MenuLevel must only be one greater than the previous one.
+
+In this case the new MenuLevel is '%5' while the old MenuLevel was '%6'.
+@2@402@0@
+The control ID %9 was used.
+@2@403@0@
+The width and height of the form must be between 0 and 100,000 [1/100 mm].
+@2@404@0@
+The first MenuLevel must be 0.
+@2@500@0@
+There is no default stylesheet for the program you are exporting to. 
+
+Contact your system administrator.
+@2@501@0@
+The program to launch has not been defined in the '%1' table. 
+
+Contact your system administrator.
+@2@502@0@
+The the parameter string '%1' for the '%2' program is not valid. 
+
+Contact your system administrator.
+@2@503@0@
+It is not possible to locate the program '%1' on your computer. 
+
+Contact your system administrator.
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´  RE  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Report Object                                                           ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@71@0@
+@2@200@0@
+This is an invalid version of report object %1.
+@2@203@0@
+The property '%4' must be specified.
+@2@300@0@
+The %5 report does not have a DataItem that uses the table (%2) specified in the function SetTableView.
+@2@301@0@
+The report has been run. Use the function CLEAR(Report).
+@2@302@0@
+The first DataItem must have DataItemIndent=0.
+@2@303@0@
+The property DataItemIndent for a DataItem must be only one greater than the property on the previous DataItem.
+@2@304@0@
+There is no DataItem named '%6'.
+@2@305@0@
+The Control ID %7 is already used.
+@2@306@0@
+The Control property DataSetFieldName value '%10' is already used.
+@2@307@0@
+The property DataItemIndent for a DataItem cannot contain a negative value.
+@2@308@0@
+The property MaxIteration for a DataItem cannot contain a negative value.
+@2@309@0@
+The DataItems path length has exceeded the allocated buffer size because of the levels of nested DataItems. Redesign the dataset to reduce its complexity and the levels of nested DataItems.
+@2@310@0@
+All DataItems in the design must have a name, when the report has a Word Layout.
+@2@311@0@
+A blank Word layout with an XML part for the current dataset has been created on the report.
+@2@312@0@
+The WordMergeDataItem property is set to DataItem '%6'. Only data items with DataItemIndent=0 can be specified in WordMergeDataItem.
+@2@313@0@
+The WordMergeDataItem property is set to DataItem '%6', which does not exist.
+@2@400@0@
+You can only add %3 FlowFields.
+@2@402@0@
+You cannot print in a report where the property 'ProcessingOnly' is set to 'Yes'.
+@2@403@0@
+The called function can only be called from a DataItem trigger.
+@2@404@0@
+The called function can only be called from a Section trigger.
+@2@405@0@
+The called function can only be called from a DataItem trigger or a Section trigger.
+@2@406@0@
+The fields specified in the TotalFields property must be of type decimal. The %2.1 field in the %1.1 table is not a decimal.
+@2@502@0@
+The width of a Section cannot be smaller than the boundary around all the controls in all Sections.
+@2@503@0@
+The height of a Section cannot be smaller than the boundary around the controls in that Section.
+@2@600@0@
+This report cannot be printed from Print Preview. Quit Print Preview and run the report.
+@2@601@0@
+A change to the printer, paper size or paper orientation has affected the size of the printable area.
+This could affect the visual appearance of the report.
+
+Do you want to print?
+@2@602@0@
+You cannot print from Print Preview until the report generation is completed.
+@2@603@0@
+You cannot run reports with request forms on Application Server for Microsoft Dynamics NAV.
+@2@604@0@
+You cannot have different source tables for the request form and the request page.
+@2@700@0@
+Invalid Report XML Request
+@2@701@0@
+You cannot import layouts (RDLC files) that are larger than %8 bytes.
+@2@703@0@
+Internal error: %1
+@2@704@0@
+It is not possible to instantiate Microsoft.Dynamics.Nav.DotNetBridge.dll.
+@2@705@0@
+The RDLC file is not a well-formed XML document. 
+
+Detailed description: %9
+@2@706@0@
+It is not possible to open the report for editing. 
+
+Detailed description: %9
+@2@707@0@
+Could not copy the ReportLayout directory. 
+
+Detailed description: %9
+@2@708@0@
+It is not possible to edit the layout with the report designer. 
+
+Detailed description: %9
+@2@709@0@
+The provided metadata is not valid.
+@2@710@0@
+Cannot create a dataset with the provided metadata.
+@2@711@0@
+Failed to clean up temporary report folder.
+@2@712@0@
+The RDLC file does not validate against its schema. The operation failed.
+@2@713@0@
+The RDLC file is not in the correct format.
+@2@714@0@
+Could not clean up the current temporary report solution folder.
+@2@715@0@
+Error creating new temporary file.
+@2@716@0@
+Error deleting temporary file.
+@2@717@0@
+Could not transform request form: %9
+@2@718@0@
+An error occurred when contacting Microsoft.Dynamics.Nav.DotNetBridge.dll.
+@2@719@0@
+An error occurred when transforming the request form.
+@2@720@0@
+The report does not contain controls and cannot be transformed.
+@2@721@0@
+Error while validating RDL content:
+%9
+@2@722@0@
+An error occurred when opening the report designer. A supported version of Visual Studio could not be found.
+@2@723@0@
+Reports that are ProcessingOnly cannot contain a Layout, such as an RDL data part.
+@2@724@0@
+This report has a reference to a field that does not exist in the dataset.%9
+You can recreate the dataset by opening the report's layout, saving it, and then recompiling the report in C/SIDE.
+@2@725@0@
+Report RDLC image '%9' is defined as external. The EnableExternalImages property has not been set.
+@2@726@0@  //A report (report ID) contains and external link.  The Enable Hyperlinks property has not been set.
+Report RDLC control '%9' contains an external link. The EnableHyperlinks property has not been set.
+@2@727@0@
+A report RDLC %9 contains an external link. The EnableHyperlinks property has not been set.
+@2@728@0@   //Could not find the ReportLayout directory: (filepath/filename) 
+Could not find the ReportLayout directory: %9
+@2@729@0@  //*Microsoft Dynamics NAV and report designer must run with same privileges: (internal Operating System message)
+Microsoft Dynamics NAV Development Environment and the report designer must run with same privileges: %9
+@2@730@0@
+The report layout is currently open in the report designer. You must close the report designer window before closing the report object.
+@2@731@0@
+You cannot run a DataSet report without a layout.
+@2@732@0@   //Could not get default RDL: (filename)
+Could not get default RDL: %9
+@2@733@0@
+The report layout is already open in the report designer.
+@2@734@0@
+Report contains a reference to an external assembly. Enable the EnableExternalAssemblies property for the report object or remove the reference to the external assembly in the layout.
+@2@735@0@
+The file that you are importing is not based on the RDL 2010 schema. You must upgrade it to the RDL 2010 schema.
+@2@736@0@
+The report is not supported and must be upgraded before you can modify or display it.
+@2@737@0@
+ProcessingOnly reports are not allowed to contain a Word Layout.
+@2@738@0@
+To upgrade reports, you must have Microsoft SQL Server 2014 Report Builder 3.0 installed.
+@2@739@0@
+Could not initialize Microsoft SQL Server 2014 Report Builder 3.0: %9
+Verify that Report Builder 3.0 is installed correctly.
+@2@740@0@
+Could not upgrade RDL on %1.
+%9
+@2@741@0@
+Could not create RDL on %1.
+%9
+@2@742@0@
+The %1 should be compiled before it can be upgraded
+@2@743@0@
+Report RDLC '%9' BackgroundImage is defined as external. The EnableExternalImages property has not been set.
+@2@744@0@
+An error occurred when opening the report designer. A supported version of Report Builder could not be found.
+@2@745@0@
+The DefaultLayout is set to Word, but no Word layout is defined for the report.
+@2@800@0@
+The first line must be a DataItem.
+@2@801@0@
+The first line must have an indent that equals 0.
+@2@802@0@
+The parent must be a DataItem.
+@2@804@0@   //The Name value must be unique. Another DataItem, Column, or Label with Name '(field or variable name)' already exists. 
+The Name value must be unique. Another Column or Label with Name '%6' already exists.
+@2@805@0@
+Data Source or SourceExpr cannot be empty.
+@2@807@0@   //The ID value must be unique. Another DataItem, Column, or Label with ID '(ID number)' already exists. 
+The ID value must be unique. Another DataItem, Column, or Label with ID '%7' already exists.
+@2@808@0@
+Data Source or SourceTable cannot be empty.
+@2@809@0@  // The name '(field name)' contains one or more characters that cannot be used because it does not comply with the Common Language Specification. The first character must be a letter.
+//            Subsequent characters can be any combination of letters, whole numbers, and underscores.
+The name '%6' contains one or more characters that cannot be used because it does not comply with the Common Language Specification. The first character must be a letter. Subsequent characters can be any combination of letters, whole numbers, and underscores. 
+@2@810@0@   //'(field name)' is not a valid column type. 
+'%11' is not a valid column type.
+@2@812@0@   //Maximum indentation level on DataItems is (number). 
+Maximum indentation level on DataItems is %12.
+@2@813@0@   //The Name field '(field name)' is too long.   Maximum length for the Name field is (number) characters. 
+The Name field '%6' is too long.
+
+Maximum length for the Name field is %13 characters.
+@2@814@0@
+Column is set to include caption, but does not have a source that is a named field. A caption for this column can be created with the Label Designer.
+@2@816@0@
+ParentDataItem is not pointing to a valid DataItem.
+@2@817@0@
+ParentColumn is not pointing to a valid column.
+@2@818@0@
+The Word layout document is empty.
+@2@819@0@
+The Word layout document is too large.
+@2@820@0@
+The Word layout document is malformed. Unable to read the document.
+@2@821@0@
+Unable to create a new empty Word layout document for the current report layout.
+@2@822@0@
+Unable to rename or update data bindings in the Word layout document.
+@2@823@0@
+Word layout document update failed with the following error:
+
+%9
+@2@824@0@
+Word layout document validation failed with the following error:
+
+%9
+@2@END@0@
+
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´	AB  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Application Base                                                        ³
+// ³                                                                          ³
+// ³  NOTE: Message 1004 is intended for use in the event viewer,             ³
+// ³        message 1005 for use in the console.                              ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@205@0@
+@2@100@0@
+You must specify which server and/or database you want to connect to when you start up the Application Server for Microsoft Dynamics NAV.
+
+The manual Installation and System Management contains a list of the correct program properties.
+@2@101@0@
+You must specify which SQL Server and database you want to connect to when you start up the Application Server for Microsoft Dynamics NAV.
+
+The manual Installation and System Management contains a list of the correct program properties.
+@2@102@0@
+You must specify which company you want to be open when you start up the Application Server for Microsoft Dynamics NAV.
+
+The manual Installation and System Management contains a list of the correct program properties.
+@2@103@0@
+You must specify a parameter for Codeunit 1 Trigger 99. This trigger is executed when starting up the Application Server for Microsoft Dynamics NAV.
+
+The manual Installation and System Management contains a list of the correct program properties.
+@2@110@0@
+Trigger 99 in Codeunit 1 does not exist. 
+
+This trigger must be executed to establish connection to the Message Bus.
+@2@120@0@
+The program failed to shut down the Application Server for Microsoft Dynamics NAV.
+@2@121@0@
+The Application Server for Microsoft Dynamics NAV %1 could not initialize properly.
+The server will attempt to initialize every %2 seconds until this is successful.
+
+@2@122@0@
+The Application Server for Microsoft Dynamics NAV %1 will shut down.
+The application could not be reconfigured to the following configuration:
+  Server Name = %2
+  Database = %3
+  Company = %4
+  Startup Parameter = %5
+@2@130@0@
+This computer has %2 processor. You do only have permission to run VIP Application Server for Microsoft Dynamics NAV on a computer with %1 processor.
+@2@200@0@
+Target "%1" not found.
+@2@201@0@
+URL too long:
+"%1%2..."
+@2@202@0@
+This is not a Microsoft Dynamics NAV Development Environment link
+"%1".
+@2@203@0@
+The link context does not match the current Microsoft Dynamics NAV Development Environment context.
+URL context:
+  Server Name = %1
+  Database  = %2
+  Company = %3
+  Server Type = %4
+Current context:
+  Server Name = %5
+  Database  = %6
+  Company = %7
+  Server Type = %8
+@2@204@0@
+You cannot use the Navision protocol to run forms.
+@2@300@0@
+Microsoft Dynamics NAV Development Environment is not supported on this operating system.
+@2@1000@0@
+The Application Server for Microsoft Dynamics NAV %1 was successfully installed as a service.
+
+@2@1001@0@
+The existing service, Application Server for Microsoft Dynamics NAV %1, was successfully uninstalled as a service.
+
+@2@1003@0@
+Application Server for Microsoft Dynamics NAV version 11.0 (Build 18323)
+Copyright (c) Microsoft. All rights reserved.
+
+@2@1004@0@
+The Application Server for Microsoft Dynamics NAV %1 started with the following configuration:
+  Database Server Name = %2
+  Database = %3
+  Company = %4
+  Startup Parameter = %5
+@2@1005@0@
+The Application Server for Microsoft Dynamics NAV %1 started with the following configuration:
+  Database Server Name = %2
+  Database =  %3
+  Company = %4
+  Startup Parameter = %5
+  
+Press ESC to shut down the Application Server for Microsoft Dynamics NAV %1.
+
+@2@1006@0@
+The previous %1 reported events were identical.
+
+In order not to overcrowd the message logging system, identical events will not be logged until after the program reports a different event.
+@2@1007@0@
+The Application Server for Microsoft Dynamics NAV will shut down when the processing of the current request has finished.
+
+@2@1020@0@
+The Application Server for Microsoft Dynamics NAV %1 was shut down.
+
+@2@1021@0@
+The Application Server for Microsoft Dynamics NAV %1 recovered using the following configuration and is now fully operational.
+  Database Server Name = %2
+  Database = %3
+  Company = %4
+  Startup Parameter = %5
+@2@1022@0@
+Processing request to reconfigure the Application Server for Microsoft Dynamics NAV %1...
+
+@2@1023@0@
+The Application Server for Microsoft Dynamics NAV %1 was reconfigured to the following configuration:
+  Database Server Name = %2
+  Database = %3
+  Company = %4
+  Startup Parameter = %5
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´	DS -> AB ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÙ                                                            ³
+// ³                                                                          ³
+// ³  Texts moved from DS to AB             						                      ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@200@0@
+@2@1@0@
+The program property '%1' is unknown.
+
+The manual Installation and System Management contains a list of the correct program properties.
+@2@2@0@
+You must specify a value for the program property '%1'.
+
+The manual Installation and System Management contains a list of the correct program properties.
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´	DS  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Development System						      ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@200@0@
+@2@20@0@
+Code: '%1' -> Dealer -> Distributor -> Manufacturer -> Password: '%2'.
+
+Contact your dealer and give him/her the above code. You will then receive a password that can only be used once.
+
+Important! Do NOT exit the login window before entering the new password. The next attempt will require a different password.
+@2@21@0@
+Invalid password.
+@2@80@0@
+The logical name %1 already exists. You must specify unique logical data and transaction log file names.
+@2@81@0@
+You cannot delete the %1 primary data or transaction log file from the database.
+@2@83@0@
+No license file has been uploaded.
+@2@84@0@
+You must specify a logical name for all data and transaction log files.
+@2@85@0@
+You must specify a collation description for the database in the Collation tab.
+@2@110@0@
+Unknown Windows user.
+@2@111@0@
+User already exists.
+@2@120@0@
+Your license file does not allow you to run User Portal Application Server. Contact your system manager.
+@2@121@0@
+User Portal Application Server cannot allocate the security descriptor for the named pipe.
+@2@122@0@
+User Portal Application Server cannot initialize the security descriptor for the named pipe.
+@2@123@0@
+User Portal Application Server cannot set the security descriptor for the named pipe.
+@2@124@0@
+User Portal Application Server cannot create the named pipe.
+@2@125@0@
+User Portal Application Server cannot impersonate the named pipe user.
+@2@126@0@
+User Portal Application Server cannot revert from the impersonation of the named pipe user.
+@2@130@0@
+The update will terminate now.
+
+Either the update file for update ID '%1' is not valid or you have cancelled the update.
+@2@131@0@
+The installation of update ID '%1' failed. The update will now terminate.
+@2@132@0@
+The database backup could not be created. The update will stop because you cannot install it until you have successfully created a database backup.
+
+To create the backup and install the update, restart the Microsoft Dynamics NAV Development Environment.
+@2@301@0@
+Copyright (c) Microsoft. All rights reserved.
+@2@400@0@
+This is the first time that you are activating a link to the following destination:
+
+Server: %1
+Database: %2
+
+Please be aware that you may be accessing code that could potentially 
+harm your computer.
+
+Do you trust this destination?
+@2@600@0@
+Microsoft Dynamics NAV Development Environment client was opened from an untrustworthy component.
+
+Contact your system administrator.
+@2@701@0@
+There are no %1 instances available for this database. You must ensure that a %1 instance is running and is configured to use the database before you perform this activity.
+@2@702@0@
+You must specify an Azure instance URL in the Server Instance property before you perform this activity. To do this, go the Tools menu and choose Options.
+@2@703@0@
+The instance URL must be entered in the format <servername>:<port>/<serverinstance>. To do this, go the Tools menu and choose Options.
+@2@800@0@
+The "%1" command is not valid.
+@2@801@0@
+You must specify the '%22' parameter for the '%1' command.
+@2@802@0@
+The "%1" parameter is not valid.
+@2@803@0@
+The "%1" file must have a .fob or .txt file extension.
+@2@804@0@
+You must define the '%1' filter as follows: field1=expression; ... fieldn=expression.
+@2@805@0@
+The "%1" parameter must be specified and have a value of "No" if you want to use the "%13" and "%22" parameters.
+@2@806@0@
+You must specify the "%1" parameter if the "%22" parameter is "No".
+@2@807@0@
+An error has occurred in the pre-analysis of the database upgrade. 
+
+Use the Microsoft Dynamics NAV 2013 Development Environment to correct errors that are displayed in the Error List before continuing with the upgrade process.
+@2@808@0@
+The .fob file cannot be imported. Report ID %2 needs to be converted to a Dataset report before it can be imported.
+
+Use the Microsoft Dynamics NAV 2013 Development Environment to convert the report before importing it again.
+@2@809@0@
+Report %1 is not a Dataset report.
+@2@810@0@
+XMLport ID %2 cannot be compiled after upgrade.
+@2@900@0@
+Server application objects were created successfully.
+@2@901@0@
+Server application objects were created with errors in some objects. Use the Error list to view all errors.
+@2@902@0@
+There is currently no data upgrade process running.
+@2@903@0@
+You cannot resume the data upgrade because the current process has not been suspended.
+@2@904@0@
+A data upgrade is currently in progress. Stop the current process before you start a new one.
+@2@1000@0@
+There are no table changes that require synchronization.
+@2@1001@0@
+Microsoft Dynamics NAV Server will validate all table changes without applying them to the corresponding tables in SQL Server. If the validation discovers that some of the changes cannot be applied without deleting data in the affected fields or tables, an error displays, and none of the changes will be synchronized.
+
+If you choose to not continue, the table changes will remain unsynchronized, and users will not be able to access any new fields. Depending on the number and the size of the changed tables, this process may take up to several minutes.
+
+Do you want to continue?
+@2@1002@0@
+Microsoft Dynamics NAV Server will validate all table changes without applying them to the corresponding tables in SQL Server. If the validation discovers that some of the changes cannot be applied without deleting data in the affected fields or tables, an error displays, and none of the changes will be synchronized.
+
+If you choose to not continue, the table changes will remain unsynchronized, and users will not be able to access any new fields. Depending on the number and the size of the changed tables, this process may take from several minutes to several hours.
+
+Do you want to continue?
+@2@1003@0@
+Microsoft Dynamics NAV Server will synchronize all table changes with the corresponding tables in SQL Server. The changes will not be validated before the synchronization, and as a result, data may be delted from the affected fields or tables.
+
+If you choose to not continue, the table changes will remain unsynchronized, and users will not be able to access any new fields. Depending on the number and the size of the changed tables, this process may take from several minutes to several hours.
+
+Do you want to continue?
+@2@1004@0@
+All table schema changes validated correctly. You can synchronize changes with no risk of deleting data.
+@2@1005@0@
+All table schema changes were synchronized with force.
+@2@END@0@
+// Module XMLPort
+
+@1@210@0@
+@2@1@0@
+Invalid version of XMLport object: %1.
+@2@2@0@
+Invalid MagicNo of XMLport object: %1.
+@2@3@0@
+The object %1 must be compiled before it can be run.
+@2@8@0@
+The Encoding %13 is not supported.
+@2@9@0@
+The ID Number %12 from Tag '%6' has been used by Line %7, it must be unique.
+@2@10@0@
+The root element's indentation must be 0.
+@2@11@0@
+The indentation difference between Tag '%6' and its parent is more than 1.
+@2@12@0@
+The SourceExpr datatype %10 cannot evaluate to string.
+@2@13@0@
+The table %5 doesn't exists.
+@2@14@0@
+The field is not assigned to a valid TableVariableName.
+@2@15@0@
+The supplied table name %14 must be same as the parent table name %5.
+@2@16@0@
+The namespace prefix '%16' has already been declared in another namespace. You must use a unique name for the namespace prefix.
+@2@17@0@  //('::') is expected in (table name::field name) at position (position number).
+'%24' is expected in %21 at position %23.
+@2@18@0@
+'%24' is a reserved word in %21 at position %23.
+@2@19@0@
+Invalid namespace start character.
+%21
+@2@20@0@
+Invalid namespace character at position %22.
+%21
+@2@21@0@
+Quote doesn't match at position %22 in %23.
+%21
+@2@22@0@
+Quote miss at position %22 in %23.
+%21
+@2@23@0@
+The sign ':' miss in %23.
+%21
+@2@24@0@
+The sign '=' miss in %23.
+%21
+@2@25@0@
+The single quote ' can not appear in %21.
+The text is single quoted.
+@2@26@0@
+The double quote " can not appear in %21.
+The text is double quoted.
+@2@27@0@
+The destination buffer size is too small.
+@2@28@0@
+The left bracket '(' is missing in %21 at position %22.
+@2@29@0@
+The right bracket ')' is missing in %21 at position %22.
+@2@30@0@
+The Field %15 is not a valid field from Table %14.
+@2@31@0@
+The namespace prefix '%16' has not been declared in a namespace. You must declare the namespace prefix in a namespace of the Namespace property.
+@2@32@0@
+The Min Occurs can only be 0 or 1.
+Value %26.
+@2@33@0@
+The Max Occurs must greater than 1.
+Value %25.
+@2@34@0@
+The Max Occurs of Field can only be 0 or 1.
+Value %25.
+@2@35@0@
+The SourceType Table for Tag <%6> can only be assigned to TagType Element.
+@2@36@0@
+No source table defined for Tag <%6>.
+@2@37@0@
+No XML TagName defined.
+@2@38@0@
+The Attribute '%6' must be indented under its parent Element.
+@2@39@0@
+The Attribute '%6' must have the same indentation as the previous Attribute.
+@2@40@0@
+The indent must be between 0 and %7.
+@2@41@0@
+Only the root element can have indentation 0.
+@2@42@0@
+No DataSource defined for Tag <%6>
+@2@43@0@
+You must specify a Table DataSource before you can select a Field DataSource.
+@2@44@0@
+Invalid tag name.
+@2@45@0@
+The XML tag name should not contain white spaces.
+@2@46@0@
+Tag <%6> has both AutoReplace and AutoUpdate properties enabled. Disable both properties or choose either AutoUpdate or AutoReplace.
+@2@47@0@
+The namespace prefix '%16' is in a format that is not correct.
+@2@48@0@
+The Namespace property contains an empty Namespace field for a Prefix.
+@2@49@0@
+The Namespaces property contains an empty Prefix field for a Namespace. An empty Prefix field sets the namespace as the default namespace. You must either set the UseDefaultNamespace property to No or provide a prefix for the namespace.
+@2@50@0@
+The namespace prefix cannot be 'xmlns'.
+@2@51@0@
+The Element <%6> can not be found from object description.
+@2@52@0@
+The destroy of child element fails.
+@2@53@0@
+The Namespace %17 has not been defined at object.
+@2@54@0@
+The Data conflict with the LinkTable and LinkFields setup of Table %14.
+@2@55@0@
+The XML Parser return the following error:
+%21
+@2@56@0@
+The XML Parser return the following fatal error:
+%21
+@2@57@0@
+The XML Parser setup fails.
+%21
+@2@58@0@
+The Attribute <%6> is prohibited from object description.
+@2@59@0@
+The Attribute <%21> is required and does not match with Attribute <%6>.
+@2@60@0@
+The Element <%6> occurred more than once.
+@2@61@0@
+The Element <%21> is expected by the Min Occurs value: %26.
+Element received: <%6>. 
+@2@62@0@
+The Element <%6> is unexpected.
+@2@63@0@
+The Attribute <%6> is unexpected.
+@2@64@0@
+Unknown source type for Element <%6>.
+@2@65@0@
+The %4 XMLport does not have a XMLItem that uses the table (%2) specified in the function SetTableView.
+@2@66@0@
+The value "%21" has a length %27, which exceeds the max size of the destination type %20.
+@2@67@0@
+The XMLport "%4" is designed for export only.
+@2@68@0@
+The XMLport "%4" is designed for import only.
+@2@69@0@
+Child elements are not supported here.
+@2@70@0@
+An element with source type Table cannot have Table element children.
+@2@71@0@
+If root element has source type Text, then all other elements must be source type Table.
+@2@72@0@
+If XMLport format Fixed Text is chosen, then the Width property should be greater than 0 on all Field and Text elements.
+@2@73@0@
+If element has source type Table, then it cannot have grandchildren.
+@2@74@0@
+If XMLport format Fixed Text or Variable Text is chosen, then the root element must have source type Text.
+@2@75@0@
+MinOccurs for an element must be greater than zero if UseLax is enabled.
+@2@76@0@  //The element <(XML Element name)> has an unexpected child element. 
+The element <%6> has an unexpected child element.
+@2@77@0@
+The 'Unbound' property can only be set on the last node of the XMLPort.
+@2@78@0@
+The attribute '%6' has been assigned a namespace prefix. Namespace prefixes are not supported on attributes. Clear the NamespacePrefix property for the attribute. 
+@2@END@0@
+// Module MenuSuite
+
+@1@220@0@
+@2@1@0@
+The destination buffer size is too small.
+@2@200@0@
+This is an invalid MenuSuite of report object %1.
+@2@201@0@
+Invalid MagicNo of MenuSuite object: %1.
+@2@202@0@
+A MenuSuite for the Classic client supports the following types:
+
+Table, Form, Report, Dataport, and Codeunit.
+@2@203@0@
+A MenuSuite for the RoleTailored client supports the following types:
+
+Table, Report, Codeunit, XMLport, and Page.
+@2@204@0@
+MenuItem %1 for the RoleTailored client must have a department category.
+@2@END@0@
+//   ÚÄÄÄÄÄÄ¿
+// ÚÄ´  Page  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÙ                                                                 ³
+// ³                                                                          ³
+// ³  Module Page                                                             ³
+// ³                                                                          ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@214@0@
+@2@10@0@
+The indent must be between 0 and %4.
+@2@11@0@
+The Container indentation must be 0.
+@2@12@0@
+The first control must be a Container.
+@2@13@0@
+The indentation difference between control '%6' and its parent is more than 1.
+@2@14@0@
+An indent after the control '%6' is not allowed.
+@2@15@0@
+Control '%6' cannot be positioned on the same level as the container.
+@2@20@0@
+The ActionContainer indentation must be 0.
+@2@21@0@
+An indent after the action '%6' is not allowed.
+@2@22@0@
+Action and ActionGroup cannot be on the same level under ActivityButton.
+@2@23@0@
+ActionContainers on CueGroups are not allowed.
+@2@24@0@
+Actions on CueGroups must be at root level.
+@2@25@0@
+Action '%6', which is under an action group inside an activity button, can only have a page type value of List for the RunObject property.
+@2@26@0@   //Action (function name), which is inside a HomeItem container, can only have a page type value of List for the RunObject property. 
+Action '%6', which is inside a HomeItem container, can only have a page type value of List for the RunObject property.
+@2@27@0@
+The indentation for the first Action or ActionGroup must be 0.
+@2@30@0@
+You entered a value that exceeds the maximum size of the %20.
+@2@40@0@
+Control ID %40 is already being used.
+@2@41@0@
+The RunObject Action property only supports the following types:
+
+Page, Report, XMLport, Codeunit
+@2@42@0@
+The Control ID cannot not be blank.
+@2@43@0@
+Control name '%6' is already being used. Control names must be unique.
+@2@44@0@
+Action name '%6' is already being used. Action names must be unique.
+@2@45@0@
+Control '%6' uses the same name as a global variable. Please choose a unique control name.
+@2@46@0@
+Action ID %40 is already being used.
+@2@47@0@
+There are too many actions on the page.
+@2@50@0@
+Cannot load the Visual Page Preview client assembly or some of its dependencies.
+@2@101@0@
+This is an invalid data type for '%10'. It should be 'Text'.
+@2@102@0@
+Part controls with PartType 'Page' must have a PagePartID.
+@2@103@0@
+UIPart controls with PartType 'System' cannot have 'None' as their SystemPartID.
+@2@104@0@
+UIPart control PartType 'Chart' cannot have 'None' as ChartPartID.
+@2@105@0@
+Part controls with PartType 'Page' must refer to pages of type 'CardPart' or 'ListPart'.
+@2@106@0@
+A container must have a subtype.
+@2@107@0@
+A page of type CardPart or ListPart cannot contain a FactBoxArea container.
+@2@108@0@
+A page can only contain one FactBoxArea container.
+@2@109@0@
+A page can only contain one RoleCenterArea container.
+@2@110@0@
+A RoleCenterArea container can only be on a page of type RoleCenter.
+@2@111@0@
+A page can only contain one ContentArea container.
+@2@112@0@
+A FactBoxArea container can only contain parts.
+@2@113@0@
+A RoleCenterArea container can only contain groups and parts.
+@2@114@0@
+IndentationColumnName must reference a field or variable of type int.
+@2@115@0@
+HomeItems and ActivityButtons can only be on Role Center pages.
+@2@117@0@
+Pages of types 'CardPart' and 'ListPart' can only contain ActionItems containers.
+@2@118@0@
+FreezeColumnID can only be specified on a repeater.
+@2@119@0@
+ShowAsTree can only be specified on a repeater.
+@2@120@0@
+When ShowAsTree is set, IndentationColumnName must be specified.
+@2@121@0@
+MinValue cannot be greater than MaxValue.
+@2@122@0@
+MaxValue cannot be greater than MaxValue on table field.
+@2@123@0@
+MinValue cannot be less than MinValue on table field.
+@2@124@0@
+The control cannot be editable if the table field is not.
+@2@125@0@
+If table field has 'NotBlank', then the control cannot allow blank values.
+@2@126@0@
+DecimalPlaces must be less than DecimalPlaces on the table field.
+@2@127@0@
+IndentationColumnName can only be specified on a Repeater.
+@2@128@0@
+SystemPardIDs 'Notes' and 'RecordLinks' cannot be used on pages with LinksAllowed set to 'No'.
+@2@129@0@
+IndentationControls can only be specified on a Repeater.
+@2@130@0@
+Only one ActivityButtons container can be on a page.
+@2@131@0@
+Only one ActivityItems container can be on a page.
+@2@132@0@
+Only one HomeItems container can be on a page.
+@2@133@0@
+Only one NewDocumentItems container can be on a page.
+@2@134@0@
+Only one RelatedInformation container can be on a page.
+@2@135@0@
+The ActionGroup Image property can only be set in an ActionContainer of SubType 'ActivityButtons'.
+@2@136@0@
+The Action Image property cannot be set in an ActionContainer of SubType 'ActivityButtons' or SubType 'HomeItems'.
+@2@137@0@
+Only one Reports container can be on a page.
+@2@138@0@
+Controls cannot be bound to fields with FieldClass 'FlowFilter'.
+@2@139@0@
+Pages of types 'CardPart' and 'ListPart' cannot contain a Part control.
+@2@140@0@
+No trigger code is allowed on pages of type Role Center.
+@2@141@0@
+Value must be of type Boolean.
+@2@143@0@
+A MultiLine property that is set to "Yes" and an ExtendedDatatype property that is set to "Masked" is not allowed.
+@2@144@0@
+Fields of type 'Char' with ExtendedDatatype set to 'Ratio' is not allowed.
+@2@145@0@
+Data type "%20" is not valid when the Width property is set.
+
+Valid data types are Text, Code, Integer, BigInteger, or Decimal.
+@2@146@0@
+Data type "%20" is not valid for the StyleExpr property.
+
+Valid data types are Boolean, Text, or Code.
+@2@1000@0@
+No metadata mapping.
+@2@END@0@
+
+@1@224@0@
+@2@1@0@   //Invalid version of Query object: (ID number).
+Invalid version of Query object: %1.
+@2@2@0@   //Invalid MagicNo of Query object: (ID number). 
+Invalid MagicNo of Query object: %1.
+@2@3@0@   //The object (Application object name) must be compiled before it can be run. 
+The object %1 must be compiled before it can be run.
+@2@4@0@
+You cannot select fields with a Blob data type as the Data Source value for Column rows. Select a different field.
+@2@5@0@  //'(field name)' is not a field on table '(table name)'. 
+'%4' is not a field on table '%6'.
+@2@6@0@
+'%24' is expected in %21 at position %23.
+@2@7@0@
+The destination buffer size is too small.
+@2@8@0@  //A source table for DataItem (field name) was not defined. 
+A source table for DataItem <%4> was not defined.
+@2@9@0@  //A DataSource was not defined for column (column number)
+A DataSource was not defined for column <%6>
+@2@10@0@
+The column is unknown.
+@2@11@0@
+The first line must be a DataItem.
+@2@12@0@
+The first line must have an indentation that equals 0.
+@2@13@0@
+The parent must be a DataItem.
+@2@14@0@
+The property Indentation for a DataItem cannot contain a negative value.
+@2@15@0@
+The property DataItemIndent for a DataItem must be only one greater than the property on the previous DataItem.
+@2@16@0@   //Maximum indentation level on DataItems is (number). 
+Maximum indentation level on DataItems is %28.
+@2@17@0@
+A Column or DataItem must come after a Column with the same indentation or a DataItem with indentation - 1.
+@2@18@0@
+The Name value cannot be empty.
+@2@19@0@   //Another DataItem or Column row with the name '(field name)' already exists. All DataItem and Column rows must have unique names. 
+Another DataItem or Column row with the name '%4' already exists. All DataItem and Column rows must have unique names.
+@2@20@0@    //The name '(field name)' contains one or more characters that cannot be used because it does not comply with the Common Language Specification. The first character must be a letter.
+//            Subsequent characters can be any combination of letters, whole numbers, and underscores. 
+The name '%4' contains one or more characters that cannot be used because it does not comply with the Common Language Specification. The first character must be a letter. Subsequent characters can be any combination of letters, whole numbers, and underscores. 
+@2@21@0@
+The ID value must be positive.
+@2@22@0@   //Another DataItem or Column row with the ID '(ID number)' already exists. All DataItem and Column rows must have unique IDs. 
+Another DataItem or Column row with the ID '%12' already exists. All DataItem and Column rows must have unique IDs.
+@2@23@0@
+You cannot select a virtual table as the Data Source value of a DataItem. Select a different table.
+@2@24@0@
+Query should have at least one data column.
+@2@42@0@
+Top number of rows cannot be negative.
+@2@43@0@
+You can only reverse the sign of fields that have a numeric data type.
+@2@25@0@
+You can only use totaling methods on numeric data types (Decimal. BigInteger, Integer, Duration) Select a field that has one of these types.
+@2@26@0@   //You can only specify up to (number) columns to total in a single query. Choose fewer columns to total. 
+You can only specify up to %29 columns to total in a single query. Choose fewer columns to total.
+@2@27@0@   //You can only specify up to (number) columns that are not totaled in a single query that includes totaling. Choose fewer columns that are not totaled. 
+You can only specify up to %29 columns that are not totaled in a single query that includes totaling. Choose fewer columns that are not totaled.
+@2@28@0@
+You cannot count a specific field in a query. To count all rows in the query results, leave the Data Source field blank.
+@2@29@0@
+You cannot select field with a FlowFilter data type as the Data Source value for Column rows. Select a different field.
+@2@30@0@
+You cannot select fields with a Binary data type as the Data Source value for Column rows. Select a different field.
+@2@31@0@
+Another totaling column has the same name. All columns must have unique names.
+@2@33@0@
+You cannot combine two DataItems at the same level because unions are not supported.
+@2@37@0@
+The Group By field is read-only. It is automatically calculated from the defined columns. All columns where method type is not Totals, will be used for the grouping. 
+@2@38@0@
+You can only select a column once when you define the order of the resulting dataset of the query.  Delete the selected duplicate columns and save again.
+@2@39@0@
+DataItemLink property cannot be empty.
+@2@40@0@
+DataItemLink property must empty when SQLJoinType property is set to Cross Join.
+@2@41@0@
+You cannot set a method on column's whose data source field type is FlowField.  Change Method Type to None and then save again.
+@2@44@0@
+You can only use the Day, Month, and Year methods on fields that have a data type of DateTime. Select a field that has a DateTime data type.
+@2@45@0@   
+You cannot import an object that does not have a %4 section.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  DotNet InteropÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ  DotNet Interop                                               ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+@1@226@0@
+@2@1@0@
+This message is for C/AL programmers:
+
+This DotNet data type is not supported by C/SIDE. You can access data from the following data types:
+object, bool, char, sbyte, byte, short,
+ushort, int, uint, long, ulong, float,
+double, decimal, DateTime, TimeSpan,
+string, Guid, Stream
+@2@2@0@
+.NET interop: Internal error occurred. The buffer was too small.
+@2@3@0@   //Could not load type '(Data type)'. 
+Could not load type '%1'.
+@2@4@0@   //The type '(Type name)' is unknown. 
+The type '%1' is unknown.
+@2@5@0@
+There are too many overloaded methods.
+@2@7@0@
+A subtype for the DotNet variable has not been specified.
+
+Specify a Type by filling out the Subtype field in the C/AL Locals or C/AL Globals window.
+@2@8@0@
+Could not find assembly '%1'.
+@2@9@0@
+.NET interop: internal error, bad id '%1'.
+@2@10@0@
+.NET interop: exception occurred, '%1'.
+@2@11@0@
+%1 is not recognized as the name of a .NET type.
+The correct format is: 'Assembly fullname'.typename
+Check to see if the entry is misspelled.
+@2@12@0@
+.NET interop: The type name is too long (exceeds 128 characters): '%1'.
+@2@13@0@
+.NET interop: Failed to load .NET version 4.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  CSDotNet  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ                                                           ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@228@0@
+@2@1@0@   //Internal error: (error ID number) 
+Internal error: %1
+@2@2@0@   //Error Message
+%1
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  CodeUnit    ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ  Codeunits                                              ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@103@0@
+@2@1@0@
+The codeunit %1.2818 was called with a %2 record. It should be a %3 record.
+@2@2@0@
+The codeunit %1.2818 must be called with a %3 record.
+@2@3@0@
+The codeunit %1.2818 was called with a %2 record. It has no parameters.
+@2@4@0@
+The object %4 has an invalid version.
+@2@5@0@
+Test codeunit %1.2818 was called with a %2 record. Test codeunits do not support record parameters.
+@2@6@0@
+Test codeunit %1.2818 was designed with table %1.26370. Test codeunits do not support tables, i.e. TableNo must be <Undefined>.
+@2@7@0@
+Test codeunit %1.2818 was called from another test codeunit. Test codeunits do not support nesting.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  C/AL_Edit ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ  C/AL Compiler and Editors                                ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@102@0@
+@2@6@0@
+There are event triggers associated with the control %6. Changing the ControlAddin will delete the event triggers and their code.
+
+Are you sure that you want to modify the ControlAddin value?
+@2@7@0@
+The line will be too long.
+@2@8@0@
+There are event triggers associated to the global variable %6. Deleting the variable will delete the event triggers and their code.
+
+Are you sure that you want to delete this global variable?
+@2@9@0@
+Changing the values in the DataType or Subtype fields for the global variable %6 deletes all the associated event triggers and their code.
+
+Are you sure that you want to make changes to this global variable?
+
+@2@10@0@
+Do you want to overwrite the signature of the edited function with the parameters of the selected publisher, %1 %2?
+
+@2@198@0@
+You are not allowed to make an assignment to a variable with the property WithEvents=Yes.
+@2@199@0@
+The length of the variable must be between 1 and %1.
+@2@200@0@
+There must be a 'TRUE/FALSE' expression in the IF, WHILE or REPEAT sentence. The current expression is a Boolean type array.
+
+Choose an individual 'TRUE/FALSE' value with an expression such as:
+
+BooleanArray[...]
+@2@201@0@
+The expression is %10.1. There must be a 'TRUE/FALSE' expression in the IF, WHILE or REPEAT sentence. For example:
+
+TRUE
+FALSE
+Customer.Blocked
+Customer.Balance > 100
+... AND ...
+... OR ...
+@2@202@0@
+This prefix operator cannot be used on %10.1.
+@2@203@0@
+A field from a record variable was expected. For example:
+
+Record.Field
+Customer.Name
+@2@204@0@
+A variable was expected. For example:
+
+MyVar
+Customer.Name
+@2@205@0@
+%3 cannot be performed on arrays.
+
+Choose a single array value using an expression such as:
+
+MyArray[...]
+@2@206@0@
+The type cannot be used as an argument.
+@2@207@0@
+When the function is called, the minimum number of parameters should be used. For example:
+
+MyFunc( .. , .. , .. )
+ROUND(MyVar)
+ROUND(MyVar,0.05)
+@2@210@0@
+A maximum of %7 parameters must be used when calling the function. For example:
+
+MyFunc( .. , .. , .. )
+ROUND(MyVar)
+ROUND(MyVar,0.05)
+@2@212@0@
+There are too many dimensions. The variable is defined with fewer dimensions. For example:
+
+MyVar
+MyArray[MyVar]
+MyArray[1,2]
+MyArray[1][2]
+@2@214@0@
+The variable is not a record. 'Variable.Field' is invalid.
+@2@215@0@ //
+There must be a '[' because the variable is an array. For example:
+
+MyArray[...]
+MyArray[MyVar]
+MyArray[1,2]
+MyArray[1][2]
+@2@216@0@
+Type conversion is not possible because 1 of the operators contains an invalid type.
+
+%10.1 %3 %11.1
+@2@217@0@
+A value or an expression was expected. For example:
+
+100
+MyVar
+MyVar + 100
+MyVar = 100
+@2@223@0@
+The variable has the type %10.1. The counter in the FOR sentence should be a numeric, boolean, date, time, byte or char variable. For example:
+
+FOR Counter := 1 TO 10 DO ... ;
+@2@224@0@
+The counter in the FOR sentence should be a numeric variable. For example:
+
+FOR Counter := 1 TO 10 DO ... ;
+@2@225@0@
+The collection expression in FOREACH is not a .NET Framework object.
+@2@226@0@
+The collection expression in FOREACH does not contain a public definition for 'GetEnumerator'.
+@2@227@0@
+A BREAK statement can only appear inside a loop, such as FOREACH, FOR, WHILE, or REPEAT.
+@2@234@0@
+This must not be the first word in a sentence.
+@2@235@0@
+There must be a ':=' in the assignment. For example:
+
+MyVar := ... ;
+MyVar := 100 + 10 ;
+@2@237@0@
+There must be a record variable in the WITH sentence. The current variable has another type. For example:
+
+WITH MyRec DO ... ;
+@2@238@0@
+There must be a record variable in the WITH sentence. For example:
+
+WITH .. DO ... ;
+WITH .. DO BEGIN ... ; ... ; END ;
+WITH MyRec DO ... ;
+@2@244@0@
+There are too many layers of nested WITH sentences.
+@2@249@0@
+There must be an IF sentence with an ELSE sentence. For example:
+
+IF ... THEN ... ELSE ... ;
+IF ... THEN IF ... ELSE ... ELSE ... ;
+IF ... THEN BEGIN ... ; ... ; END ELSE BEGIN ... ; END ;
+
+This error occurs often because there is a semicolon (;) just before the ELSE sentence.
+@2@250@0@
+A REPEAT sentence is expected with an UNTIL sentence. For example:
+
+REPEAT ... ; ... ; UNTIL ... ;
+@2@251@0@
+A BEGIN sentence is expected with an END sentence. For example:
+
+BEGIN ... ; ... ; END ;
+@2@254@0@
+The %10.1 variable must belong to %10.5 and not to %11.5.
+@2@256@0@
+The array dimensions must be identical.
+@2@262@0@
+A WITH statement cannot be used for an array of records.
+@2@263@0@
+The return value should be used for this function.
+@2@264@0@
+An option must be specified after '::'.
+@2@266@0@
+Not an allowed option.
+@2@268@0@
+Assignment is not allowed for this variable.
+@2@269@0@
+Keyword '%9' is reserved.
+@2@270@0@
+The same trigger was imported twice.
+@2@272@0@
+The maximum number of elements in an array is 1000000.
+@2@273@0@
+A dimension must be a positive number.
+@2@274@0@
+The function ID is missing. All user-defined functions must have an ID associated.
+
+MyFunction@23();
+@2@275@0@
+The function ID %1 is used by both function %2 and function %3.
+@2@276@0@
+The MESSAGE function with the variant data type is invalid because the FORMAT function is missing.
+@2@277@0@
+The variable ID %1 is used by both variable %2 and variable %3.
+@2@278@0@
+The parameter ID %1 is used by both parameter %2 and parameter %3 in the trigger %4.
+@2@279@0@
+The local variable ID %1 is used by both local variable %2 and local variable %3 in the trigger %4.
+@2@280@0@
+The variable ID %1 for the variable %2 is reserved for C/SIDE-defined variables only. The minimum ID number allowed is %3.
+@2@281@0@
+The ID %1 for the variable %2 is out of range. The maximum ID number allowed is %3.
+@2@282@0@
+The ID %1 for the function %2 is out of range. The maximum ID number allowed is %3.
+@2@283@0@
+The FunctionType and HandlerFunctions properties have been deleted.
+@2@284@0@
+The text that is being compiled exceeds the maximum token size of 64 KB.
+@2@285@0@   //The DotNet variable (variable name) cannot have both RunOnClient and WithEvents set to "Yes".
+The DotNet variable %1 cannot have both RunOnClient and WithEvents set to "Yes".
+@2@286@0@
+Assignment to a column in a query is not allowed.
+@2@287@0@
+A column in a query cannot be passed to a VAR parameter.
+@2@288@0@
+A column from a query variable was expected. For example:
+
+Query.Column
+Customer.Name
+@2@289@0@
+The %1 type is not supported. Use the %2 type instead.
+@2@290@0@
+The Upgrade function properties have been deleted.
+@2@291@0@
+The function attribute [%6] is invalid in this context.
+@2@292@0@
+The function '%1' cannot contain quotation marks (") in EventFunction property '%2'.
+@2@293@0@
+The EventFunction property cannot be empty in the function %1.
+@2@294@0@
+If you have selected the OnBeforeValidateEvent or the OnAfterValidateEvent functions, you must also set OnValidateEventField property in the function %1.
+@2@302@0@
+The following error occurred when saving the debugger breakpoint file.
+
+%1
+Value: %2
+@2@303@0@  //A breakpoint has already been defined for this object outside the editor, in '(application object)' at line (line number). The breakpoint cannot be set. 
+A breakpoint has already been defined for this object outside the editor, in '%6' at line %4. The breakpoint cannot be set.
+@2@304@0@  // Trying to set a breakpoint when Database Authentication is used to log in into C/SIDE and there is no NavUSer mapped to database login
+No users match the current user ID. You cannot set the breakpoint if you are using database authentication to log into Microsoft Dynamics NAV Development Environment and there is no Microsoft Dynamics NAV user ID mapped to the database login.
+@2@400@0@  //Invalid test method signature of function (function name).\r\n\r\nFunctions that are marked as TestMethod cannot have a return value or parameters. 
+Invalid test method signature of function %1.
+
+Functions that are marked as TestMethod cannot have a return value or parameters.
+@2@401@0@
+Invalid MESSAGE handler signature of function %1.
+
+MESSAGE handler functions must have this signature (parameter names may be freely chosen):
+<function name>(Message : Text[1024])
+@2@402@0@
+Invalid CONFIRM handler signature of function %1.
+
+CONFIRM handler functions must have this signature (parameter names may be freely chosen):
+<function name>(Question : Text[1024];VAR Reply : Boolean)
+@2@403@0@
+Invalid STRMENU handler signature of function %1.
+
+STRMENU handler functions must have this signature (parameter names may be freely chosen):
+<function name>(Options : Text[1024];VAR Choice : Integer;Instruction : Text[1024])
+@2@404@0@  //Invalid PAGE.RUN handler signature of function (function name).\r\n\r\nPAGE.RUN handler functions must have this signature, but you can choose any parameter names:\r\n\r\n
+//           <function name>(VAR <variable name> : Page <id>)\r\nor\r\n<function name>(VAR <variable name> : TestPage <id>) 
+Invalid PAGE.RUN handler signature of function %1.
+
+PAGE.RUN handler functions must have this signature, but you can choose any parameter names:
+
+<function name>(VAR <variable name> : Page <id>)
+or
+<function name>(VAR <variable name> : TestPage <id>)
+@2@405@0@   //Invalid PAGE.RUNMODAL handler signature of function (function name).\r\n\r\nPAGE.RUNMODAL handler functions must have this signature, but you can choose any parameter names:\r\n\r\n
+//            <function name>(VAR <variable name> : Page <id>;VAR Response : Action)\r\nor\r\n<function name>(VAR <variable name> : TestPage <id>) 
+Invalid PAGE.RUNMODAL handler signature of function %1.
+
+PAGE.RUNMODAL handler functions must have this signature, but you can choose any parameter names:
+
+<function name>(VAR <variable name> : Page <id>;VAR Response : Action)
+or
+<function name>(VAR <variable name> : TestPage <id>)
+@2@406@0@
+Invalid REPORT handler signature of function %1.
+
+REPORT handler functions must have this signature (parameter names may be freely chosen):
+<function name>(VAR <report name> : Report <report id>)
+@2@407@0@  //Invalid REQUESTPAGE handler signature of function (function name).\r\n\r\nREQUESTPAGE handler functions must have this signature (parameter names may be freely chosen):\r\n
+//           <function name>(VAR <report name> : TestRequestPage <report id>) 
+Invalid REQUESTPAGE handler signature of function %1.
+
+REQUESTPAGE handler functions must have this signature (parameter names may be freely chosen):
+<function name>(VAR <report name> : TestRequestPage <report id>)
+@2@413@0@
+The OnBeforeTestRun trigger signature is not valid. 
+
+This trigger is called before each test function of a test codeunit is run. It must have the following signature where you can specify your own parameter names but must use the OnBeforeTestRun function name and the following parameter types: 
+OnBeforeTestRun(CodeUnitId : Integer;CodeUnitName : Text[30];FunctionName : Text[128];FunctionTestPermissions : TestPermissions ) : Boolean 
+The parameters specify the function. The return value determines if that function should be included in the test run. Returning FALSE skips the function.
+@2@414@0@
+The OnAfterTestRun trigger signature is not valid.
+
+This trigger is called after each test function of a test codeunit is run. It must have the following signature where you can specify your own parameter names but must use the OnAfterTestRun function name and the following parameter types: 
+OnAfterTestRun(CodeUnitId : Integer;CodeUnitName : Text[30];FunctionName : Text[128];FunctionTestPermissions : TestPermissions;Success : Boolean) 
+The first three parameters specify the function. The Success parameter is TRUE if the run succeeded and FALSE if it failed.
+@2@415@0@
+Missing %1 UI handler (for Object ID: %2).
+@2@416@0@
+The following UI handlers were not executed.
+
+%1
+@2@417@0@
+The number of parameters for filter page handlers must be equal to the number of records used in the filter page. The parameters must be of type RecordRef and the handler must be returning a Boolean value, like:
+%1(FirstRecordRef : RecordRef;SecondRecordRef : RecordRef;NRecordRef : RecordRef) : Boolean 
+@2@418@0@
+The HYPERLINK handler signature in function %1 is not valid.
+
+HYPERLINK handler functions must have a signature in the following format:
+<function name>(Message : Text[1024])
+@2@419@0@
+A send notification handler can have one parameter only.  The parameter must be of type Notification, and the handler must return a Boolean value, for example:
+%1(VAR TheNotification : Notification) : Boolean
+@2@420@0@
+The function %1 cannot be local.
+
+Functions of upgrade codeunits must be non-local to be executed by the server during upgrade.
+@2@421@0@
+Invalid signature of function %1.
+
+Upgrade and Check functions must have this signature because they do not accept parameters and do not return any values:
+<function name>()
+@2@422@0@
+Invalid signature of function %1.
+
+TableSyncSetup functions must have this signature (function and parameter names may be freely chosen):
+<function name>(VAR <record name> : Record "Table Synch. Setup")
+@2@423@0@
+A recall notification handler can have one parameter only.  The parameter must be of type Notification, and the handler must return a Boolean value, for example:
+%1(VAR TheNotification : Notification) : Boolean
+@2@424@0@
+A SessionSettings notification handler can have one parameter only.  The parameter must be of type SessionSettings, and the handler must return a Boolean value, for example:
+%1(VAR TheSessionSettings : SessionSettings) : Boolean
+@2@430@0@
+TryFunction is only valid for normal functions. Function = %1.
+@2@431@0@
+A TryFunction cannot have a return value. Function = %1.
+@2@503@0@
+Use the symbol { to start the comment. For example: {Ordinary comment}.
+@2@504@0@
+Use the symbol } to end the comment. For example: {Ordinary comment}.
+@2@505@0@
+There is an error in a constant.
+@2@506@0@
+There is a syntax error.
+@2@507@0@ // 101::23
+Reduce the expression so it is less complex.
+@2@509@0@
+You have specified an unknown variable.
+
+%6
+
+Define the variable under 'Global C/AL symbols'.
+@2@510@0@
+The variable %6 is defined more than once.
+
+An example could be: 'File' exists as both a data type and a global variable.
+@2@511@0@
+'%9' should come here.
+@2@512@0@
+%6 is not a function, and only functions can be called with '(....'.
+@2@513@0@
+The call is ambiguous between the following methods:
+'%1'
+and
+'%2'
+@2@514@0@
+The function call was ambiguous. No matching method was found.
+@2@515@0@   //There is no overload for method '(function name)' that takes '(number)' arguments. 
+There is no overload for method '%1' that takes '%2' arguments.
+@2@516@0@   //The Comment Line exceeds the maximum size of (number) characters. 
+The Comment Line exceeds the maximum size of %2 characters.
+@2@602@0@
+Your program license does not permit use of the datatype %6.
+@2@700@0@
+You have reached the allowed number of permissions.
+@2@701@0@
+You have exceed the allowed number of permissions. The last %1 entries will not be saved.
+@2@702@0@
+The internal buffer size has been exceeded. Please remove one language or shorten the '%1' text constant. 
+Please notice that if you save the object, you will loose information!
+@2@703@0@
+The Dimensions property must be empty before you can set the "IncludeInDataset" property on the variable %1.
+@2@800@0@
+You cannot add code to an event publisher function. You can only add comments.
+@2@801@0@
+The event publisher function '%1' cannot have local variables.
+@2@802@0@
+The event publisher function '%1' cannot have a return value.
+@2@803@0@
+The event publisher function '%1' cannot have a parameter named '%2' if the '%3' property is set to 'true'
+@2@804@0@
+The event subscriber function '%1' cannot have a return value.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  AL_Run   ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÙ  C/AL Stack Machine Interpreter                            ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@101@0@
+@2@1@0@
+Array dimensions should be identical.
+@2@2@0@
+%3 cannot be used as an operator.
+
+%10.1 %3 %11.1
+@2@3@0@
+The value of %6 parameter %7 is outside of the permitted range.
+
+The current value is: %11.20.
+The permitted range is: from %1 to %2.
+@2@4@0@
+The indexing %11.20 in the array is outside of the permitted range.
+@2@6@0@
+Overflow in calculation of %10.20 %3 %11.20.
+@2@7@0@
+Division by zero.
+@2@9@0@
+Overflow under type conversion of %11.1 to %10.1.
+
+Value: %11.20
+@2@10@0@
+There is not sufficient available space in the C/AL stack memory to execute this task.
+
+There are too many simultaneous activities, due to the way recursive function call is used in the program. The problem can be solved temporarily by shutting down some of the open activities (but the function still cannot be executed).
+@2@14@0@
+The function %6 is not supported any longer.
+
+Remove the function call and compile the C/AL object again.
+@2@16@0@
+The expression %11.1 cannot be type-converted to a %10.1 value.
+@2@21@0@
+Reference to the member %6 of the variable %20 could not be solved.
+@2@22@0@
+The contents '%11.20' of %6 parameter no. %7 are invalid.
+@2@23@0@
+The function %6 was called with %11.1 in the parameter %7. 
+
+It should have been %10.1.
+@2@24@0@
+A variable may not take up more than 2 MB.
+@2@27@0@
+The definition of the field %6 was changed after the object was saved.
+
+Old type: %10.1
+New type: %11.1
+@2@31@0@
+%6
+@2@32@0@
+The C/AL object cannot be saved in compiled form.
+@2@34@0@
+STRCHECKSUM expects only numbers between 0 and 9 to be used in parameter no. %7. '%11.20'
+@2@35@0@
+CONVERTSTR expects that the 2 strings in the conversion are of equal length:
+
+Converting from: '%10.20' to: '%11.20'
+@2@55@0@
+The text '%11.20' in %6 parameter no. %7 is too long.
+@2@69@0@
+Cannot find the user-defined C/AL function %1.
+@2@70@0@
+The user-defined C/AL function %1 that takes %3 parameters, was called with %2 parameters.
+@2@71@0@
+You are using an invalid data type for this function.
+@2@72@0@
+You cannot call the C/AL function %6 when running the Application Server for Microsoft Dynamics NAV.
+@2@73@0@
+You cannot use C/AL variables of type %6 when running the Application Server for Microsoft Dynamics NAV.
+@2@75@0@
+The VARIANT2TIME function has encountered a parameter that cannot be converted.
+Use either variant or time as the argument.
+@2@76@0@
+The VARIANT2DATE function has encountered a parameter that cannot be converted.
+Use either variant or date as the argument.
+@2@77@0@
+An error was expected inside an ASSERTERROR statement.
+@2@78@0@
+Nesting ASSERTERROR statements in the same scope is not supported.
+@2@79@0@   //This message is for C/AL programmers:\r\n\r\nYou cannot run the (Application Object) object ID (ID number) when you open a report from the RoleTailored client. 
+This message is for C/AL programmers:
+
+You cannot run the %1 object ID %2 when you open a report from the RoleTailored client.
+@2@80@0@   //This message is for C/AL programmers:\r\n\r\nThe (Application object type - Dataport or Form) object run time is not supported in the C/SIDE Development Environment. 
+This message is for C/AL programmers:
+
+The %6 object run time is not supported in the C/SIDE Development Environment.
+@2@90@0@
+The file is not open.
+@2@91@0@
+The file is already open.
+@2@92@0@
+A variable of this type cannot be read or written in binary form.
+@2@93@0@
+An error occurred while you streamed the file.
+@2@94@0@
+The .NET interoperability type cannot be used in code for the C/SIDE run time.
+@2@96@0@
+The CURRENTEXECUTIONMODE function cannot be used in code for the C/SIDE run time.
+@2@97@0@
+You cannot access report functions and properties for the C/SIDE run time.
+@2@120@0@
+The dialog window is not open.
+@2@130@0@
+You cannot export an empty BLOB (%6).
+@2@131@0@
+You cannot stream an empty BLOB (%6).
+@2@132@0@
+You could not stream to BLOB.
+@2@140@0@
+You cannot call CONFIRM in the Application Server. 
+The message was: 
+ 
+%12
+@2@141@0@
+You cannot call STRMENU in the Application Server.
+The menu items were:
+
+%13
+@2@142@0@
+You cannot call DIALOG.INPUT in the Application Server.
+@2@150@0@
+The stream has returned a read error.
+@2@151@0@
+You cannot stream an empty stream interface (%6).
+@2@152@0@
+The stream has returned a write error.
+@2@200@0@
+Too many key fields were specified, so %1.1 could not be retrieved. The number of fields in the primary key is %4.
+@2@201@0@
+No relationship has been associated with the field %2.1 in %1.1.
+@2@301@0@
+A CONFIRM with the following message has been encountered:
+
+%10
+
+The system answered %11 to the question.
+@2@400@0@
+You are about to run the following executable for the first time:
+
+Executable: %1
+Parameter: %2
+
+Please be aware that you may be running an executable that could potentially 
+harm your computer.
+
+Do you trust this executable and its parameter?
+@2@401@0@
+For security reasons, you are not allowed to run the following
+executable in the SHELL function when it is passed as a variable:
+
+Executable: %1
+Parameter: %2
+
+For AL Developers: Instead, use a text constant that contains 
+the path to the executable.
+@2@1101@0@
+%2.1 %3 in %1.1 %5.
+@2@1102@0@
+%2.1 must not be %2.5 in %1.1 %5.
+@2@1103@0@
+%2.1 must be %2.5 in %1.1 %5.
+@2@1104@0@
+%6 has been deleted from table %1.1.
+@2@1105@0@
+Field %2.1 in table %1.1 is not enabled.
+@2@1106@0@
+The LOCKTABLE function on the %1.1 table cannot be used with a Wait parameter value of FALSE or a VersionCheck parameter value of TRUE when connected to SQL Server.
+@2@1107@0@
+The COPY function can only be used with the shareTable argument set to true if both records are temporary.
+@2@1112@0@
+You must specify %2.1 in %1.1 %5.
+@2@1113@0@
+You must not specify %2.1 in %1.1 %5.
+@2@1122@0@
+%2.1 must not be %2.5 in %1.1 %5.
+@2@1123@0@
+%2.1 must be %2.5 in %1.1 %5.
+@2@1132@0@
+%2.1 must not be %2.5 in %1.1 %5.
+@2@1133@0@
+%2.1 must be %2.5 in %1.1 %5.
+@2@1134@0@
+The text constant %4 in the report exceeds the allowed limit by %5 characters.
+
+
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  AL_Streams   ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÙ  C/AL Streams Errors                                         ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@120@0@
+@2@1@0@
+A stream error has occurred.
+@2@2@0@
+This message is for C/AL programmers:
+
+The Read Size does not correspond to the Variable size or the requested Length.
+@2@3@0@
+This message is for C/AL programmers:
+
+The Written Size does not correspond to the Variable size or the requested Length.
+@2@4@0@
+This message is for C/AL programmers:
+
+The stream contains data that cannot be correctly interpreted.
+@2@5@0@
+This message is for C/AL programmers:
+
+The stream cannot find a zero-terminated string.
+The stream may be invalid, or the (variable or requested) size may be too small.
+@2@6@0@
+This message is for C/AL programmers:
+
+The requested size in the stream does not correspond to the variable size.
+@2@7@0@
+This message is for C/AL programmers:
+
+The stream is either out of scope or has not been initialized.
+@2@8@0@
+This message is for C/AL programmers:
+
+The write size in the stream does not correspond to the variable size or the requested length.
+@2@9@0@
+An error occurred when you tried to write to the stream.
+
+@2@10@0@
+You cannot use COPYSTREAM to copy data between two streams based on the same data source.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  AL_Variant   ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÙ  C/AL Variant Errors                                         ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@121@0@
+@2@1@0@
+A variant error has occurred.
+@2@2@0@
+This message is for C/AL programmers:
+
+The variant is empty or an unknown value has been assigned to it.
+@2@3@0@
+This message is for C/AL programmers:
+
+The variant has encountered an incompatible data type.
+@2@4@0@
+The VARIANT2TIME function has encountered an argument that the program cannot convert.
+Use either variant or time as the argument.
+@2@5@0@
+The VARIANT2DATE function has encountered an argument that the program cannot convert.
+Use either variant or date as the argument.
+@2@6@0@
+You cannot copy the variant.
+@2@7@0@
+You cannot assign a different type than %1 when it is contained in a variant by VAR.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  AL_Bigstr   ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÙ  C/AL Bigstr Errors                                         ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@148@0@
+@2@1@0@
+This message is for C/AL programmers:
+
+You cannot allocate a string lager than 2147483647 Bytes for a BigText variable.
+@2@2@0@
+This message is for C/AL programmers:
+
+You cannot specify a negative position in a BigText variable.
+@2@3@0@
+This message is for C/AL programmers:
+
+You cannot specify a negative Length in a BigText variable.
+@2@4@0@
+This message is for C/AL programmers:
+
+You would overflow the target field when copying from the BigText variable.
+@2@END@0@
+//   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  AL_NCLTypeConv    ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÙ  C/AL to NCL type convertion Errors                         ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@109@0@
+@2@1@0@
+The type %1 is not supported by the Microsoft Dynamics NAV Development Environment Class Library.
+@2@END@0@
+
+//   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ÚÄ´  Module_AL_2Cs    ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+// ³ ÀÄÄÄÄÄÄÄÄÄÄÄÙ  AL 2 C# and Metadata generation errors                     ³
+// ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@1@108@0@
+@2@1@0@
+MSXML could not be loaded
+@2@2@0@
+Metadata is corrupt
+@2@END@0@

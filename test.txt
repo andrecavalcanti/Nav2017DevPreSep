@@ -1,0 +1,45 @@
+OBJECT Table 70018000 EDI Setup
+{
+  OBJECT-PROPERTIES
+  {
+    Date=10/17/16;
+    Time=[ 4:17:04 AM];
+    Modified=Yes;
+    Version List=FLS1.00;
+  }
+  PROPERTIES
+  {
+    CaptionML=[ENU=EDI Setup;
+               ENA=EDI Setup];
+  }
+  FIELDS
+  {
+    { 1   ;   ;Primary Key         ;Code10        ;CaptionML=[ENU=Primary Key;
+                                                              ENA=Primary Key];
+                                                   Description=ECSP2.00j }
+    { 450 ;   ;Security Active     ;Boolean       ;CaptionML=[ENU=Security Active;
+                                                              ENA=Security Active];
+                                                   Description=ECSP2.00j }
+  }
+  KEYS
+  {
+    {    ;Primary Key                             ;Clustered=Yes }
+  }
+  FIELDGROUPS
+  {
+  }
+  CODE
+  {
+    VAR
+      ediFoundation@1101235000 : Codeunit 70018003;
+
+    BEGIN
+    {
+      ECLIPSE - SupplyPoint (ECSP)
+      ----------------------------
+        ECSP2.00j
+    }
+    END.
+  }
+}
+

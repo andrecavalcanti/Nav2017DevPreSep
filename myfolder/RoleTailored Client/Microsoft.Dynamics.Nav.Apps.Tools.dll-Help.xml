@@ -1,0 +1,3026 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <!-- Cmdlet: Compare-NAVAppApplicationObjectLanguage -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Compare-NAVAppApplicationObjectLanguage</command:name>
+      <command:verb>Compare</command:verb>
+      <command:noun>NAVAppApplicationObjectLanguage</command:noun>
+      <maml:description>
+        <maml:para>Compares the language text files in two folders (original and modified) and calculates the deltas. The result of the comparison is a language text file per object with the calculated delta.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the Compare-NAVAppApplicationObjectLanguage cmdlet to calculate the delta between an original version and modified version of language text files. The resulting delta language text files can then be included in a NAV App package by using the New-NAVAppPackage cmdlet.</maml:para>
+      <maml:para>The Compare-NAVAppApplicationObjectLanguage cmdlet compares all of the language text files in the two specified folders and creates a delta language text file per object that includes the differences. The language text files to compare must be in the format of exported multilanguage files created by using the Export-NAVApplicationObjectLanguage cmdlet or the Microsoft Dynamics NAV Development Environment. You can compare two language text files that contain multiple application objects or multiple language text files containing a single object, or any combination therein. The cmdlet will compare the translations for all objects across all of the language text files in the specified folders.</maml:para>
+      <maml:para>The cmdlet creates a language text file per object that includes all of the translated \*ML properties and text constants (deltas) for that object. For example, you export the text strings for the Microsoft Dynamics NAV objects that you will be providing translations for to text files in a MLORIGINAL folder. You then put a copy of the exported text file into a MLMODIFIED folder and add your translated strings directly to the file.</maml:para>
+      <maml:para>You then use the Compare-NAVAppApplicationObjectLanguage cmdlet to compare the language text files in the MLORIGINAL and MLMODIFIED folders, saving the resulting delta language text files to a MLDELTA folder. Then when using the New-NAVAppPackage cmdlet to create the NAV App package, the MLDELTA folder is provided for the -SourcePath parameter.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Compare-NAVAppApplicationObjectLanguage</maml:name>
+        <!-- Parameter: OriginalPath -->
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="1" aliases="Original">
+          <maml:name>OriginalPath</maml:name>
+          <maml:description>
+            <maml:para>Specifies the folder containing the original language files to compare.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: ModifiedPath -->
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="2" aliases="Modified">
+          <maml:name>ModifiedPath</maml:name>
+          <maml:description>
+            <maml:para>Specifies the folder containing the modified language files to compare.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: DeltaPath -->
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="3" aliases="Delta">
+          <maml:name>DeltaPath</maml:name>
+          <maml:description>
+            <maml:para>Specifies the folder where the calculated delta language files will be placed.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Force -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Forces the command to run without asking for user confirmation to overwrite an existing file at the given path.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: OriginalPath -->
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="1" aliases="Original">
+        <maml:name>OriginalPath</maml:name>
+        <maml:description>
+          <maml:para>Specifies the folder containing the original language files to compare.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="1" aliases="Original">
+        <maml:name>Original</maml:name>
+        <maml:description>
+          <maml:para>Specifies the folder containing the original language files to compare.</maml:para>
+          <maml:para>This is an alias of the OriginalPath parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: ModifiedPath -->
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="2" aliases="Modified">
+        <maml:name>ModifiedPath</maml:name>
+        <maml:description>
+          <maml:para>Specifies the folder containing the modified language files to compare.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="2" aliases="Modified">
+        <maml:name>Modified</maml:name>
+        <maml:description>
+          <maml:para>Specifies the folder containing the modified language files to compare.</maml:para>
+          <maml:para>This is an alias of the ModifiedPath parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: DeltaPath -->
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="3" aliases="Delta">
+        <maml:name>DeltaPath</maml:name>
+        <maml:description>
+          <maml:para>Specifies the folder where the calculated delta language files will be placed.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="3" aliases="Delta">
+        <maml:name>Delta</maml:name>
+        <maml:description>
+          <maml:para>Specifies the folder where the calculated delta language files will be placed.</maml:para>
+          <maml:para>This is an alias of the DeltaPath parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Force -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>Forces the command to run without asking for user confirmation to overwrite an existing file at the given path.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>Compare-NAVAppApplicationObjectLanguage -OriginalPath /MLORIGINAL -ModifiedPath /MLMODIFIED -DeltaPath /MLDELTA
+
+   Page 70001: Added
+   Table 70006: Modified</dev:code>
+        <dev:remarks>
+          <maml:para>This example compares the language text files in the MLORIGINAL and MLMODIFIED folders, creating the resulting delta language text files in the MLDELTA folder. When the comparison completes, a summary is shown.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>Compare-NAVAppApplicationObjectLanguage -OriginalPath /MLORIGINAL -ModifiedPath /MLMODIFIED -DeltaPath /MLDELTA -Confirm
+
+   Page 70001: Added
+   Table 70006: Modified</dev:code>
+        <dev:remarks>
+          <maml:para>This example compares the language text files in the MLORIGINAL and MLMODIFIED folders, creating the resulting delta language text files in the MLDELTA folder. The -Confirm parameter specifies that the user must confirm the process. When the comparison completes, a summary is shown.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 3  ----------</maml:title>
+        <dev:code>Compare-NAVAppApplicationObjectLanguage -OriginalPath /MLORIGINAL -ModifiedPath /MLMODIFIED -DeltaPath /MLDELTA -Confirm
+
+   Page 70001: Added
+   Table 70006: Modified</dev:code>
+        <dev:remarks>
+          <maml:para>This example compares the language text files in the MLORIGINAL and MLMODIFIED folders, creating the resulting delta language text files in the MLDELTA folder. The -Force parameter specifies that an existing file in the delta folder with the same name will be overwritten without prompting the user. When the comparison completes, a summary is shown.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 4  ----------</maml:title>
+        <dev:code>Compare-NAVAppApplicationObjectLanguage -OriginalPath /MLORIGINAL -ModifiedPath /MLMODIFIED -DeltaPath /MLDELTA -PassThru
+
+   Page 70001: Added
+   Table 70006: Modified</dev:code>
+        <dev:remarks>
+          <maml:para>This example compares the language text files in the MLORIGINAL and MLMODIFIED folders, creating the resulting delta language text files in the MLDELTA folder. The -PassThru parameter returns a FileInfo object for each delta language file that is created by the comparison. When the comparison completes, a summary is shown.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink?linkid=398882</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-NAVAppPackage</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=616078</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: Get-NAVAppManifest -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-NAVAppManifest</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>NAVAppManifest</command:noun>
+      <maml:description>
+        <maml:para>Loads a manifest for an NAV App from an external source.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the Get-NAVAppManifest cmdlet to load a manifest from an NAV App from an external source, such as an .xml file.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-NAVAppManifest</maml:name>
+        <!-- Parameter: Path -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to a file with an NAV App manifest.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Path -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to a file with an NAV App manifest.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By value and by property name: Path</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: NavAppManifest -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>Get-NAVAppManifest -Path '.\Manifest-Proseware SmartApp.xml'
+
+   AppId              : 3c88160c-e0eb-4fe1-b4f6-011e45d74b10
+   AppName            : Proseware SmartApp
+   AppPublisher       : Proseware, Inc.
+   AppDescription     : First NAV App by Proseware
+   AppVersion         : 2.3.4.500
+   AppCompatibilityId : 2.0.0.0
+   AppPrivacyStatement: http://www.proseware.com/SmartApp/privacypolicy.aspx
+   AppEula            : http://www.proseware.com/SmartApp/ULA.aspx
+   AppHelp            : http://www.proseware.com/SmartApp/Support.aspx
+   AppUrl             : http://www.proseware.com/SmartApp/
+   AppLogo            :
+   AppScreenShots     : {}
+   Capabilities       : {}
+   Prerequisites      : {}
+   Dependencies       : {}</dev:code>
+        <dev:remarks>
+          <maml:para>This example gets a NAV App manifest from an XML manifest file.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>Get-NAVAppManifest -Path '.\Manifest-Proseware SmartApp.xml' | New-NAVAppPackage -Path 'C:\Proseware SmartApp.navx' -SourcePath
+C:\NavAppFiles</dev:code>
+        <dev:remarks>
+          <maml:para>This example gets a NAV App manifest from an XML manifest file and then passes the manifest to the New-NAVAppPackage cmdlet to create a new NAV App package.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=616072</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-NAVAppManifest</maml:linkText>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-NavAppManifestFile</maml:linkText>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-NAVAppPackage</maml:linkText>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Set-NAVAppManifest</maml:linkText>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: New-NAVAppManifest -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>New-NAVAppManifest</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>NAVAppManifest</command:noun>
+      <maml:description>
+        <maml:para>Creates a new in-memory manifest object with the specified NAV App metadata.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the New-NAVAppManifest cmdlet to create a new in-memory manifest object that defines a NAV App along with its required prerequisites and dependencies. The manifest object can then be written to disk using the New-NAVAppManifestFile cmdlet. The manifest is required when creating the NAV App package file (.navx) using the New-NAVAppPackage cmdlet. The manifest property values can be changed using the Set-NAVAppManifest cmdlet.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>New-NAVAppManifest</maml:name>
+        <!-- Parameter: Name -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="1" aliases="AppName">
+          <maml:name>Name</maml:name>
+          <maml:description>
+            <maml:para>Specifies the name of the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Help -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="10" aliases="AppHelp">
+          <maml:name>Help</maml:name>
+          <maml:description>
+            <maml:para>Specifies a hyperlink to the NAV App help site.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Url -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="11" aliases="AppUrl">
+          <maml:name>Url</maml:name>
+          <maml:description>
+            <maml:para>Specifies a generic hyperlink.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Publisher -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="2" aliases="AppPublisher">
+          <maml:name>Publisher</maml:name>
+          <maml:description>
+            <maml:para>Specifies the publisher of the NAV App, such as your company name.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Id -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="3" aliases="AppId">
+          <maml:name>Id</maml:name>
+          <maml:description>
+            <maml:para>Specifies the unique identifier for the NAV App. A unique identifier will be generated if a value is not provided. The same unique identifier should be used for each new version of the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">Guid</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>00000000-0000-0000-0000-000000000000</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: Brief -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="4" aliases="AppBrief">
+          <maml:name>Brief</maml:name>
+          <maml:description>
+            <maml:para>Specifies the brief description for the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Description -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="5" aliases="AppDescription">
+          <maml:name>Description</maml:name>
+          <maml:description>
+            <maml:para>Specifies the description for the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Version -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="6" aliases="AppVersion">
+          <maml:name>Version</maml:name>
+          <maml:description>
+            <maml:para>Specifies the version of the NAV App. The version is a string in the format of Major.Minor.Build.Revision, with a default value of 1.0.0.0 if not provided. The value should be incremented for each new version of the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">Version</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Version</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: CompatibilityId -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="7" aliases="AppCompatibilityId">
+          <maml:name>CompatibilityId</maml:name>
+          <maml:description>
+            <maml:para>Specifies the compatibility ID of the NAV App. The compatibility ID is a version string in the format of Major.Minor.Build.Revision, with a default value of 1.0.0.0 if not provided. The value is used to indicate whether there are compatibility related code changes between different versions of the NAV App. If a new version of the NAV App does not break compatibility, leave the compatibility ID the same as the previous version.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">Version</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Version</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: PrivacyStatement -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="8" aliases="AppPrivacyStatment">
+          <maml:name>PrivacyStatement</maml:name>
+          <maml:description>
+            <maml:para>Specifies a hyperlink to the NAV App Privacy Statement.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Eula -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="9" aliases="AppEula">
+          <maml:name>Eula</maml:name>
+          <maml:description>
+            <maml:para>Specifies a hyperlink to the NAV AppEnd User License Agreement.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Dependencies -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>Dependencies</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to a package file (.navx) for another NAV App that this NAV App is dependent on. Use a comma (,) to separate the paths to multiple .navx files., such as in the following example: C:\Proseware\SmartAppBase.navx, C:\Proseware\ProsewareBase.navx</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Prerequisites -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>Prerequisites</maml:name>
+          <maml:description>
+            <maml:para>Specifies the objects that must exist in order to deploy the NAV App to a Microsoft Dynamics NAV server instance. The prerequisites is a string in the format of type=ID, where type can be any NAV object type such as Table, CodeUnit, or Page. Use a comma (,) to separate the prerequisites, such as in the following example: Table=397, CodeUnit=78</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Name -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="1" aliases="AppName">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>Specifies the name of the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="1" aliases="AppName">
+        <maml:name>AppName</maml:name>
+        <maml:description>
+          <maml:para>Specifies the name of the NAV App.</maml:para>
+          <maml:para>This is an alias of the Name parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Publisher -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="2" aliases="AppPublisher">
+        <maml:name>Publisher</maml:name>
+        <maml:description>
+          <maml:para>Specifies the publisher of the NAV App, such as your company name.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="2" aliases="AppPublisher">
+        <maml:name>AppPublisher</maml:name>
+        <maml:description>
+          <maml:para>Specifies the publisher of the NAV App, such as your company name.</maml:para>
+          <maml:para>This is an alias of the Publisher parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Id -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="3" aliases="AppId">
+        <maml:name>Id</maml:name>
+        <maml:description>
+          <maml:para>Specifies the unique identifier for the NAV App. A unique identifier will be generated if a value is not provided. The same unique identifier should be used for each new version of the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Guid</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>00000000-0000-0000-0000-000000000000</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="3" aliases="AppId">
+        <maml:name>AppId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the unique identifier for the NAV App. A unique identifier will be generated if a value is not provided. The same unique identifier should be used for each new version of the NAV App.</maml:para>
+          <maml:para>This is an alias of the Id parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Guid</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>00000000-0000-0000-0000-000000000000</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Brief -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="4" aliases="AppBrief">
+        <maml:name>Brief</maml:name>
+        <maml:description>
+          <maml:para>Specifies the brief description for the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="4" aliases="AppBrief">
+        <maml:name>AppBrief</maml:name>
+        <maml:description>
+          <maml:para>Specifies the brief description for the NAV App.</maml:para>
+          <maml:para>This is an alias of the Brief parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Description -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="5" aliases="AppDescription">
+        <maml:name>Description</maml:name>
+        <maml:description>
+          <maml:para>Specifies the description for the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="5" aliases="AppDescription">
+        <maml:name>AppDescription</maml:name>
+        <maml:description>
+          <maml:para>Specifies the description for the NAV App.</maml:para>
+          <maml:para>This is an alias of the Description parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Version -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="6" aliases="AppVersion">
+        <maml:name>Version</maml:name>
+        <maml:description>
+          <maml:para>Specifies the version of the NAV App. The version is a string in the format of Major.Minor.Build.Revision, with a default value of 1.0.0.0 if not provided. The value should be incremented for each new version of the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Version</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="6" aliases="AppVersion">
+        <maml:name>AppVersion</maml:name>
+        <maml:description>
+          <maml:para>Specifies the version of the NAV App. The version is a string in the format of Major.Minor.Build.Revision, with a default value of 1.0.0.0 if not provided. The value should be incremented for each new version of the NAV App.</maml:para>
+          <maml:para>This is an alias of the Version parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Version</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: CompatibilityId -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="7" aliases="AppCompatibilityId">
+        <maml:name>CompatibilityId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the compatibility ID of the NAV App. The compatibility ID is a version string in the format of Major.Minor.Build.Revision, with a default value of 1.0.0.0 if not provided. The value is used to indicate whether there are compatibility related code changes between different versions of the NAV App. If a new version of the NAV App does not break compatibility, leave the compatibility ID the same as the previous version.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Version</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="7" aliases="AppCompatibilityId">
+        <maml:name>AppCompatibilityId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the compatibility ID of the NAV App. The compatibility ID is a version string in the format of Major.Minor.Build.Revision, with a default value of 1.0.0.0 if not provided. The value is used to indicate whether there are compatibility related code changes between different versions of the NAV App. If a new version of the NAV App does not break compatibility, leave the compatibility ID the same as the previous version.</maml:para>
+          <maml:para>This is an alias of the CompatibilityId parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Version</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: PrivacyStatement -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="8" aliases="AppPrivacyStatment">
+        <maml:name>PrivacyStatement</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NAV App Privacy Statement.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="8" aliases="AppPrivacyStatment">
+        <maml:name>AppPrivacyStatment</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NAV App Privacy Statement.</maml:para>
+          <maml:para>This is an alias of the PrivacyStatement parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Eula -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="9" aliases="AppEula">
+        <maml:name>Eula</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NAV AppEnd User License Agreement.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="9" aliases="AppEula">
+        <maml:name>AppEula</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NAV AppEnd User License Agreement.</maml:para>
+          <maml:para>This is an alias of the Eula parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Help -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="10" aliases="AppHelp">
+        <maml:name>Help</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NAV App help site.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="10" aliases="AppHelp">
+        <maml:name>AppHelp</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NAV App help site.</maml:para>
+          <maml:para>This is an alias of the Help parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Url -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="11" aliases="AppUrl">
+        <maml:name>Url</maml:name>
+        <maml:description>
+          <maml:para>Specifies a generic hyperlink.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="11" aliases="AppUrl">
+        <maml:name>AppUrl</maml:name>
+        <maml:description>
+          <maml:para>Specifies a generic hyperlink.</maml:para>
+          <maml:para>This is an alias of the Url parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Prerequisites -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>Prerequisites</maml:name>
+        <maml:description>
+          <maml:para>Specifies the objects that must exist in order to deploy the NAV App to a Microsoft Dynamics NAV server instance. The prerequisites is a string in the format of type=ID, where type can be any NAV object type such as Table, CodeUnit, or Page. Use a comma (,) to separate the prerequisites, such as in the following example: Table=397, CodeUnit=78</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Dependencies -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>Dependencies</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to a package file (.navx) for another NAV App that this NAV App is dependent on. Use a comma (,) to separate the paths to multiple .navx files., such as in the following example: C:\Proseware\SmartAppBase.navx, C:\Proseware\ProsewareBase.navx</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Name</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Publisher</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Id</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Brief</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Description</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Version</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: CompatibilityId</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: PrivacyStatement</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Eula</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Help</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Url</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Prerequisites</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Dependencies</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: NavAppManifest -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>New-NavAppManifest -Name "Proseware SmartApp" -Publisher "Proseware, Inc." -Description "First NAV App by Proseware"
+
+   AppId              : 384ed42e-534b-491f-9c4b-dfc8140bbc38
+   AppName            : Proseware SmartApp
+   AppPublisher       : Proseware, Inc.
+   AppDescription     : First NAV App by Proseware
+   AppBrief           :
+   AppVersion         : 1.0.0.0
+   AppCompatibilityId : 1.0.0.0
+   AppPrivacyStatement:
+   AppEula            :
+   AppHelp            :
+   AppUrl             :
+   AppLogo            :
+   AppScreenShots     :
+   Capabilities       : {}
+   Prerequisites      : {}
+   Dependencies       : {}</dev:code>
+        <dev:remarks>
+          <maml:para>This example creates a new in-memory manifest object with the provided property values and defaults for properties not provided.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>New-NavAppManifest -Name "Proseware SmartApp" -Publisher "Proseware, Inc." -Brief "First Proseware App" -Description "The first NAV
+App created by Proseware" -Version "2.3.4.500" -CompatibilityId "2.0.0.0" -Id 384ed42e-534b-491f-9c4b-dfc8140bbc38 -Dependencies
+C:\Proseware\SmartAppBase.navx, C:\Proseware\ProsewareBase.navx -Prerequisites Table=397, CodeUnit=78 -PrivacyStatement
+http://www.proseware.com/SmartApp/privacypolicy.aspx -Ula http://www.proseware.com/SmartApp/ULA.aspx -Help
+http://www.proseware.com/SmartApp/Support.aspx -Url http://www.proseware.com/SmartApp/
+
+   AppId              : 384ed42e-534b-491f-9c4b-dfc8140bbc38
+   AppName            : Proseware SmartApp
+   AppPublisher       : Proseware, Inc.
+   AppDescription     : First NAV App by Proseware
+    AppBrief           : First Proseware App
+   AppVersion         : 2.3.4.500
+   AppCompatibilityId : 2.0.0.0
+   AppPrivacyStatement: http://www.proseware.com/SmartApp/privacypolicy.aspx
+   AppEula            : http://www.proseware.com/SmartApp/ULA.aspx
+   AppHelp            : http://www.proseware.com/SmartApp/Support.aspx
+   AppUrl             : http://www.proseware.com/SmartApp/
+   AppLogo            :
+   AppScreenShot      :
+   Capabilities       : {}
+   Prerequisites      : {Table=397, CodeUnit=78}
+   Dependencies       : {SmartApp Base, Proseware Inc., 2.0.0.300, Proseware Base, Proseware Inc, 2.0.0.0}</dev:code>
+        <dev:remarks>
+          <maml:para>This example creates a new in-memory manifest object with values provided for all properties.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 3  ----------</maml:title>
+        <dev:code>New-NavAppManifest -Name "Proseware SmartApp" -Publisher "Proseware, Inc." -Description "First NAV App by Proseware" |
+New-NavAppManifestFile -Path ".\Manifest-Proseware SmartApp.xml"</dev:code>
+        <dev:remarks>
+          <maml:para>This example uses New-NAVAPPManifestFile cmdlet to persist the new in-memory manifest to a file. This can then be saved under source control for later use.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 4  ----------</maml:title>
+        <dev:code>New-NAVAppManifest -Name "Proseware SmartApp" -Publisher "Proseware, Inc." -Description "First NAV App by Proseware" |
+New-NAVAppPackage -Path 'C:\Proseware SmartApp.navx' -SourcePath C:\NavAppFiles</dev:code>
+        <dev:remarks>
+          <maml:para>This example shows how to pass the in-memory manifest to New-NAVAppPackage cmdlet to get a .navx file.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=616071</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-NAVAppManifest</maml:linkText>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-NavAppManifestFile</maml:linkText>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-NAVAppPackage</maml:linkText>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Set-NAVAppManifest</maml:linkText>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: Set-NAVAppManifest -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Set-NAVAppManifest</command:name>
+      <command:verb>Set</command:verb>
+      <command:noun>NAVAppManifest</command:noun>
+      <maml:description>
+        <maml:para>Sets one or more available properties on an in-memory manifest.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the Set-NAVAppManifest cmdlet to set properties on an in-memory manifest object. You can create the manifest object by using the New-NAVAppManifest cmdlet. You can then write the updated manifest object to disk by using the New-NAVAppManifestFile cmdlet. The manifest is required when creating the NAV App package file (.navx) using the New-NAVAppPackage cmdlet.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Set-NAVAppManifest</maml:name>
+        <!-- Parameter: Manifest -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="1">
+          <maml:name>Manifest</maml:name>
+          <maml:description>
+            <maml:para>Specifies the manifest object on which the properties are to be set by the cmdlet's parameter values.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">NavAppManifest</command:parameterValue>
+          <dev:type>
+            <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Brief -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppBrief">
+          <maml:name>Brief</maml:name>
+          <maml:description>
+            <maml:para>Specifies the brief description for the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: CompatibilityId -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppCompatibilityId">
+          <maml:name>CompatibilityId</maml:name>
+          <maml:description>
+            <maml:para>Specifies the compatibility ID of the NAV App. The compatibility ID is a version string in the format of Major.Minor.Build.Revision. The value is used to indicate whether there are compatibility related code changes between different versions of the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">Version</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Version</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Dependencies -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Dependencies</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to a package file (.navx) for another NAV App that this NAV App is dependent on. Use a comma (,) to separate the paths to multiple .navx files, such as in the following example: C:\Proseware\SmartAppBase.navx, C:\Proseware\ProsewareBase.navx</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Description -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppDescription">
+          <maml:name>Description</maml:name>
+          <maml:description>
+            <maml:para>Specifies the description for the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Eula -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppEula">
+          <maml:name>Eula</maml:name>
+          <maml:description>
+            <maml:para>Specifies a hyperlink to the NavApp End User License Agreement.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Help -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppHelp">
+          <maml:name>Help</maml:name>
+          <maml:description>
+            <maml:para>Specifies a hyperlink to the NavApp help site.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Id -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppId">
+          <maml:name>Id</maml:name>
+          <maml:description>
+            <maml:para>Specifies the unique identifier for the NAV App. A unique identifier will be generated if a value is not provided. The same unique identifier should be used for each new version of the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">Guid</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>00000000-0000-0000-0000-000000000000</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: Name -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppName">
+          <maml:name>Name</maml:name>
+          <maml:description>
+            <maml:para>Specifies the name of the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Prerequisites -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Prerequisites</maml:name>
+          <maml:description>
+            <maml:para>Specifies the objects that must exist in order to deploy the NAV App to a NAV server instance. The prerequisites is a string in the format of type=ID, where type would include NAV object types like Table, CodeUnit, Page, etc. Use a comma (,) to separate the prerequisites. (example: Table=397, CodeUnit=78)</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: PrivacyStatement -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppPrivacyStatement">
+          <maml:name>PrivacyStatement</maml:name>
+          <maml:description>
+            <maml:para>Specifies a hyperlink to the NavApp Privacy Statement.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Publisher -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppPublisher">
+          <maml:name>Publisher</maml:name>
+          <maml:description>
+            <maml:para>Specifies the publisher of the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Url -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppUrl">
+          <maml:name>Url</maml:name>
+          <maml:description>
+            <maml:para>Specifies a generic hyperlink.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Version -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppVersion">
+          <maml:name>Version</maml:name>
+          <maml:description>
+            <maml:para>Specifies the version of the NAV App. The version is a string in the format of Major.Minor.Build.Revision. The value should be incremented for each new version of the NAV App.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">Version</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Version</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Manifest -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="1">
+        <maml:name>Manifest</maml:name>
+        <maml:description>
+          <maml:para>Specifies the manifest object on which the properties are to be set by the cmdlet's parameter values.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">NavAppManifest</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Id -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppId">
+        <maml:name>Id</maml:name>
+        <maml:description>
+          <maml:para>Specifies the unique identifier for the NAV App. A unique identifier will be generated if a value is not provided. The same unique identifier should be used for each new version of the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Guid</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>00000000-0000-0000-0000-000000000000</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppId">
+        <maml:name>AppId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the unique identifier for the NAV App. A unique identifier will be generated if a value is not provided. The same unique identifier should be used for each new version of the NAV App.</maml:para>
+          <maml:para>This is an alias of the Id parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Guid</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>00000000-0000-0000-0000-000000000000</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Name -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppName">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>Specifies the name of the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppName">
+        <maml:name>AppName</maml:name>
+        <maml:description>
+          <maml:para>Specifies the name of the NAV App.</maml:para>
+          <maml:para>This is an alias of the Name parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Publisher -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppPublisher">
+        <maml:name>Publisher</maml:name>
+        <maml:description>
+          <maml:para>Specifies the publisher of the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppPublisher">
+        <maml:name>AppPublisher</maml:name>
+        <maml:description>
+          <maml:para>Specifies the publisher of the NAV App.</maml:para>
+          <maml:para>This is an alias of the Publisher parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Brief -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppBrief">
+        <maml:name>Brief</maml:name>
+        <maml:description>
+          <maml:para>Specifies the brief description for the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppBrief">
+        <maml:name>AppBrief</maml:name>
+        <maml:description>
+          <maml:para>Specifies the brief description for the NAV App.</maml:para>
+          <maml:para>This is an alias of the Brief parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Description -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppDescription">
+        <maml:name>Description</maml:name>
+        <maml:description>
+          <maml:para>Specifies the description for the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppDescription">
+        <maml:name>AppDescription</maml:name>
+        <maml:description>
+          <maml:para>Specifies the description for the NAV App.</maml:para>
+          <maml:para>This is an alias of the Description parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Version -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppVersion">
+        <maml:name>Version</maml:name>
+        <maml:description>
+          <maml:para>Specifies the version of the NAV App. The version is a string in the format of Major.Minor.Build.Revision. The value should be incremented for each new version of the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Version</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppVersion">
+        <maml:name>AppVersion</maml:name>
+        <maml:description>
+          <maml:para>Specifies the version of the NAV App. The version is a string in the format of Major.Minor.Build.Revision. The value should be incremented for each new version of the NAV App.</maml:para>
+          <maml:para>This is an alias of the Version parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Version</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: CompatibilityId -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppCompatibilityId">
+        <maml:name>CompatibilityId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the compatibility ID of the NAV App. The compatibility ID is a version string in the format of Major.Minor.Build.Revision. The value is used to indicate whether there are compatibility related code changes between different versions of the NAV App.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Version</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppCompatibilityId">
+        <maml:name>AppCompatibilityId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the compatibility ID of the NAV App. The compatibility ID is a version string in the format of Major.Minor.Build.Revision. The value is used to indicate whether there are compatibility related code changes between different versions of the NAV App.</maml:para>
+          <maml:para>This is an alias of the CompatibilityId parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Version</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Version</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: PrivacyStatement -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppPrivacyStatement">
+        <maml:name>PrivacyStatement</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NavApp Privacy Statement.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppPrivacyStatement">
+        <maml:name>AppPrivacyStatement</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NavApp Privacy Statement.</maml:para>
+          <maml:para>This is an alias of the PrivacyStatement parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Eula -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppEula">
+        <maml:name>Eula</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NavApp End User License Agreement.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppEula">
+        <maml:name>AppEula</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NavApp End User License Agreement.</maml:para>
+          <maml:para>This is an alias of the Eula parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Help -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppHelp">
+        <maml:name>Help</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NavApp help site.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppHelp">
+        <maml:name>AppHelp</maml:name>
+        <maml:description>
+          <maml:para>Specifies a hyperlink to the NavApp help site.</maml:para>
+          <maml:para>This is an alias of the Help parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Url -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppUrl">
+        <maml:name>Url</maml:name>
+        <maml:description>
+          <maml:para>Specifies a generic hyperlink.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named" aliases="AppUrl">
+        <maml:name>AppUrl</maml:name>
+        <maml:description>
+          <maml:para>Specifies a generic hyperlink.</maml:para>
+          <maml:para>This is an alias of the Url parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Prerequisites -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Prerequisites</maml:name>
+        <maml:description>
+          <maml:para>Specifies the objects that must exist in order to deploy the NAV App to a NAV server instance. The prerequisites is a string in the format of type=ID, where type would include NAV object types like Table, CodeUnit, Page, etc. Use a comma (,) to separate the prerequisites. (example: Table=397, CodeUnit=78)</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Dependencies -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Dependencies</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to a package file (.navx) for another NAV App that this NAV App is dependent on. Use a comma (,) to separate the paths to multiple .navx files, such as in the following example: C:\Proseware\SmartAppBase.navx, C:\Proseware\ProsewareBase.navx</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Manifest</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: NavAppManifest -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>New-NavAppManifest -Name "Proseware SmartApp" -Publisher "Proseware, Inc." -Description "First NAV App by Proseware" |
+Set-NavAppManifest -Version 2.3.4.500 -CompatibilityId 2.0.0.0
+
+   AppId              : 16f55eab-44d2-4428-8550-040b63308e72
+   AppName            : Proseware SmartApp
+   AppPublisher       : Proseware, Inc.
+   AppDescription     : First NAV App by Proseware
+   AppBrief           :
+   AppVersion         : 2.3.4.500
+   AppCompatibilityId : 2.0.0.0
+   AppPrivacyStatement:
+   AppEula            :
+   AppHelp            :
+   AppUrl             :
+   AppLogo            :
+   AppScreenShots     :
+   Capabilities       : {}
+   Prerequisites      : {}
+   Dependencies       : {}</dev:code>
+        <dev:remarks>
+          <maml:para>This example creates a new manifest with a few properties and then passes the created manifest to the Set-NAVAppManifest cmdlet in order to set the version and compatibilityId properties.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>Get-NAVAppManifest -Path '.\Manifest-Proseware SmartApp.xml' | Set-NavAppManifest -Version 2.3.4.500 -CompatibilityId 2.0.0.0 |
+New-NavAppManifestFile -Path ".\Manifest-Proseware SmartApp.xml" -Force</dev:code>
+        <dev:remarks>
+          <maml:para>This example gets a manifest from file, sets the version and compatibilityId properties and then saves the updated manifest back to file. The -Force parameter overwrites the existing file.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=616073</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-NAVAppManifest</maml:linkText>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-NAVAppManifest</maml:linkText>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: New-NAVAppManifestFile -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>New-NAVAppManifestFile</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>NAVAppManifestFile</command:noun>
+      <maml:description>
+        <maml:para>Creates a file with metadata for a NAV App package.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the New-NAVAppManifestFile cmdlet to create a file with metadata for a NAV App package.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>New-NAVAppManifestFile</maml:name>
+        <!-- Parameter: Path -->
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="1">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to the NAV App manifest file to create.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Manifest -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="2">
+          <maml:name>Manifest</maml:name>
+          <maml:description>
+            <maml:para>Specifies the manifest object to write to file. You can pass this object from the New-NAVAppManifest or Get-NAVAppManifest cmdlets to the New-NAVAppManifestFile cmdlet.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">NavAppManifest</command:parameterValue>
+          <dev:type>
+            <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Force -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Forces the command to run without asking for user confirmation to overwrite an existing manifest file at the given path.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: PassThru -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para>Returns the path to the manifest file.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Path -->
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="1">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to the NAV App manifest file to create.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Manifest -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="2">
+        <maml:name>Manifest</maml:name>
+        <maml:description>
+          <maml:para>Specifies the manifest object to write to file. You can pass this object from the New-NAVAppManifest or Get-NAVAppManifest cmdlets to the New-NAVAppManifestFile cmdlet.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">NavAppManifest</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: PassThru -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>Returns the path to the manifest file.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Force -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>Forces the command to run without asking for user confirmation to overwrite an existing manifest file at the given path.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Manifest</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>New-NavAppManifest -Name "Proseware SmartApp" -Publisher "Proseware, Inc." -Description "First NAV App by Proseware" |
+New-NavAppManifestFile -Path ".\Manifest-Proseware SmartApp.xml" -Force</dev:code>
+        <dev:remarks>
+          <maml:para>This example creates an in-memory manifest and then writes it to disk. The -Force parameter will overwrite the file if it already exists.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=616074</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-NAVAppManifest</maml:linkText>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-NAVAppManifest</maml:linkText>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Set-NAVAppManifest</maml:linkText>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: New-NAVAppPackage -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>New-NAVAppPackage</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>NAVAppPackage</command:noun>
+      <maml:description>
+        <maml:para>Creates a NAV App package file (.navx) at the specified location based on the specified manifest file and source files.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the New-NAVAppPackage cmdlet to create a .navx package file to distribute a NAV App. You can then use the package file to deploy the NAV App to a Microsoft Dynamics NAV Server instance.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>New-NAVAppPackage</maml:name>
+        <!-- Parameter: Path -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="1" aliases="OutputPath,Output">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the file name and the location where the NAV App package file (.navx) must be placed.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Manifest -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="2">
+          <maml:name>Manifest</maml:name>
+          <maml:description>
+            <maml:para>Specifies the manifest object that contains the metadata that defines the NAV App package. You can pass this object from the New-NAVAppManifest or Get-NAVAppManifest cmdlets to the New-NAVAppPackage cmdlet.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">NavAppManifest</command:parameterValue>
+          <dev:type>
+            <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: SourcePath -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="3">
+          <maml:name>SourcePath</maml:name>
+          <maml:description>
+            <maml:para>Specifies the location of the delta files and full object files, or a folder that contains the files, that you want to include in the NAV App package. Use a comma (,) to separate multiple paths as in the following example: C:\NavAppFiles\, C:\Permissions\PermissionSet.xml</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Logo -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="4">
+          <maml:name>Logo</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to and image file to use as the logo when creating this Nav App package</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: ScreenShots -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="5">
+          <maml:name>ScreenShots</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path(s) to the image and files, or a directory containing such, to include as product screen shots in the NAV App package. Use a comma (,) to separate multiple paths. (example: C:\NavAppImages\, C:\Images\ScreenShot.jpg)</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Force -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Forces the command to run without asking for user confirmation to overwrite an existing package file at the given path.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: PassThru -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para>Returns the path of the created package file.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Path -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="1" aliases="OutputPath,Output">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the file name and the location where the NAV App package file (.navx) must be placed.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="1" aliases="OutputPath,Output">
+        <maml:name>OutputPath</maml:name>
+        <maml:description>
+          <maml:para>Specifies the file name and the location where the NAV App package file (.navx) must be placed.</maml:para>
+          <maml:para>This is an alias of the Path parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="1" aliases="OutputPath,Output">
+        <maml:name>Output</maml:name>
+        <maml:description>
+          <maml:para>Specifies the file name and the location where the NAV App package file (.navx) must be placed.</maml:para>
+          <maml:para>This is an alias of the Path parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Manifest -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="2">
+        <maml:name>Manifest</maml:name>
+        <maml:description>
+          <maml:para>Specifies the manifest object that contains the metadata that defines the NAV App package. You can pass this object from the New-NAVAppManifest or Get-NAVAppManifest cmdlets to the New-NAVAppPackage cmdlet.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">NavAppManifest</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: SourcePath -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="3">
+        <maml:name>SourcePath</maml:name>
+        <maml:description>
+          <maml:para>Specifies the location of the delta files and full object files, or a folder that contains the files, that you want to include in the NAV App package. Use a comma (,) to separate multiple paths as in the following example: C:\NavAppFiles\, C:\Permissions\PermissionSet.xml</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Logo -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="4">
+        <maml:name>Logo</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to and image file to use as the logo when creating this Nav App package</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: ScreenShots -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="5">
+        <maml:name>ScreenShots</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path(s) to the image and files, or a directory containing such, to include as product screen shots in the NAV App package. Use a comma (,) to separate multiple paths. (example: C:\NavAppImages\, C:\Images\ScreenShot.jpg)</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: PassThru -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>Returns the path of the created package file.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Force -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>Forces the command to run without asking for user confirmation to overwrite an existing package file at the given path.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Path</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Apps.NavAppManifest</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Manifest</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>SourcePath</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Logo</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>ScreenShots</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>New-NavAppManifest -Name 'Proseware SmartApp' -Publisher 'Proseware, Inc.' -Version 2.3.4.500 | New-NAVAppPackage -Path 'C:\Proseware
+SmartApp.navx' -SourcePath 'C:\NavAppFiles'</dev:code>
+        <dev:remarks>
+          <maml:para>This example creates a new NAV App package using new in-memory NAV App manifest metadata and the source files in the C:\NavAppFiles folder.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>Get-NAVAppManifest -Path '.\Manifest-Proseware SmartApp.xml' | New-NAVAppPackage -Path 'C:\Proseware SmartApp.navx' -SourcePath
+'C:\NavAppFiles'</dev:code>
+        <dev:remarks>
+          <maml:para>This example creates a new NAV App package using the NAV App manifest file and source files in the C:\NavAppFiles folder.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 3  ----------</maml:title>
+        <dev:code>Get-NAVAppManifest -Path '.\Manifest-Proseware SmartStuff.xml' | New-NAVAppPackage -Path 'C:\Proseware SmartStuff.navx' -SourcePath
+C:\NavAppFiles, 'C:\permissions.xml'</dev:code>
+        <dev:remarks>
+          <maml:para>This example creates a new NAV App package using the NAV App manifest file and source files in the C:\NavAppFiles folder and an exported permission set file in the location provided.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 4  ----------</maml:title>
+        <dev:code>Get-NAVAppManifest -Path '.\Manifest-Proseware SmartStuff.xml' | New-NAVAppPackage -Path 'C:\Proseware SmartStuff.navx' -SourcePath
+C:\NavAppFiles, 'C:\permissions.xml' -Logo C:\SmartLogo.png -ScreenShots C:\SmartScreenShots</dev:code>
+        <dev:remarks>
+          <maml:para>This example creates a new NAV App package using the NAV App manifest file and source files in the C:\NavAppFiles folder, an exported permission set file in the location provided, a logo image in the location provided, and screen shot images files in the C:\SmartScreenShots folder.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=616078</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-NAVAppManifest</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=616072</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-NAVAppManifest</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=616071</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: Export-NAVAppPermissionSet -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Export-NAVAppPermissionSet</command:name>
+      <command:verb>Export</command:verb>
+      <command:noun>NAVAppPermissionSet</command:noun>
+      <maml:description>
+        <maml:para>Exports the specified permission set(s) from a Microsoft Dynamics NAV database to a file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the Export-NAVAppPermissionSet cmdlet to export a permission set (or multiple permission sets) from a Microsoft Dynamics NAV database to a file.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Export-NAVAppPermissionSet</maml:name>
+        <!-- Parameter: ServerInstance -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+          <maml:name>ServerInstance</maml:name>
+          <maml:description>
+            <maml:para>Specifies the Microsoft Dynamics NAV Server instance that the NAV App is published to, such as DynamicsNAV.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue></dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: Path -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to the Extension Package file that you want to publish to the Microsoft Dynamics NAV Server instance.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: PermissionSetId -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>PermissionSetId</maml:name>
+          <maml:description>
+            <maml:para>Specifies the permission set ID(s) that will be exported.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Force -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Forces the command to run without asking for user confirmation.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: PassThru -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para>Returns an Extension object for the published Extension. The Extension object contains the properties of the Extension, such as name, publisher, version.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: PermissionSetId -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>PermissionSetId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the permission set ID(s) that will be exported.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: ServerInstance -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+        <maml:name>ServerInstance</maml:name>
+        <maml:description>
+          <maml:para>Specifies the Microsoft Dynamics NAV Server instance that the NAV App is published to, such as DynamicsNAV.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Path -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to the Extension Package file that you want to publish to the Microsoft Dynamics NAV Server instance.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: PassThru -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>Returns an Extension object for the published Extension. The Extension object contains the properties of the Extension, such as name, publisher, version.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Force -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>Forces the command to run without asking for user confirmation.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: PermissionSetId</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By value and by property name: ServerInstance</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Path</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>Export-NAVAppPermissionSet -ServerInstance DynamicsNAV -Path '.\PermissionSet.xml' -PermissionSetId PSA-VIEW</dev:code>
+        <dev:remarks>
+          <maml:para>This example exports the permission set with the ID "PSA-VIEW" in the database that is used by the DynamicsNAV server instance to the PermissionSet.xml file.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>$PermissionSetFile=Export-NAVAppPermissionSet -ServerInstance DynamicsNAV -Path '.\PermissionSet.xml' -PermissionSetId PSA-VIEW
+-PassThru
+
+   Mode             LastWriteTime            Length Name
+   ----             -------------            ------ ----
+   -a---            8/5/2017   11:47 AM         450 PermissionSet.xml</dev:code>
+        <dev:remarks>
+          <maml:para>This example exports the permission set with the ID "PSA-VIEW" in the database that is used by the DynamicsNAV server instance to the PermissionSet.xml file, and then returns the location of the file to a variable. The variable could then be used when creating a package. (Example: Get-NAVAppManifest -Path '.\Manifest-Proseware SmartStuff.xml' | New-NAVAppPackage -Path 'C:\Proseware SmartStuff.navx' -SourcePath C:\NavExtensionFiles, $PermissionSetFile</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=616075</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: Export-NAVAppReportLayout -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Export-NAVAppReportLayout</command:name>
+      <command:verb>Export</command:verb>
+      <command:noun>NAVAppReportLayout</command:noun>
+      <maml:description>
+        <maml:para>Exports the specified custom report layout from a Microsoft Dynamics NAV database to a file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the Export-NAVAppReportLayout cmdlet to export a custom report layout from a Microsoft Dynamics NAV database to a file.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Export-NAVAppReportLayout</maml:name>
+        <!-- Parameter: ServerInstance -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+          <maml:name>ServerInstance</maml:name>
+          <maml:description>
+            <maml:para>Specifies the Microsoft Dynamics NAV Server instance that the NAV App is published to, such as DynamicsNAV.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue></dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: LayoutCode -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>LayoutCode</maml:name>
+          <maml:description>
+            <maml:para>Specifies the Code of the report layout that will be exported.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Path -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to the Extension Package file that you want to publish to the Microsoft Dynamics NAV Server instance.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Force -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Forces the command to run without asking for user confirmation.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: PassThru -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para>Returns an Extension object for the published Extension. The Extension object contains the properties of the Extension, such as name, publisher, version.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: Tenant -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>Tenant</maml:name>
+          <maml:description>
+            <maml:para>Specifies the tenant from which to export data. If the server instance is configured for single tenant, do not set the parameter.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">TenantId</command:parameterValue>
+          <dev:type>
+            <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: LayoutCode -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>LayoutCode</maml:name>
+        <maml:description>
+          <maml:para>Specifies the Code of the report layout that will be exported.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Tenant -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>Tenant</maml:name>
+        <maml:description>
+          <maml:para>Specifies the tenant from which to export data. If the server instance is configured for single tenant, do not set the parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">TenantId</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: ServerInstance -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+        <maml:name>ServerInstance</maml:name>
+        <maml:description>
+          <maml:para>Specifies the Microsoft Dynamics NAV Server instance that the NAV App is published to, such as DynamicsNAV.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Path -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to the Extension Package file that you want to publish to the Microsoft Dynamics NAV Server instance.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: PassThru -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>Returns an Extension object for the published Extension. The Extension object contains the properties of the Extension, such as name, publisher, version.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Force -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>Forces the command to run without asking for user confirmation.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: LayoutCode</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Tenant</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By value and by property name: ServerInstance</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Path</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>Export-NAVAppReportLayout -ServerInstance DynamicsNAV -Path .\ReportLayout.layoutdata -LayoutId MS-1016-DEFAULT</dev:code>
+        <dev:remarks>
+          <maml:para>This example exports the report layout with the code 'MS-1016-DEFAULT' in the database that is used by the DynamicsNAV server instance to the ReportLayout.layoutdata file.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>Export-NAVAppReportLayout -ServerInstance DynamicsNAV -Path .\ReportLayout.layoutdata -LayoutId MS-1016-DEFAULT -PassThru
+
+   Mode             LastWriteTime            Length Name
+   ----             -------------            ------ ----
+   -a---            11/25/2017   11:47 AM       450 ReportLayout.xml</dev:code>
+        <dev:remarks>
+          <maml:para>This example exports the report layout with the code 'MS-1016-DEFAULT' in the database that is used by the DynamicsNAV server instance to the ReportLayout.layoutdata file, then returns the location of the file.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=717749</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: Export-NAVAppTableData -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Export-NAVAppTableData</command:name>
+      <command:verb>Export</command:verb>
+      <command:noun>NAVAppTableData</command:noun>
+      <maml:description>
+        <maml:para>Exports data from a Microsoft Dynamics NAV database table to file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the Export-NAVAppTableData cmdlet to export table data from a Microsoft Dynamics NAV database to a file. The data must be for a new non-company table created as part of the extension package to which the exported file will be included.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Export-NAVAppTableData</maml:name>
+        <!-- Parameter: ServerInstance -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+          <maml:name>ServerInstance</maml:name>
+          <maml:description>
+            <maml:para>Specifies the Microsoft Dynamics NAV Server instance that the NAV App is published to, such as DynamicsNAV.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue></dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: Path -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to the folder where the export file should be written. A data file with a name of TAB&lt;TABLEID&gt;.navxdata will be created. (Example: TAB10000.navxdata)</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: TableId -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>TableId</maml:name>
+          <maml:description>
+            <maml:para>Specifies the table ID to export. The ID must be for a new non-company table created as part of the extension.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>0</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: Force -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Forces the command to run without asking for user confirmation.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: Tenant -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id">
+          <maml:name>Tenant</maml:name>
+          <maml:description>
+            <maml:para>Specifies the tenant from which to export data. If the server instance is configured for single tenant, do not set the parameter.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">TenantId</command:parameterValue>
+          <dev:type>
+            <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: ServerInstance -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+        <maml:name>ServerInstance</maml:name>
+        <maml:description>
+          <maml:para>Specifies the Microsoft Dynamics NAV Server instance that the NAV App is published to, such as DynamicsNAV.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Tenant -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id">
+        <maml:name>Tenant</maml:name>
+        <maml:description>
+          <maml:para>Specifies the tenant from which to export data. If the server instance is configured for single tenant, do not set the parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">TenantId</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id">
+        <maml:name>Id</maml:name>
+        <maml:description>
+          <maml:para>Specifies the tenant from which to export data. If the server instance is configured for single tenant, do not set the parameter.</maml:para>
+          <maml:para>This is an alias of the Tenant parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">TenantId</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Path -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to the folder where the export file should be written. A data file with a name of TAB&lt;TABLEID&gt;.navxdata will be created. (Example: TAB10000.navxdata)</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: TableId -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>TableId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the table ID to export. The ID must be for a new non-company table created as part of the extension.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">int</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Force -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>Forces the command to run without asking for user confirmation.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By value and by property name: ServerInstance</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Tenant</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Path</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: TableId</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>Export-NAVAppTableData -ServerInstance DynamicsNAV -Path '.\' -TableId 10000</dev:code>
+        <dev:remarks>
+          <maml:para>This example exports the data from the table with the ID 10000 in the default tenant database for server instance DynamicsNAV to a TAB10000.navxdata file in the current folder.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=708721</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: Export-NAVAppTenantWebService -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Export-NAVAppTenantWebService</command:name>
+      <command:verb>Export</command:verb>
+      <command:noun>NAVAppTenantWebService</command:noun>
+      <maml:description>
+        <maml:para>Exports the specified web service from a Microsoft Dynamics NAV database to a file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the Export-NAVAppTenantWebService cmdlet to export a web service from a Microsoft Dynamics NAV database to a file.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Export-NAVAppTenantWebService</maml:name>
+        <!-- Parameter: ServerInstance -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+          <maml:name>ServerInstance</maml:name>
+          <maml:description>
+            <maml:para>Specifies the Microsoft Dynamics NAV Server instance that the NAV App is published to, such as DynamicsNAV.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue></dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ObjectId -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>ObjectId</maml:name>
+          <maml:description>
+            <maml:para>Specifies the object ID of the web service that will be exported.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>0</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ObjectType -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>ObjectType</maml:name>
+          <maml:description>
+            <maml:para>Specifies the object type of the web service that will be exported.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Path -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to the Extension Package file that you want to publish to the Microsoft Dynamics NAV Server instance.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: ServiceName -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>ServiceName</maml:name>
+          <maml:description>
+            <maml:para>Specifies the service name of the web service that will be exported.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Force -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Forces the command to run without asking for user confirmation.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: PassThru -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para>Returns an Extension object for the published Extension. The Extension object contains the properties of the Extension, such as name, publisher, version.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: Tenant -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id">
+          <maml:name>Tenant</maml:name>
+          <maml:description>
+            <maml:para>Specifies the tenant from which to export data. If the server instance is configured for single tenant, do not set the parameter.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">TenantId</command:parameterValue>
+          <dev:type>
+            <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: ServiceName -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>ServiceName</maml:name>
+        <maml:description>
+          <maml:para>Specifies the service name of the web service that will be exported.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: ObjectType -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>ObjectType</maml:name>
+        <maml:description>
+          <maml:para>Specifies the object type of the web service that will be exported.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: ObjectId -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>ObjectId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the object ID of the web service that will be exported.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">int</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Tenant -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id">
+        <maml:name>Tenant</maml:name>
+        <maml:description>
+          <maml:para>Specifies the tenant from which to export data. If the server instance is configured for single tenant, do not set the parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">TenantId</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id">
+        <maml:name>Id</maml:name>
+        <maml:description>
+          <maml:para>Specifies the tenant from which to export data. If the server instance is configured for single tenant, do not set the parameter.</maml:para>
+          <maml:para>This is an alias of the Tenant parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">TenantId</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: ServerInstance -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+        <maml:name>ServerInstance</maml:name>
+        <maml:description>
+          <maml:para>Specifies the Microsoft Dynamics NAV Server instance that the NAV App is published to, such as DynamicsNAV.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Path -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to the Extension Package file that you want to publish to the Microsoft Dynamics NAV Server instance.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: PassThru -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>Returns an Extension object for the published Extension. The Extension object contains the properties of the Extension, such as name, publisher, version.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: Force -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>Forces the command to run without asking for user confirmation.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: ServiceName</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: ObjectType</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: ObjectId</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>Microsoft.Dynamics.Nav.Types.TenantId</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Tenant</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By value and by property name: ServerInstance</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>By property name: Path</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>Export-NAVAppTenantWebService -ServerInstance DynamicsNAV -Path .\TenantWebService.xml -ServiceName Customer -ObjectType Page
+-ObjectId 21</dev:code>
+        <dev:remarks>
+          <maml:para>This example exports the web service with the name "Customer" on the Page 21 object in the database that is used by the DynamicsNAV server instance to the TenantWebService.xml file.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>Export-NAVAppTenantWebService -ServerInstance DynamicsNAV -Path .\TenantWebService.xml -ServiceName Customer -ObjectType Page
+-ObjectId 21 -PassThru
+
+   Mode             LastWriteTime            Length Name
+   ----             -------------            ------ ----
+   -a---            11/25/2017   11:47 AM       450 TenantWebService.xml</dev:code>
+        <dev:remarks>
+          <maml:para>This example exports the web service with the name "Customer" on the Page 21 object in the database that is used by the DynamicsNAV server instance to the TenantWebService.xml file, then returns the location of the file.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=715641</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>
